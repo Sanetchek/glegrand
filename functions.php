@@ -42,13 +42,11 @@ require_once ('inc/functions-limits.php');
  * Custom WordPress Footer                              -   ON
  * Remove WordPress Version From The Admin Footer       -   ON
  * 
- *
+ **/
 require_once('inc/functions-remove.php');
-*/
+
 /*
  * Disable Updates
- *
- *
  *
 
 require_once('inc/functions-updates.php');
@@ -75,7 +73,7 @@ require_once ('inc/functions-background-image.php');
 
 function my_favicon() {
 	echo '<link rel="shortcut Icon" type="image/x-icon"
- href="' . get_template_directory_uri() . '/assets/images/favicon.ico" />';
+ href="' . get_template_directory_uri() . '/assets/images/favicon.png" />';
 }
 add_action('wp_head', 'my_favicon');
 

@@ -6,9 +6,9 @@ function customize_footer_settings () {
 
     add_settings_section( 'customize-footer-options', __( 'Внешний вид', 'customize' ), 'customize_footer_options', 'customize_theme_appearance' );
 
-    add_settings_field( 'footer-title', __( 'Заголовок', 'customize' ), 'customize_footer_title', 'customize-footer-options' );
-    add_settings_field( 'facebook', __( 'Заголовок подвала', 'customize' ), 'customize_facebook', 'customize-footer-options' );
-    add_settings_field( 'instagram', __( 'Заголовок подвала', 'customize' ), 'customize_instagram', 'customize-footer-options' );
+    add_settings_field( 'footer-title', __( 'Заголовок', 'customize' ), 'customize_footer_title', 'customize_theme_appearance', 'customize-footer-options' );
+    add_settings_field( 'facebook', __( 'Facebook', 'customize' ), 'customize_facebook', 'customize_theme_appearance', 'customize-footer-options' );
+    add_settings_field( 'instagram', __( 'Instagram', 'customize' ), 'customize_instagram', 'customize_theme_appearance', 'customize-footer-options' );
 }
 
 function customize_footer_options() {
