@@ -8,7 +8,12 @@
 
         <div class="page-thumbnail">
                 <?php
-                the_post_thumbnail('large');
+                if( has_post_thumbnail() ) {
+                    the_post_thumbnail('large');
+                }
+                else {
+                    echo '<img src="'.get_template_directory_uri().'/assets/images/page-replace-image.jpg" alt="Picture"/>';
+                }
                 ?>
         </div><!-- .post-thumbnail -->
 

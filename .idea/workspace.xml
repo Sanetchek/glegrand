@@ -5,26 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2af86de4-10d2-4a17-91a0-a151463972e2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/customize/images/facebook.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customize/images/instagram.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customize/images/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/page-replace-imge.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/customize/images/favicon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customize/css/customize.css" beforeDir="false" afterPath="$PROJECT_DIR$/customize/css/customize.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customize/functions-customize.php" beforeDir="false" afterPath="$PROJECT_DIR$/customize/functions-customize.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customize/inc/function-admin-menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/customize/inc/function-admin-menu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customize/inc/functions/admin/admin-footer-settings.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/customize/inc/functions/admin/admin-settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/customize/inc/functions/admin/admin-settings.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customize/inc/functions/admin/customize-fields.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/customize/inc/functions/function-banner-settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/customize/inc/functions/function-general-settings.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customize/inc/functions/function-footer-settings.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/customize/js/customize.js" beforeDir="false" afterPath="$PROJECT_DIR$/customize/js/customize.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customize/js/multiupload.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template-parts/footer/content-footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/template-parts/footer/content-footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template-parts/header/header-main.php" beforeDir="false" afterPath="$PROJECT_DIR$/template-parts/header/header-main.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page.php" beforeDir="false" afterPath="$PROJECT_DIR$/page.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template-parts/page/content-page.php" beforeDir="false" afterPath="$PROJECT_DIR$/template-parts/page/content-page.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,11 +36,15 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectId" id="1kNDUYHpRP53VVmt1YPOk2feThl" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="NewWatcherDialog.advanced.open" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -115,12 +103,15 @@
       <workItem from="1605625442444" duration="7125000" />
       <workItem from="1605639923859" duration="441000" />
       <workItem from="1605640410643" duration="148285000" />
-      <workItem from="1606486374896" duration="30932000" />
+      <workItem from="1606486374896" duration="31754000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="648" y="311" key="#Custom_Plugin_Repositories" timestamp="1605596522206">
