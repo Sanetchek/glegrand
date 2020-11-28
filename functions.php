@@ -64,19 +64,6 @@ require_once ('inc/functions-plugins.php');
 */
 require_once ('inc/functions-background-image.php');
 
-
-/*
-===================================================================
-          Add favicon
-===================================================================
-*/
-
-function my_favicon() {
-	echo '<link rel="shortcut Icon" type="image/x-icon"
- href="' . get_template_directory_uri() . '/assets/images/favicon.png" />';
-}
-add_action('wp_head', 'my_favicon');
-
 /*
 ===================================================================
           Switch default core markup for search form, comment form,

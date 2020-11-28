@@ -39,3 +39,20 @@ add_action('admin_enqueue_scripts', 'customize_profile_scripts');
 ===================================================================
 */
 require_once( 'inc/function-admin-menu.php' );
+
+/*
+===================================================================
+          Add favicon
+===================================================================
+*/
+
+function my_favicon() {
+    $favicon = esc_attr( get_option( 'favicon' ) );
+    if (isset($favicon)) {
+        echo '<link rel="shortcut Icon" type="image/x-icon" href="' . $favicon . '" />';
+    } else {
+        echo '<link rel="shortcut Icon" type="image/x-icon" href="' . get_template_directory_uri() . '/customize/images/favicon.png" />';
+    }
+
+}
+add_action('wp_head', 'my_favicon');

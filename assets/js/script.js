@@ -1,7 +1,10 @@
 "use strict";
 
-( function( $ ) {
+jQuery(document).ready( function($) {
+    // Burger menu change style
+    $('.burger-menu').on('click', function(){
+        this.classList.toggle("change");
+        $('.main-menu').slideToggle();
+    });
 
-    
-
-} )( jQuery );
+} );

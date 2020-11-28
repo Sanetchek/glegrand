@@ -1,8 +1,10 @@
+<?php $headerLogo = esc_attr( get_option( 'header_logo' ) ); ?>
+
 <header id="header">
 	<div class="wrapper">
-		<div class="left">
+		<div class="left header-log-height">
 			<a href="<?php echo get_home_url(); ?>" class="logo">
-				<span class="glegrand glegrand-logo"></span>
+                <img id="header-logo" src="<?php print $headerLogo ?>" alt="<?php _e( 'Логотип', 'glegrandsale' ); ?>">
 			</a>
 		</div>
 		<div class="right">
@@ -23,6 +25,11 @@
                     'walker'          => '',
                 ] );
                 ?>
+                <div id="burger-menu" class="burger-menu">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
 			</div>
 		</div>
 	</div>

@@ -1,6 +1,9 @@
 <?php
-
+/* Admin Banner settings and custom fields */
 function customize_banner_settings() {
+    register_setting( 'customize-settings-group' , 'header_logo' );
+    register_setting( 'customize-settings-group' , 'footer_logo' );
+    register_setting( 'customize-settings-group' , 'favicon' );
     register_setting( 'customize-settings-group' , 'banner_image' );
     register_setting(
         'customize-settings-group', //уникальное имя для хранения информации в базе дынных
@@ -12,14 +15,20 @@ function customize_banner_settings() {
     register_setting( 'customize-settings-group' , 'banner_phone_one' );
     register_setting( 'customize-settings-group' , 'banner_phone_two' );
     register_setting( 'customize-settings-group' , 'banner_mode' );
+    register_setting( 'customize-settings-group' , 'footer_hour_mode' );
+    register_setting( 'customize-settings-group', 'footer_title' );
+    register_setting( 'customize-settings-group', 'facebook' );
+    register_setting( 'customize-settings-group', 'instagram', 'customize_sanitize_instagram' );
 
     add_settings_section(
         'customize-banner-options', // id
-        __( 'Внешний вид банера', 'customize' ), // title
+        __( 'Внешний вид', 'customize' ), // title
         'customize_top_options', // регистрация функции
         'customize_theme'  // page место где выводится форма (SLUG URL страницы)
     );
 
+    add_settings_field( 'favicon', __( 'Favicon', 'customize' ), 'customize_favicon', 'customize_theme', 'customize-banner-options' );
+    add_settings_field( 'header-footer-logo', __( 'Логотип сайта', 'customize' ), 'customize_header_footer_logo', 'customize_theme', 'customize-banner-options' );
     add_settings_field( 'banner-image', __( 'Картинка банера', 'customize' ), 'customize_banner_image', 'customize_theme', 'customize-banner-options' );
     add_settings_field(
         'banner-title', // id
@@ -31,17 +40,48 @@ function customize_banner_settings() {
     add_settings_field( 'banner-tagline', __( 'Слоган в банере', 'customize' ), 'customize_banner_tagline', 'customize_theme', 'customize-banner-options' );
     add_settings_field( 'banner-address', __( 'Адрес', 'customize' ), 'customize_banner_address', 'customize_theme', 'customize-banner-options' );
     add_settings_field( 'banner-phone', __( 'Телефон', 'customize' ), 'customize_banner_phone', 'customize_theme', 'customize-banner-options' );
+    add_settings_field( 'footer-hour-mode', __( 'Заголовок для Режим работы', 'customize' ), 'customize_footer_hour_mode', 'customize_theme', 'customize-banner-options' );
     add_settings_field( 'banner-mode', __( 'Режим работы', 'customize' ), 'customize_banner_mode', 'customize_theme', 'customize-banner-options' );
+    add_settings_field( 'footer-title', __( 'Заголовок подвала', 'customize' ), 'customize_footer_title', 'customize_theme', 'customize-banner-options' );
+    add_settings_field( 'facebook', __( 'Facebook', 'customize' ), 'customize_facebook', 'customize_theme', 'customize-banner-options' );
+    add_settings_field( 'instagram', __( 'Instagram', 'customize' ), 'customize_instagram', 'customize_theme', 'customize-banner-options' );
 }
 
 function customize_top_options() {
     echo 'Страница редактирования информации в Банере';
 }
 
+function customize_favicon() {
+    $banner = 'favicon';
+    $bannerField = esc_attr( get_option( $banner ) );
+    echo '
+    <input type="button" class="button button-secondary" value="'. __( 'Загрузить favicon', 'cusomize' ) .'" id="upload-favicon-button">
+    <input type="hidden" id="value-favicon" name="'. $banner .'" value="'. $bannerField .'" />
+    '; // name = SLUG meta field
+}
+
+function customize_header_footer_logo() {
+    $headerLogo = 'header_logo';
+    $headerLogoField = esc_attr( get_option( $headerLogo ) );
+    $footerLogo = 'footer_logo';
+    $footerLogoField = esc_attr( get_option( $headerLogo ) );
+    echo '
+    <input type="button" class="button button-secondary" value="'. __( 'Загрузить Логотип шапки', 'cusomize' ) .'" id="upload-header-logo-button">
+    <input type="hidden" id="value-header-logo" name="'. $headerLogo .'" value="'. $headerLogoField .'" />
+    '; // name = SLUG meta field
+    echo '
+    <input type="button" class="button button-secondary" value="'. __( 'Загрузить Логотип подвала', 'cusomize' ) .'" id="upload-footer-logo-button">
+    <input type="hidden" id="value-footer-logo" name="'. $footerLogo .'" value="'. $footerLogoField .'" />
+    '; // name = SLUG meta field
+}
+
 function customize_banner_image () {
     $banner = 'banner_image';
     $bannerField = esc_attr( get_option( $banner ) );
-    echo '<input type="button" class="button button-secondary" value="'. __( 'Загрузить картинку', 'cusomize' ) .'" id="upload-button"><input type="hidden" id="banner-image" name="'. $banner .'" value="'. $bannerField .'" />'; // name = SLUG meta field
+    echo '
+    <input type="button" class="button button-secondary" value="'. __( 'Загрузить картинку', 'cusomize' ) .'" id="upload-button">
+    <input type="hidden" id="banner-image" name="'. $banner .'" value="'. $bannerField .'" />
+    '; // name = SLUG meta field
 }
 
 function customize_banner_title () {
@@ -76,6 +116,12 @@ function customize_banner_phone () {
     '; // name = SLUG meta field
 }
 
+function customize_footer_hour_mode () {
+    $banner = 'footer_hour_mode';
+    $bannerField = esc_attr( get_option( $banner ) );
+    echo '<input type="text" id="footer-input-hour-mode" name="'. $banner .'" value="'. $bannerField .'" placeholder="'.__( 'Заголовок для Режим работы', 'customize' ).'" />'; // name = SLUG meta field
+}
+
 function customize_banner_mode () {
     $banner = 'banner_mode';
     $bannerField = esc_attr( get_option( $banner ) );
@@ -85,4 +131,29 @@ function customize_banner_mode () {
 function customize_theme_create_page () {
     // Генерация Админ Страницы
     require_once('admin/admin-settings.php');
+}
+
+function customize_footer_title() {
+    $footer = 'footer_title';
+    $footerField = esc_attr( get_option( $footer ) );
+    echo '<input id="footer-input-title" type="text" name="'. $footer .'" value="'. $footerField .'" placeholder="'.__( 'Заголовок', 'customize' ).'" />'; // name = SLUG meta field
+}
+
+function customize_facebook() {
+    $footer = 'facebook';
+    $footerField = esc_attr( get_option( $footer ) );
+    echo '<input type="text" name="'. $footer .'" value="'. $footerField .'" placeholder="'.__( 'Facebook', 'customize' ).'" />'; // name = SLUG meta field
+}
+
+function customize_instagram() {
+    $footer = 'instagram';
+    $footerField = esc_attr( get_option( $footer ) );
+    echo '<input type="text" name="'. $footer .'" value="'. $footerField .'" placeholder="'.__( 'Instagram', 'customize' ).'" />'; // name = SLUG meta field
+}
+
+// Sanitization settings
+function customize_sanitize_instagram( $input ) {
+    $output = sanitize_text_field($input);
+    $output = str_replace('@', '', $output);
+    return $output;
 }

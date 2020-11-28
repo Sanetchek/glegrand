@@ -5,10 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2af86de4-10d2-4a17-91a0-a151463972e2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/customize/images/facebook.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customize/images/instagram.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customize/images/logo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customize/inc/functions/function-footer-settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/customize/inc/functions/function-footer-settings.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/customize/images/favicon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customize/css/customize.css" beforeDir="false" afterPath="$PROJECT_DIR$/customize/css/customize.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customize/functions-customize.php" beforeDir="false" afterPath="$PROJECT_DIR$/customize/functions-customize.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customize/inc/function-admin-menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/customize/inc/function-admin-menu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customize/inc/functions/admin/admin-footer-settings.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customize/inc/functions/admin/admin-settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/customize/inc/functions/admin/admin-settings.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customize/inc/functions/admin/customize-fields.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customize/inc/functions/function-banner-settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/customize/inc/functions/function-general-settings.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customize/inc/functions/function-footer-settings.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customize/js/customize.js" beforeDir="false" afterPath="$PROJECT_DIR$/customize/js/customize.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customize/js/multiupload.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/functions-remove.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/functions-remove.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template-parts/footer/content-footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/template-parts/footer/content-footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template-parts/header/header-main.php" beforeDir="false" afterPath="$PROJECT_DIR$/template-parts/header/header-main.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +60,7 @@
     <property name="NewWatcherDialog.advanced.open" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/customize" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/customize/images" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -53,18 +69,19 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\xampp\htdocs\wp-glegrand\wp-content\themes\glegrand\customize\images" />
+      <recent name="D:\xampp\htdocs\wp-glegrand\wp-content\themes\glegrand\assets\images" />
+      <recent name="D:\xampp\htdocs\wp-glegrand\wp-content\themes\glegrand\customize\inc\functions" />
+      <recent name="D:\xampp\htdocs\wp-glegrand\wp-content\themes\glegrand\customize\inc" />
+      <recent name="D:\xampp\htdocs\wp-glegrand\wp-content\themes\glegrand\customize\js" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\xampp\htdocs\wp-glegrand\wp-content\themes\glegrand\customize\images" />
       <recent name="D:\xampp\htdocs\wp-glegrand\wp-content\themes\glegrand\customize" />
       <recent name="D:\xampp\htdocs\wp-glegrand\wp-content\themes\glegrand\customize\admin" />
       <recent name="D:\xampp\htdocs\wp-glegrand\wp-content\themes\glegrand\inc" />
       <recent name="D:\xampp\htdocs\wp-glegrand\wp-content\themes\glegrand\assets\js" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\xampp\htdocs\wp-glegrand\wp-content\themes\glegrand\customize\inc\functions" />
-      <recent name="D:\xampp\htdocs\wp-glegrand\wp-content\themes\glegrand\customize\inc" />
-      <recent name="D:\xampp\htdocs\wp-glegrand\wp-content\themes\glegrand\customize\js" />
-      <recent name="D:\xampp\htdocs\wp-glegrand\wp-content\themes\glegrand\template-parts\page" />
-      <recent name="D:\xampp\htdocs\wp-glegrand\wp-content\themes\glegrand\template-parts\header" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -98,7 +115,7 @@
       <workItem from="1605625442444" duration="7125000" />
       <workItem from="1605639923859" duration="441000" />
       <workItem from="1605640410643" duration="148285000" />
-      <workItem from="1606486374896" duration="49000" />
+      <workItem from="1606486374896" duration="30932000" />
     </task>
     <servers />
   </component>
@@ -126,10 +143,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="548" y="135" key="#com.intellij.ide.macro.MacrosDialog/0.0.1536.824@0.0.1536.824" timestamp="1605643961106" />
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605599870658">
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1606488629855">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1605599870658" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1606488629855" />
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1605556856872">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

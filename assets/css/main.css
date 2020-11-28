@@ -80,20 +80,25 @@ body {
     font-family: "OswaldRegular", Helvetica, sans-serif;
 }
 
+.display {
+    display: unset;
+}
+
 /* Header */
-#header {
+#header, .header-log-height {
     height: 120px;
 }
 
-#header .logo span {
-    font-size: 4em;
-    color: #2c6247;
-    line-height: 120px;
+#header .logo img {
+    max-width: 210px;
+    position: relative;
+    top: 25%;
 }
 
 #header .header-nav {
     font-size: 1.2em;
     color: #000;
+    position: relative;
 }
 
 #top-menu {
@@ -125,6 +130,34 @@ body {
 
 #top-menu  .current-menu-item > .und-line {
     height: 3px;
+}
+
+#burger-menu {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 42px;
+    right: 0;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
 }
 
 /* Banner */
@@ -349,9 +382,54 @@ body {
 
 /* Footer */
 .footer {
-    height: 260px;
     background: #232222;
     color: #fff;
+}
+
+.footer-contacts {
+    padding-left: 5%;
+}
+
+.footer-title {
+    font-family: "LobsterRegular", Helvetica, sans-serif;
+    font-size: 2.6em;
+    margin: 11% 0 8% 0;
+}
+
+.footer-address {
+    margin-bottom: 5%;
+}
+
+.footer-phone a {
+    color: #fff;
+}
+
+h4.footer-hour-mode, .footer-social-head {
+    font-weight: normal;
+}
+
+.block.footer-social {
+    position: relative;
+    height: 260px;
+}
+
+.footer-social-icon {
+    position: absolute;
+    bottom: 5%;
+    right: 20%;
+}
+
+.footer-social-head {
+    margin-left: 10px;
+}
+
+.footer-social-icon a img {
+    width: 50px;
+}
+
+.footer-social-icon a {
+    display: inline-block;
+    margin: 14px 10px 0 10px;
 }
 
 .footer .footer-logo {
@@ -412,7 +490,59 @@ span.search-filter span {
     }
 }
 
+@media screen and (max-width: 1020px) {
+    .three-col.footer-logo {
+        width: 100% !important;
+    }
+    .footer .footer-logo {
+        height: 0;
+    }
+    .footer-social-icon {
+        bottom: unset;
+        right: 10%;
+    }
+    .three-col.footer-logo .block {
+        min-height: 0;
+    }
+}
+
 @media screen and (max-width: 992px) {
+    #header .header-nav {
+        width: 320px;
+    }
+    #burger-menu {
+        display: block;
+    }
+    .main-menu {
+        z-index: 10;
+        background: #fff;
+        position: relative;
+        top: 120px;
+        text-align: center;
+        border: 1px solid gainsboro;
+        display: none;
+    }
+    #top-menu li {
+        display: block;
+        height: 50px;
+        line-height: 50px;
+        margin: 0;
+        z-index: 10;
+    }
+    #top-menu li a {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        line-height: 50px;
+        transition: all 0.2s linear;
+    }
+    #top-menu span.und-line {
+        bottom: 0;
+    }
+    #top-menu li a:hover {
+        background: #2c6247;
+        color: #fff;
+    }
     #banner-contacts {
         display: none;
     }
@@ -429,16 +559,22 @@ span.search-filter span {
     }
 }
 
-@media screen and (max-width: 767px) {
-
-}
-
 @media screen and (max-width: 625px) {
+    .right {
+        position: absolute;
+        right: 1%;
+    }
     .banner-container-menu {
         width: 80%;
     }
     #banner-wrap-menu > .three-col {
         width: 100%;
+    }
+    #content-page .content-about h1 {
+        font-size: 1.4em;
+    }
+    .content {
+        font-size: 0.8em;
     }
 }
 
@@ -453,5 +589,31 @@ span.search-filter span {
         display: block;
         max-width: 80%;
         margin: 0 auto;
+    }
+    .block.footer-social {
+        height: 0;
+    }
+    .footer-social-icon {
+        right: unset;
+    }
+}
+@media screen and (max-width: 500px) {
+    .footer .footer-logo {
+        height: 80px;
+    }
+    .footer .footer-logo a {
+        right: unset;
+    }
+}
+@media screen and (max-width: 450px) {
+    .banner-title {
+        font-size: 4em;
+    }
+    .banner-slogan {
+        top: unset;
+        left: unset;
+    }
+    .three-col >.block {
+        min-width: fit-content !important;
     }
 }
