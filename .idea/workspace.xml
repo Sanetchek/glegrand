@@ -5,24 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2af86de4-10d2-4a17-91a0-a151463972e2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/template-parts/post/content-post.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/404.php" beforeDir="false" afterPath="$PROJECT_DIR$/404.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/archive.php" beforeDir="false" afterPath="$PROJECT_DIR$/archive.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comments.php" beforeDir="false" afterPath="$PROJECT_DIR$/comments.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-page.php" beforeDir="false" afterPath="$PROJECT_DIR$/front-page.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/single.php" beforeDir="false" afterPath="$PROJECT_DIR$/single.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template-parts/footer/content-footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/template-parts/footer/content-footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template-parts/header/header-main.php" beforeDir="false" afterPath="$PROJECT_DIR$/template-parts/header/header-main.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template-parts/navigation/nav-breadcrumbs.php" beforeDir="false" afterPath="$PROJECT_DIR$/template-parts/navigation/nav-breadcrumbs.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template-parts/page/content-banner.php" beforeDir="false" afterPath="$PROJECT_DIR$/template-parts/page/content-banner.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template-parts/page/content-page.php" beforeDir="false" afterPath="$PROJECT_DIR$/template-parts/page/content-page.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template-parts/post/content-loop.php" beforeDir="false" afterPath="$PROJECT_DIR$/template-parts/post/content-loop.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +101,7 @@
       <workItem from="1605625442444" duration="7125000" />
       <workItem from="1605639923859" duration="441000" />
       <workItem from="1605640410643" duration="148285000" />
-      <workItem from="1606486374896" duration="41780000" />
+      <workItem from="1606486374896" duration="42517000" />
     </task>
     <servers />
   </component>

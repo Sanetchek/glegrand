@@ -194,7 +194,7 @@ body {
      */
     transform: translate(0, 120%);
     opacity: 0;
-    transition: all 0.4s ease 0s;
+    transition: all 0.6s ease 0s;
 }
 
 .banner-title.active  {
@@ -212,13 +212,13 @@ body {
 
     transform: translate(120%, 0px);
     opacity: 0;
-    transition: all 0.4s ease 0s;
+    transition: all 0.6s ease 0s;
 }
 
 .banner-slogan.active  {
     transform: translate(0px, 0px);
     opacity: 1;
-    transition: all 0.4s ease 0.4s; /*дополнительная задержка*/
+    transition: all 0.6s ease 0.4s; /*дополнительная задержка*/
 }
 
 #banner-contacts {
@@ -232,19 +232,19 @@ body {
 
     transform: translate(-120%, 0px);
     opacity: 0;
-    transition: all 0.4s ease 0s;
+    transition: all 0.6s ease 0s;
 }
 
 .banner-address.active {
     transform: translate(0px, 0px);
     opacity: 1;
-    transition: all 0.4s ease 0.4s; /*дополнительная задержка*/
+    transition: all 0.6s ease 0.4s; /*дополнительная задержка*/
 }
 
 .banner-phone.active {
     transform: translate(0px, 0px);
     opacity: 1;
-    transition: all 0.4s ease 0.6s; /*дополнительная задержка*/
+    transition: all 0.6s ease 0.6s; /*дополнительная задержка*/
 }
 
 .banner-phone a {
@@ -263,13 +263,13 @@ body {
 
     transform: translate(0, 120%);
     opacity: 0;
-    transition: all 0.4s ease 0s;
+    transition: all 0.6s ease 0s;
 }
 
 .banner-mode.active {
     transform: translate(0px, 0px);
     opacity: 1;
-    transition: all 0.4s ease 0.4s; /*дополнительная задержка*/
+    transition: all 0.6s ease 0.4s; /*дополнительная задержка*/
 }
 
 .banner-container-menu {
