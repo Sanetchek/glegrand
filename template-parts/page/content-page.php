@@ -12,7 +12,7 @@
                     the_post_thumbnail('large');
                 }
                 else {
-                    echo '<img src="'.get_template_directory_uri().'/assets/images/page-replace-image.jpg" alt="Picture"/>';
+                    echo '<img src="'.get_bloginfo("template_url").'/assets/images/page-replace-image.jpg" alt="Picture"/>';
                 }
                 ?>
         </div><!-- .post-thumbnail -->
