@@ -14,11 +14,3 @@
 <?php get_template_part( 'template-parts/header/header', 'main' ); ?>
 
 <main id="main">
-
-<?php
-
-$text = 'header.php - end of code';
-
-echo strip_tags($text);
-
-?>

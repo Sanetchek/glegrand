@@ -44,11 +44,3 @@
     </div>
 
 <?php get_footer(); ?>
-
-<?php
-
-$text = 'archive.php - end of code';
-
-echo strip_tags($text);
-
-?>

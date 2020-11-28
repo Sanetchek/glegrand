@@ -18,7 +18,7 @@ $instaImage = get_template_directory_uri() . '/assets/images/instagram.png';
     <div class="raw">
         <div class="three-col">
             <div class="block footer-contacts">
-                <div class="footer-title"><?php _e( $footerTitle, 'glegrandsale') ?></div>
+                <div class="footer-title anim-items"><?php _e( $footerTitle, 'glegrandsale') ?></div>
                 <div class="footer-address"><?php _e( $bannerAddress, 'glegrandsale' ) ?></div>
                 <div class="footer-phone">
                     <?php _e( $bannerPhonePrefix, 'glegrandsale' ) ?>

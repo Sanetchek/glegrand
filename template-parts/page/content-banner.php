@@ -20,16 +20,16 @@ $bannerMode = esc_attr( get_option( 'banner_mode' ) );
 
                 <img src="<?php echo( $bannerImage ); ?>" alt="<?php _e( 'Banner Image', 'glegrandsale' ); ?>">
                 <div class="banner-info">
-                    <div class="banner-title"><?php _e( $bannerTitle, 'glegrandsale' ) ?></div>
-                    <div class="banner-slogan"><?php _e( $bannerTagline, 'glegrandsale' ) ?></div>
+                    <div class="banner-title anim-items"><?php _e( $bannerTitle, 'glegrandsale' ) ?></div>
+                    <div class="banner-slogan anim-items"><?php _e( $bannerTagline, 'glegrandsale' ) ?></div>
                     <div id="banner-contacts">
-                        <div class="banner-address"><?php _e( $bannerAddress, 'glegrandsale' ) ?></div>
-                        <div class="banner-phone">
+                        <div class="banner-address anim-items"><?php _e( $bannerAddress, 'glegrandsale' ) ?></div>
+                        <div class="banner-phone anim-items">
                             <?php _e( $bannerPhonePrefix, 'glegrandsale' ) ?>
                             <a href="tel:<?php echo $bannerPhoneOne ?>"><?php echo $bannerPhoneOne ?></a>,
                             <a href="tel:<?php echo $bannerPhoneTwo ?>"><?php echo $bannerPhoneTwo ?></a>
                         </div>
-                        <div class="banner-mode"><?php _e( $bannerMode, 'glegrandsale' ) ?></div>
+                        <div class="banner-mode anim-items"><?php _e( $bannerMode, 'glegrandsale' ) ?></div>
                     </div>
                 </div>
             </div>
@@ -51,11 +51,3 @@ $bannerMode = esc_attr( get_option( 'banner_mode' ) );
     ?>
 </div>
 <div class="clearfix"></div>
-
-<?php
-
-$text = 'content-banner.php - end of code';
-
-echo strip_tags($text);
-
-?>

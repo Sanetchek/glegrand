@@ -61,11 +61,3 @@
 	    comment_form($args); // показываем нашу форму
 	} ?>
 </div>
-
-<?php
-
-$text = 'comments.php - end of code';
-
-echo strip_tags($text);
-
-?>

@@ -5,10 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2af86de4-10d2-4a17-91a0-a151463972e2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/images/page-replace-image.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template-parts/post/content-post.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/page-replace-imge.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/404.php" beforeDir="false" afterPath="$PROJECT_DIR$/404.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive.php" beforeDir="false" afterPath="$PROJECT_DIR$/archive.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comments.php" beforeDir="false" afterPath="$PROJECT_DIR$/comments.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-page.php" beforeDir="false" afterPath="$PROJECT_DIR$/front-page.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/single.php" beforeDir="false" afterPath="$PROJECT_DIR$/single.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template-parts/footer/content-footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/template-parts/footer/content-footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template-parts/header/header-main.php" beforeDir="false" afterPath="$PROJECT_DIR$/template-parts/header/header-main.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template-parts/navigation/nav-breadcrumbs.php" beforeDir="false" afterPath="$PROJECT_DIR$/template-parts/navigation/nav-breadcrumbs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template-parts/page/content-banner.php" beforeDir="false" afterPath="$PROJECT_DIR$/template-parts/page/content-banner.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/template-parts/page/content-page.php" beforeDir="false" afterPath="$PROJECT_DIR$/template-parts/page/content-page.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template-parts/post/content-loop.php" beforeDir="false" afterPath="$PROJECT_DIR$/template-parts/post/content-loop.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +117,7 @@
       <workItem from="1605625442444" duration="7125000" />
       <workItem from="1605639923859" duration="441000" />
       <workItem from="1605640410643" duration="148285000" />
-      <workItem from="1606486374896" duration="32011000" />
+      <workItem from="1606486374896" duration="41780000" />
     </task>
     <servers />
   </component>
@@ -166,10 +180,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1606031274154" />
-    <state x="472" y="363" key="NewPhpFileDialog" timestamp="1606308120202">
+    <state x="472" y="363" key="NewPhpFileDialog" timestamp="1606586154901">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="472" y="363" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1606308120202" />
+    <state x="472" y="363" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1606586154901" />
     <state x="277" y="57" key="SettingsEditor" timestamp="1606132487317">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -182,10 +196,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="477" y="0" width="581" height="824" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1605555102867" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1605943552462">
+    <state x="425" y="187" key="run.anything.popup" timestamp="1606571112426">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1605943552462" />
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1606571112426" />
     <state x="415" y="77" width="672" height="678" key="search.everywhere.popup" timestamp="1605554863690">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

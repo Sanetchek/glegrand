@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-
+<div class="wrapper">
     <?php get_template_part( 'template-parts/navigation/nav', 'breadcrumbs' ); ?>
 
     <article class="article">
@@ -11,9 +11,7 @@
 
         <?php endwhile; ?>
 
-        <?php if (function_exists(wp_corenavi)) {
-            wp_corenavi();
-        } ?>
+        <?php if ( function_exists( 'wp_corenavi' ) ) wp_corenavi(); ?>
         <?php wp_reset_postdata(); ?>
 
     <?php else:  ?>
@@ -32,13 +30,5 @@
     <?php endif; ?>
 
     </article>
-
+</div>
 <?php get_footer(); ?>
-
-<?php
-
-$text = 'index.php - end of code';
-
-echo strip_tags($text);
-
-?>

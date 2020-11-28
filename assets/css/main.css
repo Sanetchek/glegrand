@@ -4,7 +4,6 @@
     src: url("../fonts/Lobster-Regular.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
-    font-display: swap;
 }
 
 @font-face {
@@ -12,7 +11,6 @@
     src: url("../fonts/Oswald/Oswald-Bold.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
-    font-display: swap;
 }
 
 @font-face {
@@ -20,7 +18,6 @@
     src: url("../fonts/Oswald/Oswald-ExtraLight.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
-    font-display: swap;
 }
 
 @font-face {
@@ -28,7 +25,6 @@
     src: url("../fonts/Oswald/Oswald-Light.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
-    font-display: swap;
 }
 
 @font-face {
@@ -36,7 +32,6 @@
     src: url("../fonts/Oswald/Oswald-Regular.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
-    font-display: swap;
 }
 
 @font-face {
@@ -192,6 +187,19 @@ body {
     font-style: italic;
     font-size: 8em;
     color: #fff;
+
+    /* анимация при прокрутке
+     * добавим класс active
+     * создадим функцию в скриптах
+     */
+    transform: translate(0, 120%);
+    opacity: 0;
+    transition: all 0.4s ease 0s;
+}
+
+.banner-title.active  {
+    transform: translate(0px, 0px);
+    opacity: 1;
 }
 
 .banner-slogan {
@@ -201,6 +209,16 @@ body {
     left: 25%;
     width: fit-content;
     width: -moz-fit-content;
+
+    transform: translate(120%, 0px);
+    opacity: 0;
+    transition: all 0.4s ease 0s;
+}
+
+.banner-slogan.active  {
+    transform: translate(0px, 0px);
+    opacity: 1;
+    transition: all 0.4s ease 0.4s; /*дополнительная задержка*/
 }
 
 #banner-contacts {
@@ -211,6 +229,22 @@ body {
     text-align: center;
     font-size: 1em;
     margin-right: 30%;
+
+    transform: translate(-120%, 0px);
+    opacity: 0;
+    transition: all 0.4s ease 0s;
+}
+
+.banner-address.active {
+    transform: translate(0px, 0px);
+    opacity: 1;
+    transition: all 0.4s ease 0.4s; /*дополнительная задержка*/
+}
+
+.banner-phone.active {
+    transform: translate(0px, 0px);
+    opacity: 1;
+    transition: all 0.4s ease 0.6s; /*дополнительная задержка*/
 }
 
 .banner-phone a {
@@ -226,6 +260,16 @@ body {
     margin-top: 10%;
     font-size: 1.5em;
     text-align: right;
+
+    transform: translate(0, 120%);
+    opacity: 0;
+    transition: all 0.4s ease 0s;
+}
+
+.banner-mode.active {
+    transform: translate(0px, 0px);
+    opacity: 1;
+    transition: all 0.4s ease 0.4s; /*дополнительная задержка*/
 }
 
 .banner-container-menu {
@@ -277,6 +321,34 @@ body {
     filter: grayscale(1);
 }
 
+ul#banner-wrap-menu .three-col, ul#footer-wrap-menu .four-col {
+    transform: translate(0, 120%);
+    opacity: 0;
+    transition: all 0.4s ease 0s;
+}
+
+ul#banner-wrap-menu .three-col:nth-child(3n+1).active, ul#footer-wrap-menu .four-col:nth-child(4n+1).active {
+    transform: translate(0, 0);
+    opacity: 1;
+    transition: all 0.4s ease 0s;
+}
+ul#banner-wrap-menu .three-col:nth-child(3n+2).active, ul#footer-wrap-menu .four-col:nth-child(4n+2).active {
+    transform: translate(0, 0);
+    opacity: 1;
+    transition: all 0.4s ease 0.1s;
+}
+ul#banner-wrap-menu .three-col:nth-child(3n+3).active, ul#footer-wrap-menu .four-col:nth-child(4n+3).active  {
+    transform: translate(0, 0);
+    opacity: 1;
+    transition: all 0.4s ease 0.2s;
+}
+
+ul#footer-wrap-menu .four-col:nth-child(4n+4).active  {
+    transform: translate(0, 0);
+    opacity: 1;
+    transition: all 0.4s ease 0.3s;
+}
+
 /* Content-page */
 #content-page {
     min-height: 580px;
@@ -307,6 +379,17 @@ body {
     font-family: 'OswaldLight', Helvetica, sans-serif;
     margin-bottom: 90px;
     list-style-type: none;
+}
+
+.front-page {
+    transform: translate(0, 120%);
+    opacity: 0;
+    transition: all 0.4s ease 0s;
+}
+
+.front-page.active {
+    transform: translate(0px, 0px);
+    opacity: 1;
 }
 
 /* Footer menu */
@@ -394,6 +477,15 @@ body {
     font-family: "LobsterRegular", Helvetica, sans-serif;
     font-size: 2.6em;
     margin: 11% 0 8% 0;
+    transform: translate(0, 120%);
+    opacity: 0;
+    transition: all 0.4s ease 0s;
+}
+
+.footer-title.active {
+    transform: translate(0,0);
+    opacity: 1;
+    transition: all 0.4s ease 0.4s;
 }
 
 .footer-address {
@@ -430,6 +522,11 @@ h4.footer-hour-mode, .footer-social-head {
 .footer-social-icon a {
     display: inline-block;
     margin: 14px 10px 0 10px;
+    filter: grayscale(0.4);
+}
+
+.footer-social-icon a:hover {
+    filter: grayscale(0);
 }
 
 .footer .footer-logo {

@@ -155,8 +155,10 @@ add_filter( 'nav_menu_css_class', 'change_menu_item_css_classes', 10, 4 );
 function change_menu_item_css_classes( $classes, $item, $args, $depth ) {
     if ( $args->theme_location === 'third' ) {
         $classes[] = 'three-col';
+        $classes[] = 'anim-items';
     } elseif ($args->theme_location === 'second') {
         $classes[] = 'four-col';
+        $classes[] = 'anim-items';
     }
     return $classes;
 }
@@ -185,3 +187,22 @@ add_action( 'widgets_init', 'glegrand_widgets_init' );
 */
 
 add_theme_support( 'post-thumbnails', array( 'post', 'page' ) );
+
+/*
+===================================================================
+          Постраничная навигация
+===================================================================
+*/
+function wp_corenavi() {
+    global $wp_query;
+    $total = isset( $wp_query->max_num_pages ) ? $wp_query->max_num_pages : 1;
+    $a['total'] = $total;
+    $a['mid_size'] = 3; // сколько ссылок показывать слева и справа от текущей
+    $a['end_size'] = 1; // сколько ссылок показывать в начале и в конце
+    $a['prev_text'] = '&laquo;'; // текст ссылки "Предыдущая страница"
+    $a['next_text'] = '&raquo;'; // текст ссылки "Следующая страница"
+
+    if ( $total > 1 ) echo '<nav class="pagination">';
+    echo paginate_links( $a );
+    if ( $total > 1 ) echo '</nav>';
+}

@@ -35,11 +35,3 @@
 	</div>
 
 </header>
-
-<?php
-
-$text = 'header-main.php - end of code';
-
-echo strip_tags($text);
-
-?>

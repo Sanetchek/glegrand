@@ -16,11 +16,3 @@
     </div>
     <div class="clearfix"></div>
 <?php get_footer(); ?>
-
-<?php
-
-$text = '404.php - end of code';
-
-echo strip_tags($text);
-
-?>

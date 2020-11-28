@@ -22,11 +22,3 @@
 </div>
 
 <?php get_footer(); ?>
-
-<?php
-
-$text = 'front-page.php - end of code';
-
-echo strip_tags($text);
-
-?>

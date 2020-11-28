@@ -7,11 +7,3 @@
         ?>
 	</div>
 </header>
-
-<?php
-
-$text = 'nav-breadcrumbs.php - end of code';
-
-echo strip_tags($text);
-
-?>
