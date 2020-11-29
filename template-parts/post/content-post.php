@@ -1,13 +1,6 @@
-<article>
+<article class="single-post">
     <header class="post-header">
 	    <?php get_template_part( 'template-parts/navigation/nav', 'breadcrumbs' ); ?>
-        <div class="post-thumbnail">
-            <a href="<?php the_permalink(); ?>">
-	            <?php
-		            the_post_thumbnail('large');
-                ?>
-            </a>
-        </div><!-- .post-thumbnail -->
 
         <?php if ( is_single() ) {
                 the_title( '<h1>', '</h1>' );
@@ -26,19 +19,17 @@
     </main>
 
     <?php
-    if ( comments_open() || get_comments_number() ) :
-	    comments_template();
-    endif;
+    the_post_navigation( array(
+        'prev_text' => '<span>' . __( 'Предыдущая страница: ', 'glegrand' ) . '</span>'.  '<span class="post-title">%title</span>',
+        'next_text' => '<span>' . __( 'Следующая страница: ', 'glegrand' ) . '</span>'.  '<span class="post-title">%title</span>',
+        'before_page_number' => '<span>' . __( 'Страница: ', 'glegrand' ) . ' </span>',
+    ) );
     ?>
 
-	<?php
+    <?php if ( comments_open() || get_comments_number() ) :
+            comments_template();
+    endif;?>
 
 
-	the_post_navigation( array(
-		'prev_text' => '<span>' . __( 'Предыдущая страница: ', 'glegrandsale' ) . '</span>'.  '<span class="post-title">%title</span>',
-		'next_text' => '<span>' . __( 'Следующая страница: ', 'glegrandsale' ) . '</span>'.  '<span class="post-title">%title</span>',
-		'before_page_number' => '<span>' . __( 'Страница: ', 'glegrandsale' ) . ' </span>',
-	) );
-    ?>
 
 </article><!-- #post-## -->

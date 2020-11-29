@@ -73,6 +73,7 @@
 /* Style */
 body {
     font-family: "OswaldRegular", Helvetica, sans-serif;
+    font-size: 100%;
 }
 
 .display {
@@ -543,35 +544,97 @@ h4.footer-hour-mode, .footer-social-head {
 }
 
 /* Search */
-.search-wrap {
-    margin: 0 auto;
-    max-width: 1135px;
+form.search-form {
+    margin: 30px 0;
 }
 
-input:focus {
-    outline: none;
-}
-
-.search-wrap input.search-field, .search-wrap input.city-search {
-}
-
-form.search-form input {
-}
-
-button.search-submit {
-}
-
-button.search-submit {
-}
-
-span.search-filter {
-}
-
-span.search-filter span {
-}
-
+/* Single post */
 .article {
-    margin: 95px 0;
+    margin: 40px 0;
+    padding: 6%;
+}
+
+.article h2 {
+    font-family: 'OswaldExtraLight', Helvetica, sans-serif;
+    font-weight: unset;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.article p {
+    font-family: 'OswaldLight', Helvetica, sans-serif;
+}
+
+article.article img {
+    padding-bottom: 20px;
+}
+
+article.single-post {
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 60px;
+}
+
+article.single-post h1 {
+    font-family: 'OswaldExtraLight', Helvetica, sans-serif;
+    font-weight: unset;
+    font-size: 2.5em;
+    margin: 30px 0;
+}
+
+article.single-post main {
+    font-size: 1.2em;
+    font-family: 'OswaldLight', Helvetica, sans-serif;
+    margin-bottom: 60px;
+}
+
+article.single-post p, article.single-post h2, article.single-post h3, article.single-post h4 {
+    padding: 15px 0;
+}
+
+/* Comment form */
+div#comments h2 {
+    font-family: 'OswaldExtraLight', Helvetica, sans-serif;
+    font-weight: unset;
+    font-size: 1em;
+}
+
+/* 404 page */
+section.error-404.not-found {
+    text-align: center;
+    padding: 200px 0 100px 0;
+}
+
+/* Author page */
+h2.author-name {
+    text-align: center;
+    margin: 20px 0 40px 0;
+    font-weight: normal;
+}
+
+h2.author-name b {
+    text-transform: uppercase;
+}
+
+.author-sitename a {
+    color: #0000ff;
+}
+
+.author-info {
+    margin-bottom: 60px;
+}
+
+ul.author-posts {
+    font-family: "OswaldLight", Helvetica, sans-serif;
+    padding: 20px 0 20px 40px;
+}
+
+ul.author-posts li {
+    margin-bottom: 10px;
+}
+
+ul.author-posts a {
+    text-decoration: underline;
 }
 
 /* General Media width */
@@ -604,6 +667,9 @@ span.search-filter span {
 }
 
 @media screen and (max-width: 992px) {
+    body {
+        font-size: 90%;
+    }
     #header .header-nav {
         width: 320px;
     }
@@ -657,6 +723,9 @@ span.search-filter span {
 }
 
 @media screen and (max-width: 625px) {
+    body {
+        font-size: 80%;
+    }
     .right {
         position: absolute;
         right: 1%;

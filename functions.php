@@ -58,6 +58,14 @@ require_once('inc/functions-updates.php');
 require_once ('inc/functions-plugins.php');
 
 /*
+ * Simple ajax comment form mod                         -   ON
+ * Disable comment js                                   -   ON
+ * Comment form                                         -   ON
+ * Reorder comment fields                               -   ON
+ */
+require_once('comments/function-comments.php');
+
+/*
 ===================================================================
           Custom site background
 ===================================================================
@@ -111,18 +119,18 @@ function glegrand_scripts()
 	wp_enqueue_style('general', get_template_directory_uri() . '/assets/css/general.css');
 
     // Scripts
-    // отменяем зарегистрированный jQuery
-    // вместо "jquery-core", можно вписать "jquery", тогда будет отменен еще и jquery-migrate
-    wp_deregister_script( 'jquery' );
-    wp_register_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js');
-    wp_enqueue_script( 'jquery' );
-    wp_enqueue_script('script', get_template_directory_uri() . '/assets/js/script.js', false, null, true);
-}
+    wp_enqueue_script('jquery');
+    wp_enqueue_script('jquery-form');
+    wp_localize_script( 'jquery', 'ajax_var', // добавим объект с глобальными JS переменными
+        array('url' => admin_url('admin-ajax.php')) // и сунем в него путь до AJAX обработчика
+    );
 
+    wp_enqueue_script('script', get_template_directory_uri() . '/assets/js/script.js', false, null, true);
+    wp_enqueue_script('comments', get_template_directory_uri() . '/assets/js/comments.js', false, null, true);
+}
 add_action('wp_enqueue_scripts', 'glegrand_scripts');
 
 // Cниппет, который добавит асинхронную загрузку для скриптов, подключенных через wp_enqueue_script():
-
 add_filter('script_loader_tag', 'add_async_attribute', 10, 2);
 
 function add_async_attribute($tag, $handle)

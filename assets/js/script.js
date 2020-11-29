@@ -19,7 +19,7 @@ jQuery(document).ready( function($) {
                 const animItem = animItems[index];
                 const animItemHeight = animItem.offsetHeight;  //получ высоту элементов
                 const animItemOffset = offset(animItem).top; // получаем позицию обьекта относительно верха
-                const animStart = 10; //коефициент
+                const animStart = 4; //коефициент
 
                 let animItemPoint = window.innerHeight - animItemHeight / animStart;
 

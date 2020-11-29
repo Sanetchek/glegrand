@@ -5,13 +5,5 @@
            value="<?php echo get_search_query(); ?>"
            name="s" />
 
-    <button type="submit" class="search-submit"><span class="search-text"><?php echo _e( 'Найти', 'submit button', 'glegrand' ); ?></span></button>
+    <button type="submit" class="search-submit button button-primary"><span class="search-text"><?php echo _e( 'Найти', 'submit button', 'glegrand' ); ?></span></button>
 </form>
-
-<?php
-
-$text = 'searchform.php - end of code';
-
-echo strip_tags($text);
-
-?>

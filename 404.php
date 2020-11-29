@@ -7,9 +7,8 @@
                     <h1><?php _e( 'Oops! Эта страница не найдена.', 'glegrand' ); ?></h1>
                 </header><!-- .page-header -->
                 <div>
-                    <p><?php _e( 'Похоже ничего не найдено. Попробуйте поиск?', 'glegrand' ); ?></p>
+                    <p><?php _e( 'Похоже ничего не найдено. Воспользуйтесь поиском.', 'glegrand' ); ?></p>
                     <?php get_search_form(); ?>
-
                 </div>
             </section>
         </main>

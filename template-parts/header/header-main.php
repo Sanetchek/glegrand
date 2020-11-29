@@ -4,7 +4,7 @@
 	<div class="wrapper">
 		<div class="left header-log-height">
 			<a href="<?php echo get_home_url(); ?>" class="logo">
-                <img id="header-logo" src="<?php print $headerLogo ?>" alt="<?php _e( 'Логотип', 'glegrandsale' ); ?>">
+                <img id="header-logo" src="<?php print $headerLogo ?>" alt="<?php _e( 'Логотип', 'glegrand' ); ?>">
 			</a>
 		</div>
 		<div class="right">

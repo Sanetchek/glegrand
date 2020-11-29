@@ -48,7 +48,7 @@ function customize_banner_settings() {
 }
 
 function customize_top_options() {
-    echo 'Страница редактирования информации в Банере';
+    echo __( 'Страница редактирования информации в Банере', 'customize' );
 }
 
 function customize_favicon() {

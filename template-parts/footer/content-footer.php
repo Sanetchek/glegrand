@@ -18,21 +18,21 @@ $instaImage = get_template_directory_uri() . '/assets/images/instagram.png';
     <div class="raw">
         <div class="three-col">
             <div class="block footer-contacts">
-                <div class="footer-title anim-items"><?php _e( $footerTitle, 'glegrandsale') ?></div>
-                <div class="footer-address"><?php _e( $bannerAddress, 'glegrandsale' ) ?></div>
+                <div class="footer-title anim-items"><?php _e( $footerTitle, 'glegrand') ?></div>
+                <div class="footer-address"><?php _e( $bannerAddress, 'glegrand' ) ?></div>
                 <div class="footer-phone">
-                    <?php _e( $bannerPhonePrefix, 'glegrandsale' ) ?>
+                    <?php _e( $bannerPhonePrefix, 'glegrand' ) ?>
                     <a href="tel:<?php echo $bannerPhoneOne ?>"><?php echo $bannerPhoneOne ?></a>,
                     <a href="tel:<?php echo $bannerPhoneTwo ?>"><?php echo $bannerPhoneTwo ?></a>
                 </div>
-                <h4 class="footer-hour-mode"><?php _e( $footerHourMode, 'glegrandsale' ) ?></h4>
-                <span class="footer-mode"><?php _e( $bannerMode, 'glegrandsale' ) ?></span>
+                <h4 class="footer-hour-mode"><?php _e( $footerHourMode, 'glegrand' ) ?></h4>
+                <span class="footer-mode"><?php _e( $bannerMode, 'glegrand' ) ?></span>
             </div>
         </div>
         <div class="three-col ">
             <div class="block footer-social">
                 <div class="footer-social-icon">
-                    <h4 class="footer-social-head"><?php _e('Социальные сети:', 'glegrandsale') ?></h4>
+                    <h4 class="footer-social-head"><?php _e('Социальные сети:', 'glegrand') ?></h4>
                     <a target="_blank" href="https://www.facebook.com/<?php print $fbSlug ?>/"><img src="<?php print $fbImage ?>" alt=""></a>
                     <a target="_blank" href="https://www.instagram.com/<?php print $instaSlug ?>/"><img src="<?php print $instaImage ?>" alt=""></a>
                 </div>

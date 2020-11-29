@@ -125,7 +125,6 @@ section {
     .raw > .six-col { width: 25%; }
     .raw > .six-col:nth-child(5n+1) { clear: none; }
     .raw > .six-col:nth-child(4n+1) { clear: both; }
-    .six-col > .block { width: 180px; }
 }
 
 @media screen and (max-width: 900px) {
@@ -180,6 +179,9 @@ section {
     .five-col > .block {
         width: 33.333%;
     }
+    .raw > .two-col {
+        width: 100%;
+    }
 }
 @media screen and (max-width: 580px) {
     .raw > .six-col,
@@ -204,10 +206,10 @@ section {
     display: inline-block;
     text-decoration: none;
     font-size: 13px;
-    line-height: 28px;
-    height: 28px;
+    line-height: 36px;
+    height: 36px;
     margin: 0;
-    padding: 0 10px 1px;
+    padding: 0 25px 1px;
     cursor: pointer;
     border: 1px solid;
     -webkit-appearance: none;
@@ -240,12 +242,13 @@ section {
 }
 
 .button-primary {
-    background: #9D5D39;
+    background: #2f644a;
     color: #fff;
 }
 
 input:not([type]), input[type="email"], input[type="number"], input[type="password"], input[type="tel"], input[type="url"], input[type="text"], input[type="search"] {
-    height: 28px;
+    width: 30%;
+    height: 36px;
     padding: 0 10px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
