@@ -14,19 +14,14 @@
                      * See ispynyc_comment() in glegrand/functions.php for more.
                      */
                     wp_list_comments( array(
-                        'callback' => 'customize_comment_list_callback',
-                        'reverse_top_level'  => 'desc',
+                        'callback'           => 'customize_comment_list_callback',
+                        'max_depth'          => 2,
+                        'reverse_top_level'  => true,
                         'login_text' => ''
                     ) );
                     ?>
 
-
-                    <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
-                        <div class="navigation">
-                            <div class="nav-previous"><?php previous_comments_link( __( '<span class="meta-nav">&larr;</span> Старые комментарии', 'glegrand' ) ); ?></div>
-                            <div class="nav-next"><?php next_comments_link( __( 'Новые комментарии <span class="meta-nav">&rarr;</span>', 'glegrand' ) ); ?></div>
-                        </div><!-- .navigation -->
-                    <?php endif; // check for comment navigation ?>
+                    <?php the_comments_pagination(); ?>
 
                 <?php else : ?>
 

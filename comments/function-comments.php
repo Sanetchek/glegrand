@@ -15,8 +15,13 @@ function custom_comment_template($comment_template){
     if ( ! ( is_single() || is_page() || $withcomments ) || empty( $post ) ) {
         return;
     }
-    $comment_template = __DIR__. '/comments/template-parts/content-comments.php';
-    return $comment_template;// полный путь до файла
+    // Path to our new comment template file
+    $new_theme_template = get_template_directory() . '/comments/template-parts/content-comments.php';
+
+    // Override if it exsits
+    if( file_exists( $new_theme_template ) )
+        $comment_template = $new_theme_template;
+    return $comment_template;
 }
 
 /*
@@ -117,7 +122,7 @@ function customize_comment_list_callback( $comment, $args, $depth ) {
             ); ?>
         </a>
 
-        <?php edit_comment_link( __( '(Редактировать)', 'glegrand' ), '  ', '' ); ?>
+        <?php edit_comment_link( __( '(Изменить)', 'glegrand' ), '  ', '' ); ?>
     </div>
 
     <?php comment_text(); ?>
