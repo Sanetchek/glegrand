@@ -1,129 +1,61 @@
-"use strict";
+var addComment = {
+    moveForm : function(commId, parentId, respondId, postId) {
+        var t = this, div, comm = t.I(commId), respond = t.I(respondId), cancel = this.I('cancel-comment-reply-link'), parent = t.I('comment_parent'), post = t.I('comment_post_ID');
 
-jQuery(document).ready( function($) {
+        if ( ! comm || ! respond || ! cancel || ! parent )
+            return;
 
-    var addComment = {
-        moveForm: function( commId, parentId, respondId, postId ) {
-            var div, element, style, cssHidden,
-                t           = this,
-                comm        = t.I( commId ),
-                respond     = t.I( respondId ),
-                cancel      = t.I( 'cancel-comment-reply-link' ),
-                parent      = t.I( 'comment_parent' ),
-                post        = t.I( 'comment_post_ID' ),
-                commentForm = respond.getElementsByTagName( 'form' )[0];
+        t.respondId = respondId;
+        postId = postId || false;
 
-            if ( ! comm || ! respond || ! cancel || ! parent || ! commentForm ) {
-                return;
-            }
-
-            t.respondId = respondId;
-            postId = postId || false;
-
-            if ( ! t.I( 'wp-temp-form-div' ) ) {
-                div = document.createElement( 'div' );
-                div.id = 'wp-temp-form-div';
-                div = respond.cloneNode(true);
-                div.style.display = '';
-                respond.parentNode.insertBefore( div, respond );
-            }
-
-            comm.parentNode.insertBefore( respond, comm.nextSibling );
-            if ( post && postId ) {
-                post.value = postId;
-            }
-            parent.value = parentId;
-            //cancel.style.display = '';
-
-            cancel.onclick = function() {
-                var t       = addComment,
-                    temp    = t.I( 'wp-temp-form-div' ),
-                    respond = t.I( t.respondId );
-
-                if ( ! temp || ! respond ) {
-                    return;
-                }
-
-                t.I( 'comment_parent' ).value = '0';
-                temp.parentNode.insertBefore( respond, temp );
-                temp.parentNode.removeChild( temp );
-                this.style.display = 'none';
-                this.onclick = null;
-                return false;
-            };
-
-            /*
-             * Set initial focus to the first form focusable element.
-             * Try/catch used just to avoid errors in IE 7- which return visibility
-             * 'inherit' when the visibility value is inherited from an ancestor.
-             */
-            try {
-                for ( var i = 0; i < commentForm.elements.length; i++ ) {
-                    element = commentForm.elements[i];
-                    cssHidden = false;
-
-                    // Modern browsers.
-                    if ( 'getComputedStyle' in window ) {
-                        style = window.getComputedStyle( element );
-                        // IE 8.
-                    } else if ( document.documentElement.currentStyle ) {
-                        style = element.currentStyle;
-                    }
-
-                    /*
-                     * For display none, do the same thing jQuery does. For visibility,
-                     * check the element computed style since browsers are already doing
-                     * the job for us. In fact, the visibility computed style is the actual
-                     * computed value and already takes into account the element ancestors.
-                     */
-                    if ( ( element.offsetWidth <= 0 && element.offsetHeight <= 0 ) || style.visibility === 'hidden' ) {
-                        cssHidden = true;
-                    }
-
-                    // Skip form elements that are hidden or disabled.
-                    if ( 'hidden' === element.type || element.disabled || cssHidden ) {
-                        continue;
-                    }
-
-                    element.focus();
-                    // Stop after the first focusable element.
-                    break;
-                }
-
-            } catch( er ) {}
-
-            return false;
-        },
-
-        I: function( id ) {
-            return document.getElementById( id );
+        if ( ! t.I('wp-temp-form-div') ) {
+            div = document.createElement('div');
+            div.id = 'wp-temp-form-div';
+            div.style.display = 'none';
+            respond.parentNode.insertBefore(div, respond);
         }
-    }
 
-    ///////////////////////////////////////////////
+        comm.parentNode.insertBefore(respond, comm.nextSibling);
+        if ( post && postId )
+            post.value = postId;
+        parent.value = parentId;
+        cancel.style.display = '';
 
-    var selectedSPAN;
-
-    function showCommentForm(node) {
-        selectedSPAN = node;
-        if (selectedSPAN.className !== 'add-a-comment') { return; }
-        if(selectedSPAN.nextElementSibling.style.display === "none") {
-            selectedSPAN.nextElementSibling.style.display = "block";
-            selectedSPAN.innerHTML = "Hide comments";
-        } else {
-            selectedSPAN.nextElementSibling.style.display = "none";
-            selectedSPAN.innerHTML = "Show comments";
+        cancel.onclick = function() {
+            addComment.moveBack();
         }
+
+        try { t.I('comment').focus(); }
+        catch(e) {}
+
+        return false;
+    },
+
+    I : function(e) {
+        return document.getElementById(e);
+    },
+
+    moveBack : function() {
+        var t = addComment, temp = t.I('wp-temp-form-div'), respond = t.I( t.respondId ), cancel = this.I('cancel-comment-reply-link');
+
+        if ( ! temp || ! respond )
+            return;
+
+        t.I('comment_parent').value = '0';
+        temp.parentNode.insertBefore(respond, temp);
+        temp.parentNode.removeChild(temp);
+        cancel.style.display = 'none';
+        cancel.onclick = null;
+        return false;
     }
+}
 
-    document.body.onclick = function (event) {
-        var target = event.target || event.srcElement;
-        showCommentForm(target);
-    };
+'use strict';
 
+//////////////////////////////////////////////////////
+
+jQuery(document).ready(function ($){
     $(function ajaxComments() {
-
-        $(function () {
             $('.comment-form').each(function () {
                 // Объявляем переменные (форма и кнопка отправки)
                 var form = $(this),
@@ -181,20 +113,23 @@ jQuery(document).ready( function($) {
                     }
                 });
             });
-        });
+
 
 
 ////////////////////////////////////////////////////////////////////////////
-        $(function () {
+
             $('body').on('submit', '.comment-form', function (e) {
                 // Stop the default form behavior
                 e.preventDefault();
-                var target = $(e.target);
-                var targetParent = target.parents('.comment_form');
-                var commentform = $(this);
-                var action = commentform.attr('action');
-                var inputs = commentform.serializeArray();
-                var submitting_comment = target.find('.submitting-comment');
+                var target = $(e.target),
+                    targetParent = target.parents('.comment_form'),
+                    commentform = $(this),
+                    action = commentform.attr('action'),
+                    inputs = commentform.serializeArray(),
+                    submitting_comment = target.find('.submitting-comment'),
+                    temp = $('#wp-temp-form-div'),
+                    respond = $( '#respond' ),
+                    commList = $( '.commentlist' );
 
                 // Submitting comment
                 commentform.ajaxSubmit({
@@ -204,15 +139,20 @@ jQuery(document).ready( function($) {
                         submitting_comment.show();
                     },
                     success: function (responseText, statusText, xhr, form) {
-                        // Switch the existing comment area with the comment area returned from AJAX call
-                        var cancel = $("#cancel-comment-reply-link");
-                        if (cancel) {
-                            cancel.click();
+                        if ( ! temp || ! respond ) {
+                            return;
+                        } else {
+                            respond.insertAfter( commList );
                         }
+
+                        // Switch the existing comment area with the comment area returned from AJAX call
+
 
                         var page = $(responseText);
                         var comments = page.find('.commentlist');
                         targetParent.find('.commentlist').replaceWith(comments);
+
+
 
                         commentform.find('p').slideDown();
                         submitting_comment.hide();
@@ -238,8 +178,7 @@ jQuery(document).ready( function($) {
                 });
                 return false;
             })
-        });
+
     });
-
-
 });
+///////////////////////////////////////////////////////

@@ -542,6 +542,14 @@ h4.footer-hour-mode, .footer-social-head {
     font-size: 4em;
     color: #2c6247;
 }
+/* Corenavi */
+nav.pagination {
+    text-align: center;
+}
+
+nav.pagination .page-numbers {
+    padding: 0 10px;
+}
 
 /* Search */
 form.search-form {
@@ -672,6 +680,11 @@ ul.author-posts a {
     }
     #header .header-nav {
         width: 320px;
+        position: relative;
+        height: 0;
+    }
+    #top-menu li a:hover + span {
+        height: 0;
     }
     #burger-menu {
         display: block;

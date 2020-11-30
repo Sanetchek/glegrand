@@ -1,14 +1,20 @@
 <?php
 
 /*
- * Enqueue scripts                     -   ON
- * Simple ajax comment form mod        -   ON
- * Disable comment js                  -   ON
- * Comment form                        -   ON
- * Reorder comment fields              -   ON
+ * Прописываем путь к форме комментариев    -   ON
+ * Enqueue scripts                          -   ON
+ * Simple ajax comment form mod             -   ON
+ * Disable comment js                       -   ON
+ * Comment form                             -   ON
+ * Reorder comment fields                   -   ON
  *
  **/
 
+/*
+===================================================================
+          Прописываем путь к форме комментариев
+===================================================================
+*/
 add_filter( 'comments_template', 'custom_comment_template' );
 function custom_comment_template($comment_template){
     global $post, $withcomments;
@@ -33,7 +39,7 @@ function custom_comment_template($comment_template){
 function custom_comments_scripts()
 {
     // Styles
-    //wp_enqueue_style('style', get_template_directory_uri() . '/style.css');
+    wp_enqueue_style('comments-form', get_template_directory_uri() . '/comments/css/comments-form.css');
 
 
     // Scripts
@@ -42,7 +48,10 @@ function custom_comments_scripts()
     wp_localize_script( 'jquery', 'ajax_var', // добавим объект с глобальными JS переменными
         array('url' => admin_url('admin-ajax.php')) // и сунем в него путь до AJAX обработчика
     );
-    wp_enqueue_script( 'comments', get_template_directory_uri() . '/comments/js/comments.min.js', array('jquery'), null, true );
+    wp_enqueue_script( 'comments', get_template_directory_uri() . '/comments/js/comments.js', array('jquery'), null, true );
+
+    // добавим comment_reply для ответа на комментарии
+    wp_enqueue_script( 'comment-reply' );
 }
 add_action('wp_enqueue_scripts', 'custom_comments_scripts');
 
@@ -67,10 +76,10 @@ add_action( 'comment_form', 'simple_ajax_comment_form_mod' );
    ===================================================================
 */
 
-function disable_comment_js(){
-    wp_deregister_script( 'comment-reply' );
-}
-add_action('init','disable_comment_js');
+//function disable_comment_js(){
+//    wp_deregister_script( 'comment-reply' );
+//}
+//add_action('init','disable_comment_js');
 
 /*
    ===================================================================
@@ -78,73 +87,65 @@ add_action('init','disable_comment_js');
    ===================================================================
 */
 function customize_comment_list_callback( $comment, $args, $depth ) {
-    if ( 'div' === $args['style'] ) {
-        $tag       = 'div';
-        $add_below = 'comment';
-    } else {
-        $tag       = 'li';
-        $add_below = 'div-comment';
-    }
+    $GLOBALS['comment'] = $comment;
+    switch ( $comment->comment_type ) :
+        case '' :
+        case 'comment' :
+            ?>
+            <li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
+            <div id="comment-<?php comment_ID(); ?>">
+                <div class="comment-author vcard">
+                    <?php printf( __( '%s <span class="says">:</span>', 'glegrand' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
+                </div><!-- .comment-author .vcard -->
+                <?php if ( $comment->comment_approved == '0' ) : ?>
+                    <em class="comment-awaiting-moderation"><?php _e( 'Комментарий на модерации', 'glegrand' ); ?></em>
+                    <br />
+                <?php endif; ?>
 
-    $classes = ' ' . comment_class( empty( $args['has_children'] ) ? '' : 'parent', null, null, false );
-    ?>
+                <div class="comment-meta commentmetadata">
+                        <?php
+                        /* translators: 1: date, 2: time */
+                        printf( __( '%1$s в %2$s', 'glegrand' ), get_comment_date(),  get_comment_time() ); ?>
+                    <?php if( ( is_user_logged_in() )) {edit_comment_link( __( ' (Изменить)', 'glegrand' ), ' ' );}
+                    ?>
+                </div><!-- .comment-meta .commentmetadata -->
 
-    <<?php echo $tag, $classes; ?> id="comment-<?php comment_ID() ?>">
-    <?php if ( 'div' != $args['style'] ) { ?>
-        <div id="div-comment-<?php comment_ID() ?>" class="comment-body"><?php
-    } ?>
+                <div class="comment-body"><?php comment_text(); ?></div>
 
-    <div class="comment-author vcard">
-        <?php
-        if ( $args['avatar_size'] != 0 ) {
-            echo get_avatar( $comment, $args['avatar_size'] );
-        }
-        printf(
-            __( '<cite class="fn">%s</cite> <span class="says">:</span>' ),
-            get_comment_author_link()
-        );
-        ?>
-    </div>
+                <div class="reply">
+                    <?php comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+                </div><!-- .reply -->
+            </div><!-- #comment-##  -->
 
-    <?php if ( $comment->comment_approved == '0' ) { ?>
-        <em class="comment-awaiting-moderation">
-            <?php _e( 'Ваш комментарий на модерации.', 'glegrand' ); ?>
-        </em><br/>
-    <?php } ?>
-
-    <div class="comment-meta commentmetadata">
-        <a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); ?>">
             <?php
-            printf(
-                __( '%1$s в %2$s', 'glegrand' ),
-                get_comment_date(),
-                get_comment_time()
-            ); ?>
-        </a>
-
-        <?php edit_comment_link( __( '(Изменить)', 'glegrand' ), '  ', '' ); ?>
-    </div>
-
-    <?php comment_text(); ?>
-
-    <div class="reply">
-        <?php
-        comment_reply_link(
-            array_merge(
-                $args,
-                array(
-                    'add_below' => $add_below,
-                    'depth'     => $depth,
-                    'max_depth' => $args['max_depth']
-                )
-            )
-        ); ?>
-    </div>
-
-    <?php if ( 'div' != $args['style'] ) { ?>
-        </div>
-    <?php }
+            break;
+        case 'pingback'  :
+        case 'trackback' :
+            ?>
+            <li class="post pingback">
+            <p><?php _e( 'Pingback:', 'glegrand' ); ?> <?php comment_author_link(); ?><?php if( ( is_user_logged_in() )) {edit_comment_link( __( ' (Изменить)', 'glegrand' ), ' ' );} ?></p>
+            <?php
+            break;
+    endswitch;
 }
+
+function comment_update_get(){
+
+    // Set up our required global objects
+    global $post, $withcomments;
+
+    $withcomments = 1;
+    $post = get_post( $_POST['post_id'] );
+
+    // Load the comments template
+    comments_template();
+
+    // We're done here
+    wp_die();
+
+}
+add_action( 'wp_ajax_nopriv_comment_update_get','comment_update_get' );
+add_action( 'wp_ajax_comment_update_get', 'comment_update_get' );
 
 /*
    ===================================================================

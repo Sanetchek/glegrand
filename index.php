@@ -10,7 +10,7 @@
             <?php get_template_part( 'template-parts/post/content', 'loop' ); ?>
 
         <?php endwhile; ?>
-
+        <div class="clearfix"></div>
         <?php if ( function_exists( 'wp_corenavi' ) ) wp_corenavi(); ?>
         <?php wp_reset_postdata(); ?>
 

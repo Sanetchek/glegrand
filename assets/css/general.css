@@ -246,7 +246,7 @@ section {
     color: #fff;
 }
 
-input:not([type]), input[type="email"], input[type="number"], input[type="password"], input[type="tel"], input[type="url"], input[type="text"], input[type="search"] {
+input:not([type]), input[type="email"], input[type="number"], input[type="password"], input[type="tel"], input[type="url"], input[type="text"], input[type="search"], input[type="submit"] {
     width: 30%;
     height: 36px;
     padding: 0 10px;

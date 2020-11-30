@@ -7,3 +7,7 @@
          * Reorder comment fields                               -   ON
          */
         require_once('comments/function-comments.php');
+2. вывести форму комментариев в нужном месте (single.php):
+        <?php if ( comments_open() || get_comments_number() ) :
+            comments_template();
+        endif;?>

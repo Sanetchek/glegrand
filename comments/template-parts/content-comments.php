@@ -1,6 +1,7 @@
 <div class="comment_form">
     <div class="form">
         <div id="comments">
+
             <ol class="commentlist">
                 <?php if ( have_comments() ) : ?>
 
@@ -29,12 +30,18 @@
                 <?php endif; // end have_comments() ?>
             </ol>
 
-            <?php if( !( is_user_logged_in() ) ) : ?>
+
+
+            <?php
+            $requireNameEmail = get_option('require_name_email');
+
+            if( !( is_user_logged_in() ) && ! $requireNameEmail  ) {
+                echo '
                 <div class="comment-register">
-                    <p class="must-log-in"><?php _e( 'Чтобы оставить комментарий войдите или зарегистрируйтесь.', 'glegrand' ) ?></p>
-                </div>
-            <?php else : ?>
-                <?php
+                    <p class="must-log-in">'. _e( 'Чтобы оставить комментарий войдите или зарегистрируйтесь.', 'glegrand' ) .'</p>
+                </div>';
+                wp_login_form();
+            } else {
                 $args = array(
                     'fields'               => array(
                         'author' => '<p class="comment-form-author">' . '<input id="author" class="author required" name="author" type="text" value="" size="30" aria-required="true" placeholder="nickname"></p>',
@@ -46,17 +53,17 @@
                     <textarea id="comment" name="comment" class="comment-form-item required" cols="45" rows="8" placeholder="'. __( 'Напишите свой комментарий', 'glegrand' ) .'"></textarea>
                     </p>',
                     'comment_notes_after'   => '',
-                    'label_submit'          => 'Publish',
-                    'title_reply'           => '',
+                    'label_submit'          => __( 'Написать', 'glegrand' ),
+                    'title_reply'           => __( 'Поделитесь мыслями!', 'glegrand' ),
                     'comment_notes_before'  => '',
-                    'title_reply_to'        => __( 'Ответить %s или', 'glegrand' ),
-                    'cancel_reply_link'     => __( 'Отмена', 'glegrand' ),
-                    'format'                => 'xhtml',
+                    'title_reply_to'        => __( 'Ответить %s или ', 'glegrand' ),
+                    'cancel_reply_link'     => __( ' Отменить', 'glegrand' ),
+                    'format'                => 'html5',
                     'logged_in_as'          => '',
                 );
                 comment_form($args);
-                ?>
-            <?php endif; ?>
+            } ?>
+
         </div>
     </div>
 </div><!-- #comments -->

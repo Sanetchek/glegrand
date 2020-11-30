@@ -58,11 +58,14 @@ require_once('inc/functions-updates.php');
 require_once ('inc/functions-plugins.php');
 
 /*
- * Simple ajax comment form mod                         -   ON
- * Disable comment js                                   -   ON
- * Comment form                                         -   ON
- * Reorder comment fields                               -   ON
- */
+ * Прописываем путь к форме комментариев    -   ON
+ * Enqueue scripts                          -   ON
+ * Simple ajax comment form mod             -   ON
+ * Disable comment js                       -   ON
+ * Comment form                             -   ON
+ * Reorder comment fields                   -   ON
+ *
+ **/
 require_once('comments/function-comments.php');
 
 /*
@@ -110,6 +113,15 @@ add_theme_support('post-formats', array(
           Register Scripts and Css
 ===================================================================
 */
+function google_jquery ()
+{
+    // подключим jquery через google
+    if (! is_admin ()) {
+        wp_deregister_script ('jquery'); wp_register_script ('jquery', ("http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"), false);
+        wp_enqueue_script ( 'JQuery');
+    }
+}
+add_action ('wp_print_scripts', 'google_jquery');
 
 function glegrand_scripts()
 {
@@ -119,8 +131,8 @@ function glegrand_scripts()
 	wp_enqueue_style('general', get_template_directory_uri() . '/assets/css/general.css');
 
     // Scripts
-    wp_enqueue_script('jquery');
-    wp_enqueue_script('jquery-form');
+//    wp_enqueue_script('jquery');
+//    wp_enqueue_script('jquery-form');
     wp_localize_script( 'jquery', 'ajax_var', // добавим объект с глобальными JS переменными
         array('url' => admin_url('admin-ajax.php')) // и сунем в него путь до AJAX обработчика
     );
