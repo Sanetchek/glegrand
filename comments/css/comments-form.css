@@ -48,15 +48,18 @@ div#comments .children li {
 
 div#respond {
     position: relative;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto 50px auto;
 }
 
-h3#reply-title {
+#respond h3#reply-title {
     font-size: 1em;
     font-family: 'OswaldBold', 'Helvetica', sans-serif;
     font-weight: normal;
 }
 
-a#cancel-comment-reply-link {
+#respond a#cancel-comment-reply-link {
     position: absolute;
     right: 0;
     font-size: 1.2em;
@@ -66,7 +69,7 @@ a#cancel-comment-reply-link {
     padding: 15px 0 0 0;
 }
 
-textarea#comment {
+#respond textarea#comment {
     width: 96%;
     height: 70px;
     padding: 2% 2% 5% 2%;
@@ -83,11 +86,22 @@ textarea#comment {
     width: 30%;
 }
 
-input#submit {
+#respond input#submit {
     width: 100%;
     font-family: 'OswaldBold', 'Helvetica', sans-serif;
     background: #2c6247;
     color: #fff;
 }
 
+#respond p.comment-form-cookies-consent {
+    position: absolute;
+}
 
+#respond p.comment-form-email, #respond p.comment-form-author {
+    padding: 0 0 15px 0;
+    display: inline-block;
+}
+
+p.comment-form-author input, p.comment-form-email input {
+    width: 90%;
+}

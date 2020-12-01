@@ -15,9 +15,9 @@
         </div><!-- .post-thumbnail -->
         <?php the_title( '<h1>', '</h1>' ); ?>
     </header><!-- .entry-header -->
-    <div class="content">
+    <main class="content">
         <?php the_content(); ?>
-    </div>
+    </main>
 
     <?php } else {?>
         <header class="entry-header">

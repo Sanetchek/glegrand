@@ -108,21 +108,6 @@ add_theme_support('post-formats', array(
     'chat',
 ));
 
-/*
-===================================================================
-          Register Scripts and Css
-===================================================================
-*/
-function google_jquery ()
-{
-    // подключим jquery через google
-    if (! is_admin ()) {
-        wp_deregister_script ('jquery'); wp_register_script ('jquery', ("http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"), false);
-        wp_enqueue_script ( 'JQuery');
-    }
-}
-add_action ('wp_print_scripts', 'google_jquery');
-
 function glegrand_scripts()
 {
     // Styles
@@ -131,8 +116,8 @@ function glegrand_scripts()
 	wp_enqueue_style('general', get_template_directory_uri() . '/assets/css/general.css');
 
     // Scripts
-//    wp_enqueue_script('jquery');
-//    wp_enqueue_script('jquery-form');
+    wp_enqueue_script('jquery');
+    wp_enqueue_script('jquery-form');
     wp_localize_script( 'jquery', 'ajax_var', // добавим объект с глобальными JS переменными
         array('url' => admin_url('admin-ajax.php')) // и сунем в него путь до AJAX обработчика
     );
@@ -141,6 +126,8 @@ function glegrand_scripts()
     wp_enqueue_script('comments', get_template_directory_uri() . '/assets/js/comments.js', false, null, true);
 }
 add_action('wp_enqueue_scripts', 'glegrand_scripts');
+add_action( 'wp_ajax_nopriv_glegrand_scripts','glegrand_scripts' );
+add_action( 'wp_ajax_glegrand_scripts', 'glegrand_scripts' );
 
 // Cниппет, который добавит асинхронную загрузку для скриптов, подключенных через wp_enqueue_script():
 add_filter('script_loader_tag', 'add_async_attribute', 10, 2);

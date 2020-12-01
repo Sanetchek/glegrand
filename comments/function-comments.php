@@ -45,7 +45,7 @@ function custom_comments_scripts()
     // Scripts
     wp_enqueue_script('jquery');
     wp_enqueue_script('jquery-form');
-    wp_localize_script( 'jquery', 'ajax_var', // добавим объект с глобальными JS переменными
+    wp_localize_script( 'ajaxurl', 'ajax_var', // добавим объект с глобальными JS переменными
         array('url' => admin_url('admin-ajax.php')) // и сунем в него путь до AJAX обработчика
     );
     wp_enqueue_script( 'comments', get_template_directory_uri() . '/comments/js/comments.js', array('jquery'), null, true );
@@ -53,7 +53,42 @@ function custom_comments_scripts()
     // добавим comment_reply для ответа на комментарии
     wp_enqueue_script( 'comment-reply' );
 }
-add_action('wp_enqueue_scripts', 'custom_comments_scripts');
+add_action( 'wp_enqueue_scripts', 'custom_comments_scripts');
+//add_action( 'wp_ajax_nopriv_custom_comments_scripts','custom_comments_scripts' );
+//add_action( 'wp_ajax_custom_comments_scripts', 'custom_comments_scripts' );
+
+
+
+
+
+
+
+
+
+
+
+
+add_action( 'wp_ajax_ajaxcomments', 'submit_ajax_comment' ); // wp_ajax_{action} for registered user
+add_action( 'wp_ajax_nopriv_ajaxcomments', 'submit_ajax_comment' ); // wp_ajax_nopriv_{action} for not registered users
+
+function submit_ajax_comment(){
+    $inputs = $_POST["page"];
+
+    echo $inputs . 'submit_ajax_comment';
+
+    die();
+
+}
+
+
+
+
+
+
+
+
+
+
 
 /*
    ===================================================================
@@ -129,23 +164,23 @@ function customize_comment_list_callback( $comment, $args, $depth ) {
     endswitch;
 }
 
-function comment_update_get(){
-
-    // Set up our required global objects
-    global $post, $withcomments;
-
-    $withcomments = 1;
-    $post = get_post( $_POST['post_id'] );
-
-    // Load the comments template
-    comments_template();
-
-    // We're done here
-    wp_die();
-
-}
-add_action( 'wp_ajax_nopriv_comment_update_get','comment_update_get' );
-add_action( 'wp_ajax_comment_update_get', 'comment_update_get' );
+//function comment_update_get(){
+//
+//    // Set up our required global objects
+//    global $post, $withcomments;
+//
+//    $withcomments = 1;
+//    $post = get_post( $_POST['post_id'] );
+//
+//    // Load the comments template
+//    comments_template();
+//
+//    // We're done here
+//    wp_die();
+//
+//}
+//add_action( 'wp_ajax_nopriv_comment_update_get','comment_update_get' );
+//add_action( 'wp_ajax_comment_update_get', 'comment_update_get' );
 
 /*
    ===================================================================
