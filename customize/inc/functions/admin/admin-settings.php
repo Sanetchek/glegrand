@@ -1,4 +1,4 @@
-<h1><?php _e('Настройка темы', 'customize'); ?></h1>
+<h1><?php _e('Настройка темы', 'theme_language'); ?></h1>
 <?php
 $favicon = esc_attr( get_option( 'favicon' ) );
 $headerLogo = esc_attr( get_option( 'header_logo' ) );

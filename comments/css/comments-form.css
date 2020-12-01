@@ -1,5 +1,12 @@
+/* Comment form */
 div#comments {
     font-family: 'OswaldLight', 'Helvetica', sans-serif;
+}
+
+div#comments h2 {
+    font-family: 'OswaldExtraLight', Helvetica, sans-serif;
+    font-weight: unset;
+    font-size: 1em;
 }
 
 div#comments li {
@@ -50,7 +57,7 @@ div#respond {
     position: relative;
     width: 100%;
     max-width: 700px;
-    margin: 0 auto 50px auto;
+    margin: 50px auto;
 }
 
 #respond h3#reply-title {

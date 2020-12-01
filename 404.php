@@ -4,10 +4,10 @@
         <main>
             <section class="error-404 not-found">
                 <header>
-                    <h1><?php _e( 'Oops! Эта страница не найдена.', 'glegrand' ); ?></h1>
+                    <h1><?php _e( 'Oops! Эта страница не найдена.', 'theme_language' ); ?></h1>
                 </header><!-- .page-header -->
                 <div>
-                    <p><?php _e( 'Похоже ничего не найдено. Воспользуйтесь поиском.', 'glegrand' ); ?></p>
+                    <p><?php _e( 'Похоже ничего не найдено. Воспользуйтесь поиском.', 'theme_language' ); ?></p>
                     <?php get_search_form(); ?>
                 </div>
             </section>

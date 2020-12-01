@@ -10,14 +10,14 @@ function customize_css_settings() {
 
     add_settings_section(
         'customize-custom-css-section', // id
-        __( '', 'customize' ), // title
+        __( '', 'theme_language' ), // title
         'customize_custom_css_section_callback', // регистрация функции
         'customize_theme_custom_css'  // page место где выводится форма (SLUG URL страницы)
     );
 
     add_settings_field(
         'customize-css', // id
-        __( 'Добавить CSS', 'customize' ), // title
+        __( 'Добавить CSS', 'theme_language' ), // title
         'customize_custom_css_field_callback', // регистрация функции
         'customize_theme_custom_css', // page
         'customize-custom-css-section' // section ID
@@ -25,7 +25,7 @@ function customize_css_settings() {
 }
 
 function customize_custom_css_section_callback() {
-    echo __( 'Редактируйте Тему с помощью CSS', 'customize' );
+    echo __( 'Редактируйте Тему с помощью CSS', 'theme_language' );
 }
 
 function customize_custom_css_field_callback () {

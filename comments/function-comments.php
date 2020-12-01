@@ -101,7 +101,7 @@ function submit_ajax_comment(){
  */
 
 function simple_ajax_comment_form_mod( $settings ){
-    printf( '<div class="submitting-comment" style="padding: 15px 20px; text-align: center; display: none;">%s</div>', __( 'Отправка сообщения...', 'glegrand' ) );
+    printf( '<div class="submitting-comment" style="padding: 15px 20px; text-align: center; display: none;">%s</div>', __( 'Отправка сообщения...', 'theme_language' ) );
 }
 add_action( 'comment_form', 'simple_ajax_comment_form_mod' );
 
@@ -130,18 +130,18 @@ function customize_comment_list_callback( $comment, $args, $depth ) {
             <li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
             <div id="comment-<?php comment_ID(); ?>">
                 <div class="comment-author vcard">
-                    <?php printf( __( '%s <span class="says">:</span>', 'glegrand' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
+                    <?php printf( __( '%s <span class="says">:</span>', 'theme_language' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
                 </div><!-- .comment-author .vcard -->
                 <?php if ( $comment->comment_approved == '0' ) : ?>
-                    <em class="comment-awaiting-moderation"><?php _e( 'Комментарий на модерации', 'glegrand' ); ?></em>
+                    <em class="comment-awaiting-moderation"><?php _e( 'Комментарий на модерации', 'theme_language' ); ?></em>
                     <br />
                 <?php endif; ?>
 
                 <div class="comment-meta commentmetadata">
                         <?php
                         /* translators: 1: date, 2: time */
-                        printf( __( '%1$s в %2$s', 'glegrand' ), get_comment_date(),  get_comment_time() ); ?>
-                    <?php if( ( is_user_logged_in() )) {edit_comment_link( __( ' (Изменить)', 'glegrand' ), ' ' );}
+                        printf( __( '%1$s в %2$s', 'theme_language' ), get_comment_date(),  get_comment_time() ); ?>
+                    <?php if( ( is_user_logged_in() )) {edit_comment_link( __( ' (Изменить)', 'theme_language' ), ' ' );}
                     ?>
                 </div><!-- .comment-meta .commentmetadata -->
 
@@ -158,7 +158,7 @@ function customize_comment_list_callback( $comment, $args, $depth ) {
         case 'trackback' :
             ?>
             <li class="post pingback">
-            <p><?php _e( 'Pingback:', 'glegrand' ); ?> <?php comment_author_link(); ?><?php if( ( is_user_logged_in() )) {edit_comment_link( __( ' (Изменить)', 'glegrand' ), ' ' );} ?></p>
+            <p><?php _e( 'Pingback:', 'theme_language' ); ?> <?php comment_author_link(); ?><?php if( ( is_user_logged_in() )) {edit_comment_link( __( ' (Изменить)', 'theme_language' ), ' ' );} ?></p>
             <?php
             break;
     endswitch;

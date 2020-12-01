@@ -24,7 +24,7 @@
                      */
                     wp_list_comments( array(
                         'callback'           => 'customize_comment_list_callback',
-                        'max_depth'          => 2,
+                        'max_depth'          => '',
                         'reverse_top_level'  => true,
                         'login_text' => ''
                     ) );
@@ -46,7 +46,7 @@
             if( !( is_user_logged_in() ) && ! $requireNameEmail  ) {
                 echo '
                 <div class="comment-register">
-                    <p class="must-log-in">'. _e( 'Чтобы оставить комментарий войдите или зарегистрируйтесь.', 'glegrand' ) .'</p>
+                    <p class="must-log-in">'. _e( 'Чтобы оставить комментарий войдите или зарегистрируйтесь.', 'theme_language' ) .'</p>
                 </div>';
                 wp_login_form();
             } else {
@@ -58,14 +58,14 @@
                     ),
                     'comment_field' =>
                         '<p class="comment-form-comment">
-                    <textarea id="comment" name="comment" class="comment-form-item required" cols="45" rows="8" placeholder="'. __( 'Напишите свой комментарий', 'glegrand' ) .'"></textarea>
+                    <textarea id="comment" name="comment" class="comment-form-item required" cols="45" rows="8" placeholder="'. __( 'Напишите свой комментарий', 'theme_language' ) .'"></textarea>
                     </p>',
                     'comment_notes_after'   => '',
-                    'label_submit'          => __( 'Написать', 'glegrand' ),
-                    'title_reply'           => __( 'Поделитесь мыслями!', 'glegrand' ),
+                    'label_submit'          => __( 'Написать', 'theme_language' ),
+                    'title_reply'           => __( 'Поделитесь мыслями!', 'theme_language' ),
                     'comment_notes_before'  => '',
-                    'title_reply_to'        => __( 'Ответить %s или ', 'glegrand' ),
-                    'cancel_reply_link'     => __( ' Отменить', 'glegrand' ),
+                    'title_reply_to'        => __( 'Ответить %s или ', 'theme_language' ),
+                    'cancel_reply_link'     => __( ' Отменить', 'theme_language' ),
                     'format'                => 'html5',
                     'logged_in_as'          => '',
                 );

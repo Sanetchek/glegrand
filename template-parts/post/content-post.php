@@ -20,9 +20,9 @@
 
     <?php
     the_post_navigation( array(
-        'prev_text' => '<span>' . __( 'Предыдущая страница: ', 'glegrand' ) . '</span>'.  '<span class="post-title">%title</span>',
-        'next_text' => '<span>' . __( 'Следующая страница: ', 'glegrand' ) . '</span>'.  '<span class="post-title">%title</span>',
-        'before_page_number' => '<span>' . __( 'Страница: ', 'glegrand' ) . ' </span>',
+        'prev_text' => '<span>' . __( 'Предыдущая страница: ', 'theme_language' ) . '</span>'.  '<span class="post-title">%title</span>',
+        'next_text' => '<span>' . __( 'Следующая страница: ', 'theme_language' ) . '</span>'.  '<span class="post-title">%title</span>',
+        'before_page_number' => '<span>' . __( 'Страница: ', 'theme_language' ) . ' </span>',
     ) );
     ?>
 

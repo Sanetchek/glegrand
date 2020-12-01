@@ -551,6 +551,30 @@ nav.pagination .page-numbers {
     padding: 0 10px;
 }
 
+nav.navigation.post-navigation {
+    font-family: 'OswaldLight', 'Helvetica',sans-serif;
+    margin-bottom: 50px;
+}
+
+h2.screen-reader-text {
+    font-size: 1.2em;
+    font-weight: unset;
+    font-family: 'OswaldBold', 'Helvetica',sans-serif;
+}
+
+.nav-previous, .nav-next {
+    display: inline-block;
+}
+.nav-next {
+    float: right;
+    text-align: right;
+}
+
+.nav-links div a span:first-child {
+    font-weight: bold;
+    display: block;
+}
+
 /* Search */
 form.search-form {
     margin: 30px 0;
@@ -598,13 +622,6 @@ article.single-post main {
 
 article.single-post p, article.single-post h2, article.single-post h3, article.single-post h4 {
     padding: 15px 0;
-}
-
-/* Comment form */
-div#comments h2 {
-    font-family: 'OswaldExtraLight', Helvetica, sans-serif;
-    font-weight: unset;
-    font-size: 1em;
 }
 
 /* 404 page */

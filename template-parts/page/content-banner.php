@@ -18,18 +18,18 @@ $bannerMode = esc_attr( get_option( 'banner_mode' ) );
                 }
                 ?>
 
-                <img src="<?php echo( $bannerImage ); ?>" alt="<?php _e( 'Banner Image', 'glegrand' ); ?>">
+                <img src="<?php echo( $bannerImage ); ?>" alt="<?php _e( 'Banner Image', 'theme_language' ); ?>">
                 <div class="banner-info">
-                    <div class="banner-title anim-items"><?php _e( $bannerTitle, 'glegrand' ) ?></div>
-                    <div class="banner-slogan anim-items"><?php _e( $bannerTagline, 'glegrand' ) ?></div>
+                    <div class="banner-title anim-items"><?php _e( $bannerTitle, 'theme_language' ) ?></div>
+                    <div class="banner-slogan anim-items"><?php _e( $bannerTagline, 'theme_language' ) ?></div>
                     <div id="banner-contacts">
-                        <div class="banner-address anim-items"><?php _e( $bannerAddress, 'glegrand' ) ?></div>
+                        <div class="banner-address anim-items"><?php _e( $bannerAddress, 'theme_language' ) ?></div>
                         <div class="banner-phone anim-items">
-                            <?php _e( $bannerPhonePrefix, 'glegrand' ) ?>
+                            <?php _e( $bannerPhonePrefix, 'theme_language' ) ?>
                             <a href="tel:<?php echo $bannerPhoneOne ?>"><?php echo $bannerPhoneOne ?></a>,
                             <a href="tel:<?php echo $bannerPhoneTwo ?>"><?php echo $bannerPhoneTwo ?></a>
                         </div>
-                        <div class="banner-mode anim-items"><?php _e( $bannerMode, 'glegrand' ) ?></div>
+                        <div class="banner-mode anim-items"><?php _e( $bannerMode, 'theme_language' ) ?></div>
                     </div>
                 </div>
             </div>

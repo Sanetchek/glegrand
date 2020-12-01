@@ -1,4 +1,4 @@
-<h1><?php _e('Custom CSS', 'customize'); ?></h1>
+<h1><?php _e('Custom CSS', 'theme_language'); ?></h1>
 
 <form id="save-custom-css-form" method="post" action="options.php">
     <?php settings_fields( 'customize-custom-css-group' ); // function-admin-menu => function customize_theme_settings() ?>

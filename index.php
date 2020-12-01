@@ -20,7 +20,7 @@
             <div class="search-wrap">
         <span class="search-filter">
             <span class="glegrand glegrand-filter"></span>
-            <?php _e("Фильтр", 'glegrand'); ?>
+            <?php _e("Фильтр", 'theme_language'); ?>
         </span>
                 <?php get_search_form(); ?>
             </div>

@@ -178,9 +178,9 @@ function change_menu_item_css_classes( $classes, $item, $args, $depth ) {
 
 function glegrand_widgets_init() {
 	register_sidebar( array(
-		'name' => __( 'Main Sidebar', 'glegrand' ),
+		'name' => __( 'Main Sidebar', 'theme_language' ),
 		'id' => 'sidebar',
-		'description' => __( 'Widgets in this area will be shown on all posts and pages.', 'glegrand' ),
+		'description' => __( 'Widgets in this area will be shown on all posts and pages.', 'theme_language' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>'
 	) );

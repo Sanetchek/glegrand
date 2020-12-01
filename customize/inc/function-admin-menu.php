@@ -7,8 +7,8 @@
 function customize_add_admin_page () {
     $siteName = strval( get_bloginfo( 'name' ) );
     // Создаем меню в админке
-    add_menu_page( __('Пользовательские Настройки Темы', 'customize'), // Текст, который будет использован в теге title на странице.
-        __( $siteName , 'customize'), // Название пункта в меню
+    add_menu_page( __('Пользовательские Настройки Темы', 'theme_language'), // Текст, который будет использован в теге title на странице.
+        __( $siteName , 'theme_language'), // Название пункта в меню
         'manage_options', // Уровень доступа пользователя
         'customize_theme', // SLUG URL страницы (должно быть уникальным)
         'customize_theme_create_page', //  регистрация функции
@@ -19,8 +19,8 @@ function customize_add_admin_page () {
     // Создаем подменю
     add_submenu_page (
         'customize_theme', // SLUG главной страницы
-        __( 'Пользовательские Настройки Темы', 'customize' ), //тег title на странице,
-        __( 'Настройка', 'customize' ), // Название пункта в меню
+        __( 'Пользовательские Настройки Темы', 'theme_language' ), //тег title на странице,
+        __( 'Настройка', 'theme_language' ), // Название пункта в меню
         'manage_options', // Уровень доступа пользователя
         'customize_theme', // SLUG URL страницы (должно быть уникальным)
         'customize_theme_create_page' //  регистрация функции
@@ -28,8 +28,8 @@ function customize_add_admin_page () {
     // Создаем 2 подменю
     add_submenu_page (
         'customize_theme', // SLUG главной страницы
-        __( 'Настройки Внешнего Вида Темы', 'customize' ), //тег title на странице,
-        __( 'Custom CSS', 'customize' ), // Название пункта в меню
+        __( 'Настройки Внешнего Вида Темы', 'theme_language' ), //тег title на странице,
+        __( 'Custom CSS', 'theme_language' ), // Название пункта в меню
         'manage_options', // Уровень доступа пользователя
         'customize_theme_custom_css', // SLUG URL страницы (должно быть уникальным)
         'customize_theme_custom_css_page' //  регистрация функции
