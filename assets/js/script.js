@@ -55,4 +55,30 @@ jQuery(document).ready(function ($) {
         }, 300);
 
     }
+
+    // Get the modal
+    var modal = $("#myModal");
+
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var modalImg = $("#img01");
+    $(".single-page-gallery img").on('click', function () {
+        var imgSrc = this.getAttribute("src");
+
+        modal.css('display', 'block');
+        modalImg.attr('src', imgSrc);
+    });
+
+    // Get the <span> element that closes the modal
+    var span = $(".close");
+    var modalClass = $(".modal");
+
+    // When the user clicks on <span> (x), close the modal
+    span.on('click', function () {
+        modal.css('display', 'none');
+    });
+
+    modalClass.on('click', function () {
+        modal.css('display', 'none');
+    });
+
 });

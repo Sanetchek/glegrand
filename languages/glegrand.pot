@@ -1,0 +1,336 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: Glegrand\n"
+"POT-Creation-Date: 2020-12-05 00:45+0200\n"
+"PO-Revision-Date: 2020-12-05 00:45+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.7\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: 404.php:7
+msgid "Oops! Эта страница не найдена."
+msgstr ""
+
+#: 404.php:10
+msgid "Похоже ничего не найдено. Воспользуйтесь поиском."
+msgstr ""
+
+#: author.php:11
+msgid "Автор: "
+msgstr ""
+
+#: author.php:15
+msgid "Название сайта:"
+msgstr ""
+
+#: author.php:19
+msgid "О себе: "
+msgstr ""
+
+#: author.php:25
+msgid "Публикации автора"
+msgstr ""
+
+#: author.php:31
+msgid "Название: "
+msgstr ""
+
+#: author.php:34
+msgid "Дата: "
+msgstr ""
+
+#: author.php:34
+msgid "в"
+msgstr ""
+
+#: author.php:38
+msgid "У этого автора публикаций пока нет."
+msgstr ""
+
+#: comments/function-comments.php:85
+msgid "Отправка сообщения..."
+msgstr ""
+
+#: comments/function-comments.php:102
+#, php-format
+msgid "%s <span class=\"says\">:</span>"
+msgstr ""
+
+#: comments/function-comments.php:105
+msgid "Комментарий на модерации"
+msgstr ""
+
+#. translators: 1: date, 2: time
+#: comments/function-comments.php:112
+#, php-format
+msgid "%1$s в %2$s"
+msgstr ""
+
+#: comments/function-comments.php:113 comments/function-comments.php:130
+msgid " (Изменить)"
+msgstr ""
+
+#: comments/function-comments.php:130
+msgid "Pingback:"
+msgstr ""
+
+#: comments/template-parts/content-comments.php:41
+msgid "Чтобы оставить комментарий войдите или зарегистрируйтесь."
+msgstr ""
+
+#: comments/template-parts/content-comments.php:53
+msgid "Напишите свой комментарий"
+msgstr ""
+
+#: comments/template-parts/content-comments.php:56
+msgid "Написать"
+msgstr ""
+
+#: comments/template-parts/content-comments.php:57
+msgid "Поделитесь мыслями!"
+msgstr ""
+
+#: comments/template-parts/content-comments.php:59
+#, php-format
+msgid "Ответить %s или "
+msgstr ""
+
+#: comments/template-parts/content-comments.php:60
+msgid " Отменить"
+msgstr ""
+
+#: customize/inc/function-admin-menu.php:10
+#: customize/inc/function-admin-menu.php:22
+msgid "Пользовательские Настройки Темы"
+msgstr ""
+
+#: customize/inc/function-admin-menu.php:23
+msgid "Настройка"
+msgstr ""
+
+#: customize/inc/functions/admin/admin-settings.php:1
+msgid "Настройка темы"
+msgstr ""
+
+#: customize/inc/functions/admin/admin-settings.php:25
+#: customize/inc/functions/function-general-settings.php:30
+msgid "Favicon"
+msgstr ""
+
+#: customize/inc/functions/admin/admin-settings.php:35
+#: customize/inc/functions/admin/admin-settings.php:97
+#: template-parts/header/header-main.php:7
+msgid "Логотип"
+msgstr ""
+
+#: customize/inc/functions/admin/admin-settings.php:54
+#: template-parts/page/content-banner.php:21
+msgid "Banner Image"
+msgstr ""
+
+#: customize/inc/functions/admin/admin-settings.php:88
+#: template-parts/footer/content-footer.php:35
+msgid "Социальные сети:"
+msgstr ""
+
+#: customize/inc/functions/function-gallery.php:18
+msgid "Галерея"
+msgstr ""
+
+#: customize/inc/functions/function-gallery.php:19
+msgid "Все изображения"
+msgstr ""
+
+#: customize/inc/functions/function-gallery.php:20
+msgid "Добавить новое изображение"
+msgstr ""
+
+#: customize/inc/functions/function-gallery.php:21
+msgid "Добавить изображение"
+msgstr ""
+
+#: customize/inc/functions/function-gallery.php:22
+msgid "Загрузить изображение"
+msgstr ""
+
+#: customize/inc/functions/function-gallery.php:23
+msgid "Изображение"
+msgstr ""
+
+#: customize/inc/functions/function-gallery.php:24
+msgid "Редактировать изображение"
+msgstr ""
+
+#: customize/inc/functions/function-gallery.php:25
+msgid "Новое изображение"
+msgstr ""
+
+#: customize/inc/functions/function-gallery.php:26
+msgid "Просмотреть изображение"
+msgstr ""
+
+#: customize/inc/functions/function-gallery.php:27
+msgid "Найти изображение"
+msgstr ""
+
+#: customize/inc/functions/function-gallery.php:28
+msgid "Изображение не найдено"
+msgstr ""
+
+#: customize/inc/functions/function-gallery.php:29
+msgid "В корзине изображений не найдено"
+msgstr ""
+
+#: customize/inc/functions/function-gallery.php:40
+msgid "Изображения"
+msgstr ""
+
+#: customize/inc/functions/function-gallery.php:41
+msgid "Дата"
+msgstr ""
+
+#: customize/inc/functions/function-general-settings.php:25
+msgid "Внешний вид"
+msgstr ""
+
+#: customize/inc/functions/function-general-settings.php:31
+msgid "Логотип сайта"
+msgstr ""
+
+#: customize/inc/functions/function-general-settings.php:32
+msgid "Картинка банера"
+msgstr ""
+
+#: customize/inc/functions/function-general-settings.php:35
+#: customize/inc/functions/function-general-settings.php:90
+msgid "Заголовок банера"
+msgstr ""
+
+#: customize/inc/functions/function-general-settings.php:40
+#: customize/inc/functions/function-general-settings.php:96
+msgid "Слоган в банере"
+msgstr ""
+
+#: customize/inc/functions/function-general-settings.php:41
+#: customize/inc/functions/function-general-settings.php:102
+msgid "Адрес"
+msgstr ""
+
+#: customize/inc/functions/function-general-settings.php:42
+msgid "Телефон"
+msgstr ""
+
+#: customize/inc/functions/function-general-settings.php:43
+#: customize/inc/functions/function-general-settings.php:122
+msgid "Заголовок для Режим работы"
+msgstr ""
+
+#: customize/inc/functions/function-general-settings.php:44
+#: customize/inc/functions/function-general-settings.php:128
+msgid "Режим работы"
+msgstr ""
+
+#: customize/inc/functions/function-general-settings.php:45
+msgid "Заголовок подвала"
+msgstr ""
+
+#: customize/inc/functions/function-general-settings.php:46
+#: customize/inc/functions/function-general-settings.php:145
+msgid "Facebook"
+msgstr ""
+
+#: customize/inc/functions/function-general-settings.php:47
+#: customize/inc/functions/function-general-settings.php:151
+msgid "Instagram"
+msgstr ""
+
+#: customize/inc/functions/function-general-settings.php:51
+msgid "Страница редактирования информации в Банере"
+msgstr ""
+
+#: customize/inc/functions/function-general-settings.php:58
+msgid "Загрузить favicon"
+msgstr ""
+
+#: customize/inc/functions/function-general-settings.php:69
+msgid "Загрузить Логотип шапки"
+msgstr ""
+
+#: customize/inc/functions/function-general-settings.php:73
+msgid "Загрузить Логотип подвала"
+msgstr ""
+
+#: customize/inc/functions/function-general-settings.php:82
+msgid "Загрузить картинку"
+msgstr ""
+
+#: customize/inc/functions/function-general-settings.php:113
+msgid "Тел. или какое-то обозначение телефонов"
+msgstr ""
+
+#: customize/inc/functions/function-general-settings.php:114
+#: customize/inc/functions/function-general-settings.php:115
+msgid "Номер телефона"
+msgstr ""
+
+#: customize/inc/functions/function-general-settings.php:139
+msgid "Заголовок"
+msgstr ""
+
+#: functions.php:196
+msgid "Main Sidebar"
+msgstr ""
+
+#: functions.php:198
+msgid "Widgets in this area will be shown on all posts and pages."
+msgstr ""
+
+#: index.php:23
+msgid "Фильтр"
+msgstr ""
+
+#: searchform.php:4
+msgid "Что найти &hellip; ?"
+msgstr ""
+
+#: searchform.php:6
+msgid "Найти"
+msgstr ""
+
+#: template-parts/post/content-post.php:23
+msgid "Предыдущая страница: "
+msgstr ""
+
+#: template-parts/post/content-post.php:24
+msgid "Следующая страница: "
+msgstr ""
+
+#: template-parts/post/content-post.php:25
+msgid "Страница: "
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Glegrand"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Glegrand Beauty Salon Theme"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Aleksandr Gryshko"
+msgstr ""

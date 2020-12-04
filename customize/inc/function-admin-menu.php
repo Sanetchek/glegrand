@@ -25,19 +25,9 @@ function customize_add_admin_page () {
         'customize_theme', // SLUG URL страницы (должно быть уникальным)
         'customize_theme_create_page' //  регистрация функции
     );
-    // Создаем 2 подменю
-    add_submenu_page (
-        'customize_theme', // SLUG главной страницы
-        __( 'Настройки Внешнего Вида Темы', 'theme_language' ), //тег title на странице,
-        __( 'Custom CSS', 'theme_language' ), // Название пункта в меню
-        'manage_options', // Уровень доступа пользователя
-        'customize_theme_custom_css', // SLUG URL страницы (должно быть уникальным)
-        'customize_theme_custom_css_page' //  регистрация функции
-    );
 
     // Включить пользовательские настройки
     add_action( 'admin_init', 'customize_banner_settings' );
-    add_action( 'admin_init', 'customize_css_settings' );
 }
 add_action( 'admin_menu', 'customize_add_admin_page' );
 
@@ -50,5 +40,4 @@ add_action( 'admin_menu', 'customize_add_admin_page' );
 add_theme_support( 'post-thumbnails', array( 'customize-gallery' ) );
 
 require_once( 'functions/function-general-settings.php' );
-require_once( 'functions/function-custom-css-settings.php' );
 require_once( 'functions/function-gallery.php' );

@@ -10,6 +10,25 @@
     top: 25%;
 }
 
+.polylang {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    z-index: 10;
+}
+
+ul.polylang-list {
+    list-style: none;
+}
+
+ul.polylang-list li {
+    display: inline-block;
+}
+
+ul.polylang-list li:nth-child(2n) {
+    margin-left: 10px;
+}
+
 #header .header-nav {
     font-size: 1.2em;
     color: #000;

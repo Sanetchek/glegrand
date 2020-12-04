@@ -25,6 +25,7 @@ a img {
     min-width: 320px;
     width: 98%;
     margin: 0 auto;
+    position: relative;
 }
 
 article,

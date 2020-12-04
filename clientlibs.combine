@@ -2,7 +2,7 @@
     "combineOnSave": true,
     "combine": [
         {
-            "output": "assets/css/style.css",
+            "output": "assets/css/theme-style.css",
             "files": [
                 "assets/css/fonts.css",
                 "assets/css/general.css",

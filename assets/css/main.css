@@ -8,6 +8,10 @@ body {
     display: unset;
 }
 
+.breadcrumbs {
+    margin: 2%;
+}
+
 /* General Media width */
 @media screen and (max-width: 1200px) {
     .banner-bg {

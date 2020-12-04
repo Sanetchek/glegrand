@@ -6,6 +6,11 @@
             <a href="<?php echo get_home_url(); ?>" class="logo">
                 <img id="header-logo" src="<?php print $headerLogo ?>" alt="<?php _e( 'Логотип', 'theme_language' ); ?>">
             </a>
+            <div class="polylang">
+                <ul class="polylang-list">
+                    <?php pll_the_languages( array( 'show_flags' => 1,'show_names' => 0 ) ); ?>
+                </ul>
+            </div>
         </div>
         <div class="right">
             <div class="header-nav">

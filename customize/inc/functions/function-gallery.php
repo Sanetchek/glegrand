@@ -27,7 +27,7 @@ function theme_custom_gallery() {
             'search_items'          => __( 'Найти изображение', 'theme_language' ),
             'not_found'             => __( 'Изображение не найдено', 'theme_language' ),
             'not_found_in_trash'    => __( 'В корзине изображений не найдено', 'theme_language' ),
-            'parent_item_colon'     => __( '', 'theme_language' )
+            'parent_item_colon'     => ''
         )
     ));
 }
