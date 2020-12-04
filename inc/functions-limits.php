@@ -24,10 +24,10 @@ add_action('admin_init','users_redirect');
 add_filter("login_redirect", "sp_login_redirect", 10, 3);
 
 function sp_login_redirect($redirect_to, $request, $user){
-	if(is_array($user->roles))
-		if(in_array('administrator', $user->roles) && ( ! defined( 'DOING_AJAX' ) || ! DOING_AJAX ) )
-			return home_url('/wp-admin/');
-	return home_url();
+    if(is_array($user->roles))
+        if(in_array('administrator', $user->roles) && ( ! defined( 'DOING_AJAX' ) || ! DOING_AJAX ) )
+            return home_url('/wp-admin/');
+    return home_url();
 }
 */
 /*
@@ -36,9 +36,9 @@ function sp_login_redirect($redirect_to, $request, $user){
 ===================================================================
 
 function remove_admin_bar() {
-	if (!current_user_can('administrator') && !is_admin()) {
-		show_admin_bar(false);
-	}
+    if (!current_user_can('administrator') && !is_admin()) {
+        show_admin_bar(false);
+    }
 }
 
 add_filter('after_setup_theme', 'remove_admin_bar');
@@ -49,11 +49,11 @@ add_filter('after_setup_theme', 'remove_admin_bar');
  ===================================================================
 */
 //function custom_login(){
-//	global $pagenow;
-//	if( 'wp-login.php' == $pagenow
-//	) {
+//    global $pagenow;
+//    if( 'wp-login.php' == $pagenow
+//    ) {
 //
-//	}
+//    }
 //}
 //add_action('init','custom_login');
 
@@ -132,7 +132,7 @@ function delete_intermediate_image_sizes( $sizes ){
     return array_diff( $sizes, array(
         'thumbnail',
         'medium_large',
-	    'large'             // 'thumbnail', 'medium', 'medium_large', 'large',
+        'large'             // 'thumbnail', 'medium', 'medium_large', 'large',
     ) );
 }
 
@@ -146,11 +146,11 @@ add_filter( 'intermediate_image_sizes', 'delete_intermediate_image_sizes' );
 
 //function delete_fullsize_image( $metadata )
 //{
-//	$upload_dir = wp_upload_dir();
-//	$full_image_path = trailingslashit( $upload_dir['basedir'] ) . $metadata['file'];
-//	$deleted = unlink( $full_image_path );
+//    $upload_dir = wp_upload_dir();
+//    $full_image_path = trailingslashit( $upload_dir['basedir'] ) . $metadata['file'];
+//    $deleted = unlink( $full_image_path );
 //
-//	return $metadata;
+//    return $metadata;
 //}
 //
 //add_filter( 'wp_generate_attachment_metadata', 'delete_fullsize_image' );

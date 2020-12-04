@@ -112,7 +112,7 @@ function customize_banner_phone () {
     echo '
     <input type="text" id="banner-input-prefix" name="'. $bannerPhonePrefix .'" value="'. $bannerPrefixField .'" placeholder="'.__( 'Тел. или какое-то обозначение телефонов', 'theme_language' ).'" />
     <input type="text" id="banner-input-phone-one" name="'. $bannerPhoneOne .'" value="'. $bannerPhoneOneField .'" placeholder="'.__( 'Номер телефона', 'theme_language' ).'" />
-    <input type="text" id="banner-input-phone-two" name="'. $bannerPhoneTwo .'" value="'. $bannerPhoneTwoField .'" placeholder="'.__( 'Номер телефона', 'theme_language' ).'" />    
+    <input type="text" id="banner-input-phone-two" name="'. $bannerPhoneTwo .'" value="'. $bannerPhoneTwoField .'" placeholder="'.__( 'Номер телефона', 'theme_language' ).'" />
     '; // name = SLUG meta field
 }
 

@@ -1,6 +1,6 @@
-<article class="single-post">
+<article class="single-post content">
     <header class="post-header">
-	    <?php get_template_part( 'template-parts/navigation/nav', 'breadcrumbs' ); ?>
+        <?php get_template_part( 'template-parts/navigation/nav', 'breadcrumbs' ); ?>
 
         <?php if ( is_single() ) {
                 the_title( '<h1>', '</h1>' );
@@ -29,7 +29,5 @@
     <?php if ( comments_open() || get_comments_number() ) :
         comments_template();
     endif;?>
-
-
 
 </article><!-- #post-## -->

@@ -1,0 +1,80 @@
+/* Header */
+#header,
+.header-log-height {
+    height: 120px;
+}
+
+#header .logo img {
+    max-width: 210px;
+    position: relative;
+    top: 25%;
+}
+
+#header .header-nav {
+    font-size: 1.2em;
+    color: #000;
+    position: relative;
+}
+
+#top-menu {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#top-menu li {
+    display: inline;
+    margin-left: 10px;
+    line-height: 120px;
+    position: relative;
+}
+
+#top-menu span.und-line {
+    background: #2c6247;
+    width: 50px;
+    height: 0;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    transition: all 0.2s linear;
+}
+
+#top-menu li a:hover + span {
+    height: 3px;
+}
+
+#top-menu .current-menu-item > .und-line {
+    height: 3px;
+}
+
+#burger-menu {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 42px;
+    right: 0;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}

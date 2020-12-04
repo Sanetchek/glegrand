@@ -9,32 +9,32 @@ $bannerPhoneTwo = esc_attr( get_option( 'banner_phone_two' ) );
 $bannerMode = esc_attr( get_option( 'banner_mode' ) );
 ?>
 
-    <div class="banner">
-        <div class="wrapper">
-            <div class="banner-bg">
-                <?php
+<div class="banner">
+    <div class="wrapper">
+        <div class="banner-bg">
+            <?php
                 if ( isset( $bannerImage ) ) {
                     $bannerImage = get_template_directory_uri() . '/assets/images/glegrand-bg.png';
                 }
                 ?>
 
-                <img src="<?php echo( $bannerImage ); ?>" alt="<?php _e( 'Banner Image', 'theme_language' ); ?>">
-                <div class="banner-info">
-                    <div class="banner-title anim-items"><?php _e( $bannerTitle, 'theme_language' ) ?></div>
-                    <div class="banner-slogan anim-items"><?php _e( $bannerTagline, 'theme_language' ) ?></div>
-                    <div id="banner-contacts">
-                        <div class="banner-address anim-items"><?php _e( $bannerAddress, 'theme_language' ) ?></div>
-                        <div class="banner-phone anim-items">
-                            <?php _e( $bannerPhonePrefix, 'theme_language' ) ?>
-                            <a href="tel:<?php echo $bannerPhoneOne ?>"><?php echo $bannerPhoneOne ?></a>,
-                            <a href="tel:<?php echo $bannerPhoneTwo ?>"><?php echo $bannerPhoneTwo ?></a>
-                        </div>
-                        <div class="banner-mode anim-items"><?php _e( $bannerMode, 'theme_language' ) ?></div>
+            <img loading="lazy" src="<?php echo( $bannerImage ); ?>" alt="<?php _e( 'Banner Image', 'theme_language' ); ?>">
+            <div class="banner-info">
+                <div class="banner-title anim-items"><?php _e( $bannerTitle, 'theme_language' ) ?></div>
+                <div class="banner-slogan anim-items"><?php _e( $bannerTagline, 'theme_language' ) ?></div>
+                <div id="banner-contacts">
+                    <div class="banner-address anim-items"><?php _e( $bannerAddress, 'theme_language' ) ?></div>
+                    <div class="banner-phone anim-items">
+                        <?php _e( $bannerPhonePrefix, 'theme_language' ) ?>
+                        <a href="tel:<?php echo $bannerPhoneOne ?>"><?php echo $bannerPhoneOne ?></a>,
+                        <a href="tel:<?php echo $bannerPhoneTwo ?>"><?php echo $bannerPhoneTwo ?></a>
                     </div>
+                    <div class="banner-mode anim-items"><?php _e( $bannerMode, 'theme_language' ) ?></div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
 <div class="wrapper">
     <?php

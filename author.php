@@ -28,14 +28,14 @@
         <!-- The Loop -->
 
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-            <li><?php _e('Название: ', 'theme_language'); ?>
-                <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link: <?php the_title(); ?>">
-                    <b><?php the_title(); ?></b></a>,
-                <?php _e('Дата: ', 'theme_language'); ?><i><?php the_time('d M Y'); ?></i> <?php _e('в', 'theme_language'); ?> <?php the_category('&');?>
-            </li>
+        <li><?php _e('Название: ', 'theme_language'); ?>
+            <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link: <?php the_title(); ?>">
+                <b><?php the_title(); ?></b></a>,
+            <?php _e('Дата: ', 'theme_language'); ?><i><?php the_time('d M Y'); ?></i> <?php _e('в', 'theme_language'); ?> <?php the_category('&');?>
+        </li>
 
         <?php endwhile; else: ?>
-            <p><?php _e('У этого автора публикаций пока нет.', 'theme_language'); ?></p>
+        <p><?php _e('У этого автора публикаций пока нет.', 'theme_language'); ?></p>
 
         <?php endif; ?>
 
@@ -45,4 +45,4 @@
 </div>
 
 <?php get_sidebar(); ?>
-<?php get_footer(); ?> 
+<?php get_footer(); ?>

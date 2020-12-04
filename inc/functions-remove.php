@@ -40,7 +40,6 @@ function themeslug_disable_emojis() {
     remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
     remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
     remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
-    add_filter( 'tiny_mce_plugins', 'themeslug_disable_emojis_tinymce' );
     add_filter( 'wp_resource_hints', 'themeslug_disable_emojis_remove_dns_prefetch', 10, 2 );
 }
 add_action( 'init', 'themeslug_disable_emojis' );

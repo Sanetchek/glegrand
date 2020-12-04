@@ -1,4 +1,4 @@
-/* Main style */
+/* General style */
 * {
     margin: 0;
     padding: 0;
@@ -65,12 +65,29 @@ section {
     float: left;
 }
 
-.raw > .six-col { width: 16.66666%; }
-.raw > .five-col { width: 20%; }
-.raw > .four-col { width: 25%; }
-.raw > .three-col { width: 33.333%; }
-.raw > .two-col { width: 50%; }
-.raw > .one-col { width: 100%; }
+.raw > .six-col {
+    width: 16.66666%;
+}
+
+.raw > .five-col {
+    width: 20%;
+}
+
+.raw > .four-col {
+    width: 25%;
+}
+
+.raw > .three-col {
+    width: 33.333%;
+}
+
+.raw > .two-col {
+    width: 50%;
+}
+
+.raw > .one-col {
+    width: 100%;
+}
 
 .raw > .six-col:nth-child(6n+1),
 .raw > .five-col:nth-child(5n+1),
@@ -92,22 +109,25 @@ section {
     margin: 0 auto !important;
 }
 
-/*.six-col > .block { width: 160px; }*/
-/*.five-col > .block { width: 180px; }*/
-/*.four-col >.block { width: 240px; }*/
-/*.three-col >.block { width: 300px; }*/
-/*.two-col >.block { width: 500px; }*/
-/*.one-col >.block { width: 90%; min-width: 300px; }*/
-
 @media screen and (max-width: 1060px) {
-    .raw > .six-col { width: 20%; }
-    .raw > .five-col { width: 25%; }
-    .raw > .four-col { width: 33.3333%; }
+    .raw > .six-col {
+        width: 20%;
+    }
+
+    .raw > .five-col {
+        width: 25%;
+    }
+
+    .raw > .four-col {
+        width: 33.3333%;
+    }
+
     .raw > .six-col:nth-child(6n+1),
     .raw > .five-col:nth-child(5n+1),
     .raw > .four-col:nth-child(4n+1) {
         clear: none;
     }
+
     .raw > .six-col:nth-child(5n+1),
     .raw > .five-col:nth-child(4n+1),
     .raw > .four-col:nth-child(3n+1) {
@@ -116,85 +136,122 @@ section {
 }
 
 @media screen and (max-width: 1020px) {
-    .raw > .three-col { width: 50%; }
-    .raw > .three-col:nth-child(3n+1) { clear: none; }
-    .raw > .three-col:nth-child(2n+1) { clear: both; }
+    .raw > .three-col {
+        width: 50%;
+    }
+
+    .raw > .three-col:nth-child(3n+1) {
+        clear: none;
+    }
+
+    .raw > .three-col:nth-child(2n+1) {
+        clear: both;
+    }
 }
 
 @media screen and (max-width: 950px) {
-    .raw > .six-col { width: 25%; }
-    .raw > .six-col:nth-child(5n+1) { clear: none; }
-    .raw > .six-col:nth-child(4n+1) { clear: both; }
+    .raw > .six-col {
+        width: 25%;
+    }
+
+    .raw > .six-col:nth-child(5n+1) {
+        clear: none;
+    }
+
+    .raw > .six-col:nth-child(4n+1) {
+        clear: both;
+    }
 }
 
 @media screen and (max-width: 900px) {
+
     .raw > .three-col,
     .raw > .two-col {
         width: 50%;
     }
+
     .raw > .three-col:nth-child(2n+1),
     .raw > .two-col:nth-child(2n+1) {
         clear: none;
     }
-    .three-col >.block,
-    .two-col >.block {
+
+    .three-col > .block,
+    .two-col > .block {
         width: 90%;
         min-width: 300px;
     }
 }
 
 @media screen and (max-width: 800px) {
+
     .raw > .six-col,
     .raw > .five-col {
         width: 33.3333%;
     }
-    .raw > .four-col { width: 50%; }
+
+    .raw > .four-col {
+        width: 50%;
+    }
+
     .raw > .six-col:nth-child(4n+1),
     .raw > .five-col:nth-child(4n+1),
     .raw > .four-col:nth-child(3n+1) {
         clear: none;
     }
+
     .raw > .six-col:nth-child(3n+1),
     .raw > .five-col:nth-child(3n+1),
     .raw > .four-col:nth-child(2n+1) {
         clear: both;
     }
-    .four-col > .block { width: 100%; }
+
+    .four-col > .block {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 700px) {
+
     .raw > .six-col,
     .raw > .five-col {
         width: 50%;
     }
+
     .raw > .six-col:nth-child(3n+1),
     .raw > .five-col:nth-child(3n+1) {
         clear: none;
     }
+
     .raw > .six-col:nth-child(2n+1),
     .raw > .five-col:nth-child(2n+1) {
         clear: both;
     }
+
     .six-col > .block,
     .five-col > .block {
         width: 33.333%;
     }
+
     .raw > .two-col {
         width: 100%;
     }
 }
+
 @media screen and (max-width: 580px) {
+
     .raw > .six-col,
     .raw > .five-col,
     .raw > .four-col,
     .raw > .three-col {
         width: 100%;
     }
+
     .raw > .six-col:nth-child(2n+1),
     .raw > .five-col:nth-child(2n+1),
     .raw > .four-col:nth-child(2n+1) {
         clear: none;
     }
+
     .six-col > .block,
     .five-col > .block,
     .four-col > .block {
@@ -218,7 +275,8 @@ section {
     white-space: nowrap;
 }
 
-.button, .button-secondary {
+.button,
+.button-secondary {
     color: #555;
     border-color: #ccc;
     background: #f7f7f7;
@@ -246,7 +304,15 @@ section {
     color: #fff;
 }
 
-input:not([type]), input[type="email"], input[type="number"], input[type="password"], input[type="tel"], input[type="url"], input[type="text"], input[type="search"], input[type="submit"] {
+input:not([type]),
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="tel"],
+input[type="url"],
+input[type="text"],
+input[type="search"],
+input[type="submit"] {
     width: 30%;
     height: 36px;
     padding: 0 10px;
@@ -272,4 +338,74 @@ input:not([type]), input[type="email"], input[type="number"], input[type="passwo
     .wrapper {
         max-width: none;
     }
+}
+
+/* Content style */
+.content table {
+    margin: 25px 0;
+}
+
+.content td,
+.content th {
+    padding: 8px;
+}
+
+.content tr:hover {
+    background-color: #ddd !important;
+}
+
+.content th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #ddd;
+}
+
+
+.content p {
+    padding: 15px 0;
+}
+
+.content ul {
+    margin-left: 5%;
+    list-style: square;
+}
+
+.content li {
+    padding: 10px 0 10px 3%;
+    font-size: 1em;
+}
+
+@media screen and (max-width: 450px) {
+    .content li {
+        font-size: 1em;
+    }
+}
+
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+    padding: 20px 0 15px 10px;
+}
+
+.wp-block-pullquote {
+    border-top: 4px solid #555d66;
+    border-bottom: 4px solid #555d66;
+    margin-bottom: 28px;
+    color: #40464d;
+}
+
+.wp-block-pullquote cite,
+.wp-block-quote cite {
+    font-family: 'OswaldExtraLight', 'Helvetica', sans-serif;
+    text-transform: capitalize;
+    font-size: 0.8em;
+    color: #6c7781;
+}
+
+.wp-block-quote {
+    border-left: 4px solid #000;
+    margin: 0 0 28px;
+    padding-left: 1em;
 }

@@ -15,7 +15,7 @@ function customize_profile_scripts( $hook )
         wp_enqueue_media();
 
         // Styles
-        wp_enqueue_style('customize', get_template_directory_uri() . '/customize/css/customize.css');
+        wp_enqueue_style('customize', get_template_directory_uri() . '/customize/css/customize.min.css');
 
         // Добавляет возможность вставлять путь к теме в файлах js, исп. themePath.templateUrl + '/customize/images/';
         $templateUrlArray = array( 'templateUrl' => get_template_directory_uri() );
@@ -25,11 +25,11 @@ function customize_profile_scripts( $hook )
 
     } else if( 'glegrand_page_customize_theme_custom_css' == $hook ){
         // Scripts
-        wp_enqueue_script( 'ace', get_template_directory_uri() . '/customize/js/ace/ace.js', array('jquery'), null, true );
-        wp_enqueue_script('css-js', get_template_directory_uri() . '/customize/js/css-script.js', array('jquery'), null, true);
+        //wp_enqueue_script( 'ace', get_template_directory_uri() . '/customize/js/ace/ace.js', array('jquery'), null, true );
+        //wp_enqueue_script('css-js', get_template_directory_uri() . '/customize/js/css-script.min.js', array('jquery'), null, true);
 
         // Styles
-        wp_enqueue_style('ace', get_template_directory_uri() . '/customize/css/ace.css');
+        //wp_enqueue_style('ace', get_template_directory_uri() . '/customize/css/ace.min.css');
 
     } else { return; }
 

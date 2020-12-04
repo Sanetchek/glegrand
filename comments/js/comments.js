@@ -1,6 +1,6 @@
 'use strict';
 
-jQuery(document).ready(function ($){
+jQuery(document).ready(function ($) {
     $(function ajaxComments() {
         $('.comment-form').each(function () {
             // Объявляем переменные (форма и кнопка отправки)
@@ -25,7 +25,9 @@ jQuery(document).ready(function ($){
 
             // Функция подсветки незаполненных полей
             function lightEmpty() {
-                form.find('.empty_field').css({'border-color': '#d8512d'});
+                form.find('.empty_field').css({
+                    'border-color': '#d8512d'
+                });
                 // Через полсекунды удаляем подсветку
                 setTimeout(function () {
                     form.find('.empty_field').removeAttr('style');
@@ -85,24 +87,24 @@ jQuery(document).ready(function ($){
                     function reset() {
                         var temp = $('#wp-temp-form-div');
 
-                        if ( $('*').is(temp) ) { //если #wp-temp-form-div существует, он добавляется при использовании comment-reply.php
+                        if ($('*').is(temp)) { //если #wp-temp-form-div существует, он добавляется при использовании comment-reply.php
                             commentReplace('.children'); // заменяем комментарии n-го уровня
                         } else {
-                            commentReplace( '.commentlist' ); // заменяем все комментарии
+                            commentReplace('.commentlist'); // заменяем все комментарии
                         }
                     }
 
-                    function commentReplace( changeList ){
+                    function commentReplace(changeList) {
                         //Switch the existing comment area with the comment area returned from AJAX call
                         var page = $(responseText); // присваиваем Текст ответа сервера переменной
 
-                        switch ( changeList ){
+                        switch (changeList) {
                             case '.children':
                                 var commParentRespond = respond.parent(), // ищем родителя #respond
                                     commParentResponseText = page.find('#' + respond.closest('li').attr('id')), // ищем родителя #respond в Тексте ответа от сервера
                                     childrenResponseText = commParentResponseText.find('.children'); // ищем .children в Тексте ответа от сервера Тексте ответа от сервера
 
-                                if( commParentRespond.find(changeList).length ) { // если кол-во .children больше 0
+                                if (commParentRespond.find(changeList).length) { // если кол-во .children больше 0
                                     commParentRespond.find(changeList).replaceWith(childrenResponseText); // заменяем наш .children тем что мы нашли в Тексте ответа от сервера с тегом .children
                                 } else { // если 0
                                     commParentRespond.append(childrenResponseText); // добавляем к родителю #respond тег .children и все содержимое

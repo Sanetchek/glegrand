@@ -1,0 +1,42 @@
+/* Search */
+form.search-form {
+    margin: 30px 0;
+}
+
+/* 404 page */
+section.error-404.not-found {
+    text-align: center;
+    padding: 200px 0 100px 0;
+}
+
+/* Author page */
+h2.author-name {
+    text-align: center;
+    margin: 20px 0 40px 0;
+    font-weight: normal;
+}
+
+h2.author-name b {
+    text-transform: uppercase;
+}
+
+.author-sitename a {
+    color: #0000ff;
+}
+
+.author-info {
+    margin-bottom: 60px;
+}
+
+ul.author-posts {
+    font-family: "OswaldLight", Helvetica, sans-serif;
+    padding: 20px 0 20px 40px;
+}
+
+ul.author-posts li {
+    margin-bottom: 10px;
+}
+
+ul.author-posts a {
+    text-decoration: underline;
+}

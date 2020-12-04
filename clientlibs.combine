@@ -1,0 +1,20 @@
+{
+    "combineOnSave": true,
+    "combine": [
+        {
+            "output": "assets/css/style.css",
+            "files": [
+                "assets/css/fonts.css",
+                "assets/css/general.css",
+                "assets/css/header.css",
+                "assets/css/banner.css",
+                "assets/css/content-page.css",
+                "assets/css/single-post.css",
+                "assets/css/other-page.css",
+                "assets/css/corenavi.css",
+                "assets/css/footer.css",
+                "assets/css/main.css"
+            ]
+        }
+    ]
+}

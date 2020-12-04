@@ -32,7 +32,6 @@ $defaults = array(
     'default-image'          => '',
     'default-repeat'         => '',
     'default-position-x'     => '',
-    'default-attachment'	 => ''
+    'default-attachment'     => ''
 );
 add_theme_support( 'custom-background', $defaults );
-

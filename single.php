@@ -1,3 +1,4 @@
+.clearfix {
 <?php get_header();?>
 <div class="wrapper">
     <?php if ( have_posts() ) :
@@ -10,11 +11,3 @@
 </div>
 <div class="clearfix"></div>
 <?php get_footer(); ?>
-
-<?php
-
-$text = 'single.php - end of code';
-
-echo strip_tags($text);
-
-?>

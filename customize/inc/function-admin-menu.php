@@ -41,5 +41,14 @@ function customize_add_admin_page () {
 }
 add_action( 'admin_menu', 'customize_add_admin_page' );
 
+/*
+===================================================================
+          Add thumbnails to Post and Pages
+===================================================================
+*/
+
+add_theme_support( 'post-thumbnails', array( 'customize-gallery' ) );
+
 require_once( 'functions/function-general-settings.php' );
 require_once( 'functions/function-custom-css-settings.php' );
+require_once( 'functions/function-gallery.php' );

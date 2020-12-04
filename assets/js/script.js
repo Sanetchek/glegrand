@@ -1,8 +1,8 @@
 "use strict";
 
-jQuery(document).ready( function($) {
+jQuery(document).ready(function ($) {
     // Burger menu change style
-    $('.burger-menu').on('click', function(){
+    $('.burger-menu').on('click', function () {
         this.classList.toggle("change");
         $('.main-menu').slideToggle();
     });
@@ -10,21 +10,22 @@ jQuery(document).ready( function($) {
 
     // анимация на сайте
     // Добавить anim-items класс вручную ко всем элементам которые анимированы
-    const animItems = $('.anim-items');
+    var animItems = $('.anim-items');
 
     if (animItems.length > 0) {
         window.addEventListener('scroll', animOnScroll)
+
         function animOnScroll() {
             for (let index = 0; index < animItems.length; index++) {
                 const animItem = animItems[index];
-                const animItemHeight = animItem.offsetHeight;  //получ высоту элементов
+                const animItemHeight = animItem.offsetHeight; //получ высоту элементов
                 const animItemOffset = offset(animItem).top; // получаем позицию обьекта относительно верха
                 const animStart = 4; //коефициент
 
                 let animItemPoint = window.innerHeight - animItemHeight / animStart;
 
                 // если элемент выше окна браузера
-                if(animItemHeight > window.innerHeight) {
+                if (animItemHeight > window.innerHeight) {
                     animItemPoint = window.innerHeight - window.innerHeight / animStart;
                 }
 
@@ -43,7 +44,10 @@ jQuery(document).ready( function($) {
             const rect = el.getBoundingClientRect(),
                 scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
                 scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
+            return {
+                top: rect.top + scrollTop,
+                left: rect.left + scrollLeft
+            }
         }
         // вызываем функцию которая выведет анимацию при загрузке страницы если элемент попадает в поле зрения с задержкой
         setTimeout(() => {
@@ -51,4 +55,4 @@ jQuery(document).ready( function($) {
         }, 300);
 
     }
-} );
+});

@@ -104,11 +104,13 @@ div#respond {
     position: absolute;
 }
 
-#respond p.comment-form-email, #respond p.comment-form-author {
+#respond p.comment-form-email,
+#respond p.comment-form-author {
     padding: 0 0 15px 0;
     display: inline-block;
 }
 
-p.comment-form-author input, p.comment-form-email input {
+p.comment-form-author input,
+p.comment-form-email input {
     width: 90%;
 }

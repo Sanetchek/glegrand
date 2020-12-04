@@ -35,11 +35,12 @@ function custom_comment_template($comment_template){
           Register Scripts and Css
 ===================================================================
 */
+add_action( 'wp_enqueue_scripts', 'custom_comments_scripts');
 
 function custom_comments_scripts()
 {
     // Styles
-    wp_enqueue_style('comments-form', get_template_directory_uri() . '/comments/css/comments-form.css');
+    wp_enqueue_style('comments-form', get_template_directory_uri() . '/comments/css/comments-form.min.css');
 
 
     // Scripts
@@ -48,23 +49,11 @@ function custom_comments_scripts()
     wp_localize_script( 'ajaxurl', 'ajax_var', // добавим объект с глобальными JS переменными
         array('url' => admin_url('admin-ajax.php')) // и сунем в него путь до AJAX обработчика
     );
-    wp_enqueue_script( 'comments', get_template_directory_uri() . '/comments/js/comments.js', array('jquery'), null, true );
+    wp_enqueue_script( 'comments', get_template_directory_uri() . '/comments/js/comments.min.js', array('jquery'), null, true );
 
     // добавим comment_reply для ответа на комментарии
     wp_enqueue_script( 'comment-reply' );
 }
-add_action( 'wp_enqueue_scripts', 'custom_comments_scripts');
-//add_action( 'wp_ajax_nopriv_custom_comments_scripts','custom_comments_scripts' );
-//add_action( 'wp_ajax_custom_comments_scripts', 'custom_comments_scripts' );
-
-
-
-
-
-
-
-
-
 
 
 
@@ -81,15 +70,6 @@ function submit_ajax_comment(){
 }
 
 
-
-
-
-
-
-
-
-
-
 /*
    ===================================================================
                Simple ajax comment form mod
@@ -99,22 +79,11 @@ function submit_ajax_comment(){
  * Adding processing message at comment form
  * Use inline style so we don't need to load more file
  */
+add_action( 'comment_form', 'simple_ajax_comment_form_mod' );
 
 function simple_ajax_comment_form_mod( $settings ){
     printf( '<div class="submitting-comment" style="padding: 15px 20px; text-align: center; display: none;">%s</div>', __( 'Отправка сообщения...', 'theme_language' ) );
 }
-add_action( 'comment_form', 'simple_ajax_comment_form_mod' );
-
-/*
-   ===================================================================
-               Disable comment js
-   ===================================================================
-*/
-
-//function disable_comment_js(){
-//    wp_deregister_script( 'comment-reply' );
-//}
-//add_action('init','disable_comment_js');
 
 /*
    ===================================================================
@@ -127,60 +96,42 @@ function customize_comment_list_callback( $comment, $args, $depth ) {
         case '' :
         case 'comment' :
             ?>
-            <li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
-            <div id="comment-<?php comment_ID(); ?>">
-                <div class="comment-author vcard">
-                    <?php printf( __( '%s <span class="says">:</span>', 'theme_language' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
-                </div><!-- .comment-author .vcard -->
-                <?php if ( $comment->comment_approved == '0' ) : ?>
-                    <em class="comment-awaiting-moderation"><?php _e( 'Комментарий на модерации', 'theme_language' ); ?></em>
-                    <br />
-                <?php endif; ?>
+<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
+    <div id="comment-<?php comment_ID(); ?>">
+        <div class="comment-author vcard">
+            <?php printf( __( '%s <span class="says">:</span>', 'theme_language' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
+        </div><!-- .comment-author .vcard -->
+        <?php if ( $comment->comment_approved == '0' ) : ?>
+        <em class="comment-awaiting-moderation"><?php _e( 'Комментарий на модерации', 'theme_language' ); ?></em>
+        <br />
+        <?php endif; ?>
 
-                <div class="comment-meta commentmetadata">
-                        <?php
+        <div class="comment-meta commentmetadata">
+            <?php
                         /* translators: 1: date, 2: time */
                         printf( __( '%1$s в %2$s', 'theme_language' ), get_comment_date(),  get_comment_time() ); ?>
-                    <?php if( ( is_user_logged_in() )) {edit_comment_link( __( ' (Изменить)', 'theme_language' ), ' ' );}
+            <?php if( ( is_user_logged_in() )) {edit_comment_link( __( ' (Изменить)', 'theme_language' ), ' ' );}
                     ?>
-                </div><!-- .comment-meta .commentmetadata -->
+        </div><!-- .comment-meta .commentmetadata -->
 
-                <div class="comment-body"><?php comment_text(); ?></div>
+        <div class="comment-body"><?php comment_text(); ?></div>
 
-                <div class="reply">
-                    <?php comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
-                </div><!-- .reply -->
-            </div><!-- #comment-##  -->
+        <div class="reply">
+            <?php comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+        </div><!-- .reply -->
+    </div><!-- #comment-##  -->
 
-            <?php
+    <?php
             break;
         case 'pingback'  :
         case 'trackback' :
             ?>
-            <li class="post pingback">
-            <p><?php _e( 'Pingback:', 'theme_language' ); ?> <?php comment_author_link(); ?><?php if( ( is_user_logged_in() )) {edit_comment_link( __( ' (Изменить)', 'theme_language' ), ' ' );} ?></p>
-            <?php
+<li class="post pingback">
+    <p><?php _e( 'Pingback:', 'theme_language' ); ?> <?php comment_author_link(); ?><?php if( ( is_user_logged_in() )) {edit_comment_link( __( ' (Изменить)', 'theme_language' ), ' ' );} ?></p>
+    <?php
             break;
     endswitch;
 }
-
-//function comment_update_get(){
-//
-//    // Set up our required global objects
-//    global $post, $withcomments;
-//
-//    $withcomments = 1;
-//    $post = get_post( $_POST['post_id'] );
-//
-//    // Load the comments template
-//    comments_template();
-//
-//    // We're done here
-//    wp_die();
-//
-//}
-//add_action( 'wp_ajax_nopriv_comment_update_get','comment_update_get' );
-//add_action( 'wp_ajax_comment_update_get', 'comment_update_get' );
 
 /*
    ===================================================================

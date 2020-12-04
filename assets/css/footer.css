@@ -1,0 +1,151 @@
+/* Footer menu */
+#footer-menu {
+    padding: 120px 0;
+}
+
+#footer-wrap-menu {
+    list-style-type: none;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+#footer-menu .footer-container-menu {
+    display: inline-block;
+    width: 100%;
+}
+
+#footer-wrap-menu li,
+#footer-wrap-menu li a > img {
+    padding: 0;
+    margin: 0;
+}
+
+#footer-wrap-menu li a > img {
+    width: 100%;
+}
+
+#footer-wrap-menu li a {
+    position: relative;
+}
+
+#footer-wrap-menu li span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+    color: #fff;
+    font-family: 'OswaldBold', Helvetica, sans-serif;
+    font-size: 1.5em;
+    transition: .5s ease;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 0;
+    background: rgba(216, 196, 78, 1);
+    transition: .5s ease;
+}
+
+#footer-wrap-menu li a:hover span {
+    opacity: 1;
+}
+
+#footer-wrap-menu li a:hover .overlay {
+    height: 100%;
+}
+
+@media(hover: hover) and (pointer: fine) {
+    #footer-wrap-menu li a:hover span {
+        opacity: 1;
+    }
+
+    #footer-wrap-menu li a:hover .overlay {
+        height: 100%;
+    }
+}
+
+/* Footer */
+.footer {
+    background: #232222;
+    color: #fff;
+}
+
+.footer-contacts {
+    padding-left: 5%;
+}
+
+.footer-title {
+    font-family: "LobsterRegular", Helvetica, sans-serif;
+    font-size: 2.6em;
+    margin: 11% 0 8% 0;
+    transform: translate(0, 120%);
+    opacity: 0;
+    transition: all 0.4s ease 0s;
+}
+
+.footer-title.active {
+    transform: translate(0, 0);
+    opacity: 1;
+    transition: all 0.4s ease 0.4s;
+}
+
+.footer-address {
+    margin-bottom: 5%;
+}
+
+.footer-phone a {
+    color: #fff;
+}
+
+h4.footer-hour-mode,
+.footer-social-head {
+    font-weight: normal;
+}
+
+.block.footer-social {
+    position: relative;
+    height: 260px;
+}
+
+.footer-social-icon {
+    position: absolute;
+    bottom: 5%;
+    right: 20%;
+}
+
+.footer-social-head {
+    margin-left: 10px;
+}
+
+.footer-social-icon a img {
+    width: 50px;
+}
+
+.footer-social-icon a {
+    display: inline-block;
+    margin: 14px 10px 0 10px;
+    filter: grayscale(0.4);
+}
+
+.footer-social-icon a:hover {
+    filter: grayscale(0);
+}
+
+.footer .footer-logo {
+    height: 260px;
+    position: relative;
+}
+
+.footer .footer-logo a {
+    position: absolute;
+    bottom: 6%;
+    right: 6%;
+    font-size: 4em;
+    color: #2c6247;
+}
