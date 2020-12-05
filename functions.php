@@ -144,21 +144,6 @@ add_action('wp_enqueue_scripts', 'glegrand_scripts');
 add_action( 'wp_ajax_nopriv_glegrand_scripts','glegrand_scripts' );
 add_action( 'wp_ajax_glegrand_scripts', 'glegrand_scripts' );
 
-// Cниппет, который добавит асинхронную загрузку для скриптов, подключенных через wp_enqueue_script():
-add_filter('script_loader_tag', 'add_async_attribute', 10, 2);
-
-function add_async_attribute($tag, $handle)
-{
-    if(!is_admin()){
-        if ('jquery-core' == $handle) {
-            return $tag;
-        }
-        return str_replace(' src', ' defer src', $tag);
-    }else{
-        return $tag;
-    }
-
-}
 
 /*
 ===================================================================
@@ -241,9 +226,9 @@ function phone_shortcode(){
     $bannerPhoneOne = esc_attr( get_option( 'banner_phone_one' ) );
     $bannerPhoneTwo = esc_attr( get_option( 'banner_phone_two' ) );
 
-    return '<p">
+    return '<p class="phone-number">
             <span>'.__( $bannerPhonePrefix, 'theme_language' ) .'</span>
-            ,
+            <a href="tel:'. $bannerPhoneOne .'">'.  $bannerPhoneOne .'</a>,
             <a href="tel:'.  $bannerPhoneTwo .'">'. $bannerPhoneTwo .'</a>
           </p>';
 }
@@ -296,3 +281,10 @@ function social_shortcode(){
     </div>';
 }
 add_shortcode('shortcode_social', 'social_shortcode');
+
+/*
+===================================================================
+          Подключаем MO файл перевода и указываем ему ID — theme_language:
+===================================================================
+*/
+load_theme_textdomain( 'theme_language', get_template_directory() . '/languages' );

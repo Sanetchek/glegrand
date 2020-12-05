@@ -498,25 +498,6 @@ input[type="submit"] {
     top: 25%;
 }
 
-.polylang {
-    position: absolute;
-    top: 10px;
-    right: 0;
-    z-index: 10;
-}
-
-ul.polylang-list {
-    list-style: none;
-}
-
-ul.polylang-list li {
-    display: inline-block;
-}
-
-ul.polylang-list li:nth-child(2n) {
-    margin-left: 10px;
-}
-
 #header .header-nav {
     font-size: 1.2em;
     color: #000;
@@ -616,7 +597,7 @@ ul.polylang-list li:nth-child(2n) {
 .banner-title {
     font-family: "LobsterRegular", Helvetica, sans-serif;
     font-style: italic;
-    font-size: 8em;
+    font-size: 7em;
     color: #fff;
 
     /* анимация при прокрутке
@@ -942,6 +923,11 @@ article#page-contacts .single-page-cont h1 {
     width: 120%;
 }
 
+p.phone-number {
+    text-align: center;
+    font-family: "OswaldBold", "Helvetica", sans-serif;
+}
+
 iframe.google-map {
     position: absolute;
     top: 54%;
@@ -982,6 +968,12 @@ main.single-page-gallery.content {
     margin-top: 8px !important;
     height: auto;
     cursor: pointer;
+    filter: grayscale(1);
+    transition: all 0.3s ease 0s;
+}
+
+#page-gallery .block img:hover {
+    filter: grayscale(0);
 }
 
 /* The Modal (background) */
@@ -1346,7 +1338,7 @@ body {
     }
 
     .banner-title {
-        font-size: 7em;
+        font-size: 6em;
     }
 
     .banner-address,

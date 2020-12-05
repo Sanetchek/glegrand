@@ -149,6 +149,11 @@ article#page-contacts .single-page-cont h1 {
     width: 120%;
 }
 
+p.phone-number {
+    text-align: center;
+    font-family: "OswaldBold", "Helvetica", sans-serif;
+}
+
 iframe.google-map {
     position: absolute;
     top: 54%;
@@ -189,6 +194,12 @@ main.single-page-gallery.content {
     margin-top: 8px !important;
     height: auto;
     cursor: pointer;
+    filter: grayscale(1);
+    transition: all 0.3s ease 0s;
+}
+
+#page-gallery .block img:hover {
+    filter: grayscale(0);
 }
 
 /* The Modal (background) */
