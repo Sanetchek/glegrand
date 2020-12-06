@@ -17,7 +17,7 @@ $gallery = new WP_Query(array(
                 while ( $gallery->have_posts() ) {
                     $gallery->the_post();
 
-                    the_post_thumbnail('medium');
+                    the_post_thumbnail('large');
                     $count++;
                 }
             } ?>
@@ -32,7 +32,7 @@ $gallery = new WP_Query(array(
                     $gallery->the_post();
 
                     if ( $count % 2 == 0 ){
-                        the_post_thumbnail('medium');
+                        the_post_thumbnail('large');
                     }
                     $count++;
                 }
@@ -46,7 +46,7 @@ $gallery = new WP_Query(array(
                     $gallery->the_post();
 
                     if ( $count % 2 == 1 ){
-                        the_post_thumbnail('medium');
+                        the_post_thumbnail('large');
                     }
                     $count++;
                 }
@@ -63,7 +63,7 @@ $gallery = new WP_Query(array(
                     $gallery->the_post();
 
                     if ( $count % 4 == 0 ){
-                        the_post_thumbnail('medium');
+                        the_post_thumbnail('large');
                     }
                     $count++;
                 }
@@ -77,7 +77,7 @@ $gallery = new WP_Query(array(
                     $gallery->the_post();
 
                     if ( $count % 4 == 1 ){
-                        the_post_thumbnail('medium');
+                        the_post_thumbnail('large');
                     }
                     $count++;
                 }
@@ -91,7 +91,7 @@ $gallery = new WP_Query(array(
                     $gallery->the_post();
 
                     if ( $count % 4 == 2 ){
-                        the_post_thumbnail('medium');
+                        the_post_thumbnail('large');
                     }
                     $count++;
                 }
@@ -105,7 +105,7 @@ $gallery = new WP_Query(array(
                     $gallery->the_post();
 
                     if ( $count % 4 == 3 ){
-                        the_post_thumbnail('medium');
+                        the_post_thumbnail('large');
                     }
                     $count++;
                 }

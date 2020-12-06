@@ -126,6 +126,12 @@ add_theme_support('post-formats', array(
     'chat',
 ));
 
+/*
+===================================================================
+          Register styles and scripts
+===================================================================
+*/
+
 function glegrand_scripts()
 {
     // Styles

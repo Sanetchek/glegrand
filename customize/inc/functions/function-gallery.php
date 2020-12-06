@@ -36,11 +36,11 @@ add_action('init', 'theme_custom_gallery');
 add_filter( 'manage_customize-gallery_posts_columns', 'customize_set_gallery_columns' );
 
 function customize_set_gallery_columns( $columns ) {
-    $newColumns = array();
-    $newColumns['picture'] = __( 'Изображения', 'theme_language' );
-    $newColumns['date'] = __( 'Дата', 'theme_language' );
+    unset( $columns['title'] );
+    unset( $columns['date'] );
+    $columns['picture'] = __( 'Изображения', 'theme_language' );
 
-    return $newColumns;
+    return $columns;
 }
 
 add_action('manage_posts_custom_column', 'posts_custom_columns', 5, 2);

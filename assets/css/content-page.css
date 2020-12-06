@@ -55,6 +55,7 @@ article#page-contacts .single-page-cont h1 {
     display: inline-block;
     width: 40%;
     text-align: center;
+    background-color: rgb(255, 255, 255, 0.75);
 }
 
 .page-thumbnail {
@@ -95,6 +96,15 @@ article#page-contacts .single-page-cont h1 {
 
 #page-content .content tbody tr:nth-child(odd) {
     background-color: rgba(216, 196, 78, 0.7);
+}
+
+.wp-block-pullquote {
+    padding: 25px 0;
+    margin: 25px 0
+}
+
+.wp-block-pullquote p {
+    font-size: 1em;
 }
 
 .wp-block-pullquote cite,
