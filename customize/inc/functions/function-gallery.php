@@ -33,6 +33,11 @@ function theme_custom_gallery() {
 }
 add_action('init', 'theme_custom_gallery');
 
+/*
+===================================================================
+          Оформление колонок в customize-gallery
+===================================================================
+*/
 add_filter( 'manage_customize-gallery_posts_columns', 'customize_set_gallery_columns' );
 
 function customize_set_gallery_columns( $columns ) {
@@ -43,6 +48,7 @@ function customize_set_gallery_columns( $columns ) {
     return $columns;
 }
 
+// Выводим thumbnail в значении колонки
 add_action('manage_posts_custom_column', 'posts_custom_columns', 5, 2);
 
 function posts_custom_columns($column_name, $id){
@@ -50,3 +56,16 @@ function posts_custom_columns($column_name, $id){
         the_post_thumbnail( 'thumbnail' );
     }
 }
+
+/*
+===================================================================
+          Shortcode Gallery
+===================================================================
+*/
+function customize_gallery_shortcode(){
+    ob_start();
+    get_template_part( 'customize/template-parts/content', 'gallery' );
+
+    return ob_get_clean();
+}
+add_shortcode('shortcode_customize_gallery', 'customize_gallery_shortcode');

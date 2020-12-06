@@ -8,7 +8,7 @@
         </header><!-- .entry-header -->
         <main class="single-page-gallery content">
             <?php the_title( '<h1 class="single-page-title">', '</h1>' ); ?>
-            <?php get_template_part( 'customize/template-parts/content', 'gallery' ); ?>
+            <?php the_content(); ?>
             <div class="clearfix"></div>
             <div id="myModal" class="modal">
                 <span class="close">&times;</span>
