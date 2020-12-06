@@ -147,8 +147,6 @@ function glegrand_scripts()
     wp_enqueue_script('script', get_template_directory_uri() . '/assets/js/script.js', false, null, true);
 }
 add_action('wp_enqueue_scripts', 'glegrand_scripts');
-add_action( 'wp_ajax_nopriv_glegrand_scripts','glegrand_scripts' );
-add_action( 'wp_ajax_glegrand_scripts', 'glegrand_scripts' );
 
 
 /*
