@@ -135,7 +135,7 @@ add_theme_support('post-formats', array(
 function glegrand_scripts()
 {
     // Styles
-    wp_enqueue_style('style', get_template_directory_uri() . '/assets/css/theme-style.css');
+    wp_enqueue_style('style', get_template_directory_uri() . '/assets/css/theme-style.min.css');
 
     // Scripts
     wp_enqueue_script('jquery');
@@ -144,9 +144,23 @@ function glegrand_scripts()
         array('url' => admin_url('admin-ajax.php')) // и сунем в него путь до AJAX обработчика
     );
 
-    wp_enqueue_script('script', get_template_directory_uri() . '/assets/js/script.js', false, null, true);
+    wp_enqueue_script('script', get_template_directory_uri() . '/assets/js/script.min.js', false, null, true);
 }
 add_action('wp_enqueue_scripts', 'glegrand_scripts');
+
+/*
+===================================================================
+          Отключить jQuery Migrate и подключить jQuery через CDN Google
+===================================================================
+*/
+function smt_register_scripts() {
+    wp_deregister_script( 'jquery' );
+    wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js' );
+    wp_enqueue_script( 'jquery' );
+    wp_register_script( 'googlemaps', 'http://maps.google.com/maps/api/js?sensor=false', array( 'jquery' ), '3' );
+    wp_enqueue_script( 'googlemaps' );
+}
+add_action('init', 'smt_register_scripts');
 
 
 /*

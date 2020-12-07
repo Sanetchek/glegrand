@@ -17,6 +17,7 @@ div#comments li {
 div#comments li > div {
     position: relative;
     min-height: 60px;
+    padding-bottom: 10px;
 }
 
 div#comments .children li {
