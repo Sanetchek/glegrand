@@ -1,5 +1,6 @@
 <?php
 $footerTitle = esc_attr( get_option( 'footer_title' ) );
+$footerLogo = esc_attr( get_option( 'footer_logo' ) );
 $bannerAddress = esc_attr( get_option( 'banner_address' ) );
 $bannerPhonePrefix = esc_attr( get_option( 'banner_phone_prefix' ) );
 $bannerPhoneOne = esc_attr( get_option( 'banner_phone_one' ) );
@@ -41,7 +42,11 @@ $instaImage = get_template_directory_uri() . '/assets/images/instagram.png';
         <div class="three-col footer-logo">
             <div class="block">
                 <a href="<?php echo get_home_url(); ?>" class="logo">
-                    <span class="glegrand glegrand-logo"></span>
+                    <?php if( ! ($footerLogo) ) : ?>
+                        <span class="glegrand glegrand-logo"></span>
+                    <?php else : ?>
+                        <img id="footer-logo" src="<?php print $footerLogo ?>" alt="<?php _e( 'Логотип', 'theme_language' ); ?>">
+                    <?php endif ?>
                 </a>
             </div>
         </div>

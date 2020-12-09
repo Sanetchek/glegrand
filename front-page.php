@@ -3,6 +3,7 @@
 <?php get_template_part( 'template-parts/page/content', 'banner' ); ?>
 
 <div id="content-page">
+   <div class="page-overlay"></div>
     <div class="wrapper">
         <div class="content-about">
             <?php if ( have_posts() ) :

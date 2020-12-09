@@ -24,7 +24,7 @@ jQuery(document).ready(function ($) {
             });
 
             mediaUploader.on('select', function () {
-                attachment = mediaUploader.state().get('selection').first().toJSON();
+                let attachment = mediaUploader.state().get('selection').first().toJSON();
                 $(idAssignValueInputField).val(attachment.url); // Присваиваем значение для поля input
                 $(idChangePicture).attr('src', attachment.url); // Меняем изображение в верстке
             });

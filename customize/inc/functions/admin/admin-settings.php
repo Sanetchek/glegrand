@@ -5,7 +5,7 @@ $headerLogo = esc_attr( get_option( 'header_logo' ) );
 $footerLogo = esc_attr( get_option( 'footer_logo' ) );
 $bannerImage = esc_attr( get_option( 'banner_image' ) );
 $bannerTitle = esc_attr( get_option( 'banner_title' ) );
-$bannerTagline = esc_attr( get_option( 'banner_tagline' ) );
+$bannerTagline = get_option( 'banner_tagline' );
 $bannerAddress = esc_attr( get_option( 'banner_address' ) );
 $bannerPhonePrefix = esc_attr( get_option( 'banner_phone_prefix' ) );
 $bannerPhoneOne = esc_attr( get_option( 'banner_phone_one' ) );
@@ -32,7 +32,11 @@ $instaImage = get_template_directory_uri() . '/assets/images/instagram.png';
     <div class="wrapper">
         <div class="left">
             <div class="logo">
-                <img id="header-logo" src="<?php print $headerLogo ?>" alt="<?php _e( 'Логотип', 'glegrandsale' ); ?>">
+            <?php if( ! ($headerLogo) ) : ?>
+                <span class="glegrand glegrand-logo"></span>
+            <?php else : ?>
+                <img id="header-logo" src="<?php print $headerLogo ?>" alt="<?php _e( 'Логотип', 'theme_language' ); ?>">
+            <?php endif ?>
             </div>
         </div>
         <div class="clearfix"></div>
@@ -41,27 +45,17 @@ $instaImage = get_template_directory_uri() . '/assets/images/instagram.png';
 </header>
 
 <div class="banner">
+    <?php if( ! ($bannerImage) ) : ?>
+        <img id="banner-picture" loading="lazy" src="<?php echo get_template_directory_uri(). '/assets/images/1-3.jpg' ?>" alt="Salon Glegrand">
+    <?php else : ?>
+        <img id="banner-picture"  src="<?php print $bannerImage ?>" alt="<?php _e( 'Логотип', 'theme_language' ); ?>">
+    <?php endif ?>
+
     <div class="wrapper">
-
-
         <div class="banner-bg">
-            <?php
-            if ( empty($bannerImage) ) {
-                $bannerImage = get_template_directory_uri() . '/assets/images/glegrand-bg.png';
-            }
-            ?>
-
-            <img id="banner-picture" src="<?php print $bannerImage ?>" alt="<?php _e( 'Banner Image', 'glegrandsale' ); ?>">
             <div class="banner-info">
-                <span id="banner-title" class="banner-title"><?php _e( $bannerTitle, 'glegrandsale' ) ?></span>
-                <span id="banner-slogan" class="banner-slogan"><?php _e( $bannerTagline, 'glegrandsale' ) ?></span>
-                <span id="banner-address" class="banner-address output-address"><?php _e( $bannerAddress, 'glegrandsale' ) ?></span>
-                <span id="banner-phone" class="banner-phone">
-                    <span id="banner-pref" class="output-pref"><?php _e( $bannerPhonePrefix, 'glegrandsale' ) ?> </span>
-                    <a id="banner-phone-one" class="output-phone-one" href="tel:<?php print $bannerPhoneOne ?>"><?php echo $bannerPhoneOne ?>, </a>
-                    <a id="banner-phone-two" class="output-phone-two" href="tel:<?php print $bannerPhoneTwo ?>"><?php echo $bannerPhoneTwo ?></a>
-                </span>
-                <span id="banner-mode" class="banner-mode output-mode"><?php _e( $bannerMode, 'glegrandsale' ) ?></span>
+                <div class="banner-title anim-items"><?php _e( $bannerTitle, 'theme_language' ) ?></div>
+                <div class="banner-slogan anim-items"><?php echo $bannerTagline ?></div>
             </div>
         </div>
     </div>
@@ -93,9 +87,13 @@ $instaImage = get_template_directory_uri() . '/assets/images/instagram.png';
         </div>
         <div class="three-col">
             <div class="block footer-logo">
-                <a href="#">
-                    <img id="footer-logo" src="<?php print $footerLogo ?>" alt="<?php _e( 'Логотип', 'glegrandsale' ); ?>">
-                </a>
+            <a href="#">
+            <?php if( ! ($footerLogo) ) : ?>
+                <span class="glegrand glegrand-logo"></span>
+            <?php else : ?>
+                <img id="footer-logo" src="<?php print $footerLogo ?>" alt="<?php _e( 'Логотип', 'theme_language' ); ?>">
+            <?php endif ?>
+            </a>
             </div>
         </div>
         <div class="clearfix"></div>

@@ -7,6 +7,29 @@
 }
 
 @font-face {
+    font-family: 'Raleway';
+    src: url("../fonts/Raleway-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'RalewayLight';
+    src: url("../fonts/Raleway-Light.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'RalewayBold';
+    src: url("../fonts/Raleway-Bold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+
+@font-face {
     font-family: 'OswaldBold';
     src: url("../fonts/Oswald/Oswald-Bold.ttf") format("truetype");
     font-style: normal;
@@ -570,8 +593,13 @@ input[type="submit"] {
 /* Banner */
 .banner {
     font-family: "OswaldRegular", Helvetica, sans-serif;
-    background: rgb(236, 230, 193);
-    background: radial-gradient(circle at 70%, rgba(236, 230, 193, 1) 6%, rgba(216, 196, 78, 1) 67%);
+    position: relative;
+    overflow: hidden;
+}
+
+.banner > img {
+    position: absolute;
+    max-width: 100%;
 }
 
 .banner-bg {
@@ -588,23 +616,18 @@ input[type="submit"] {
 
 .banner-info {
     position: absolute;
-    top: 20%;
-    left: 6%;
+    bottom: 18%;
+    left: 50%;
     width: 60%;
-    color: #2c6247;
+    transform: translateX(-50%);
 }
 
 .banner-title {
-    font-family: "LobsterRegular", Helvetica, sans-serif;
-    font-style: italic;
-    font-size: 7em;
+    font-family: "RalewayItalic", Helvetica, sans-serif;
+    font-size: 2em;
+    text-align: center;
     color: #fff;
-
-    /* анимация при прокрутке
-     * добавим класс active
-     * создадим функцию в скриптах
-     */
-    transform: translate(0, 120%);
+    transform: translate(0, -100%);
     opacity: 0;
     transition: all 0.6s ease 0s;
 }
@@ -617,12 +640,10 @@ input[type="submit"] {
 .banner-slogan {
     font-size: 1em;
     position: relative;
-    top: -25px;
-    left: 25%;
-    width: fit-content;
-    width: -moz-fit-content;
-
-    transform: translate(120%, 0px);
+    text-align: center;
+    color: #fff;
+    margin-top: 20px;
+    transform: translate(0, 100%);
     opacity: 0;
     transition: all 0.6s ease 0s;
 }
@@ -632,6 +653,15 @@ input[type="submit"] {
     opacity: 1;
     transition: all 0.6s ease 0.4s;
     /*дополнительная задержка*/
+}
+
+.banner-slogan span.glegrand.glegrand-logo, .banner-slogan q {
+    font-size: 2em;
+    vertical-align: sub;
+}
+
+.banner-slogan q {
+    quotes: "\201c" "\201d";
 }
 
 #banner-contacts {
@@ -691,7 +721,7 @@ input[type="submit"] {
 
 .banner-container-menu {
     min-height: 236px;
-    margin: 0 auto;
+    margin: 100px auto;
 }
 
 #banner-wrap-menu {
@@ -699,33 +729,24 @@ input[type="submit"] {
     padding: 0;
     list-style-type: none;
     position: relative;
-    top: -66px;
 }
 
 #banner-wrap-menu a {
     position: relative;
     overflow: hidden;
-    margin-bottom: 15px;
 }
 
 #banner-wrap-menu a img {
-    border: 4px solid #fff;
     width: 100%;
-    max-width: 96%;
     filter: none;
     padding: 0;
 }
 
 #banner-wrap-menu a span {
     font-family: "OswaldBold", Helvetica, sans-serif;
-    font-weight: bold;
-    position: absolute;
-    text-align: left;
-    color: #fff;
+    text-align: center;
     font-size: 1.4em;
     display: block;
-    top: 90px;
-    left: 1.2em;
 }
 
 #banner-wrap-menu a:hover {
@@ -777,11 +798,20 @@ ul#footer-wrap-menu .four-col:nth-child(4n+4).active {
     background: url(../images/about-bg.jpg) no-repeat fixed center;
     background-size: cover;
     padding: 50px 0;
+    position: relative;
+}
+
+.page-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(0 0 0 / 50%);
+    top: 0;
 }
 
 #content-page .content-about {
     margin: 0 auto;
-    background-color: rgb(255, 255, 255, 0.75);
+    background-color: rgb(255, 255, 255, 0.8);
     max-width: 68%;
     width: 100%;
     min-height: 410px;
@@ -1199,42 +1229,46 @@ h2.screen-reader-text {
 
 #footer-wrap-menu li a > img {
     width: 100%;
+    position: relative;
+    bottom: 0;
+    transition: .5s ease;
 }
 
 #footer-wrap-menu li a {
     position: relative;
+    overflow: hidden;
+    background: #232222;
+}
+
+#footer-wrap-menu li a:hover > img {
+    bottom: 83px;
+    opacity: 0.5;
 }
 
 #footer-wrap-menu li span {
     position: absolute;
-    top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
+    bottom: -68px;
+    width: 80%;
+    height: 68px;
+    padding: 10px 11% 10px 10%;
     opacity: 0;
     color: #fff;
     font-family: 'OswaldBold', Helvetica, sans-serif;
     font-size: 1.5em;
+    text-align: center;
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
     transition: .5s ease;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 0;
-    background: rgba(216, 196, 78, 1);
-    transition: .5s ease;
+    z-index: 2;
+    display: grid;
+    align-items: center;
 }
 
 #footer-wrap-menu li a:hover span {
     opacity: 1;
-}
-
-#footer-wrap-menu li a:hover .overlay {
-    height: 100%;
+    bottom: 0;
 }
 
 @media(hover: hover) and (pointer: fine) {

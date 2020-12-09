@@ -4,7 +4,11 @@
     <div class="wrapper">
         <div class="left header-log-height">
             <a href="<?php echo get_home_url(); ?>" class="logo">
+            <?php if( ! ($headerLogo) ) : ?>
+                <span class="glegrand glegrand-logo"></span>
+            <?php else : ?>
                 <img id="header-logo" src="<?php print $headerLogo ?>" alt="<?php _e( 'Логотип', 'theme_language' ); ?>">
+            <?php endif ?>
             </a>
         </div>
         <div class="right">

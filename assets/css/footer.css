@@ -22,42 +22,46 @@
 
 #footer-wrap-menu li a > img {
     width: 100%;
+    position: relative;
+    bottom: 0;
+    transition: .5s ease;
 }
 
 #footer-wrap-menu li a {
     position: relative;
+    overflow: hidden;
+    background: #232222;
+}
+
+#footer-wrap-menu li a:hover > img {
+    bottom: 83px;
+    opacity: 0.5;
 }
 
 #footer-wrap-menu li span {
     position: absolute;
-    top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
+    bottom: -68px;
+    width: 80%;
+    height: 68px;
+    padding: 10px 11% 10px 10%;
     opacity: 0;
     color: #fff;
     font-family: 'OswaldBold', Helvetica, sans-serif;
     font-size: 1.5em;
+    text-align: center;
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
     transition: .5s ease;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 0;
-    background: rgba(216, 196, 78, 1);
-    transition: .5s ease;
+    z-index: 2;
+    display: grid;
+    align-items: center;
 }
 
 #footer-wrap-menu li a:hover span {
     opacity: 1;
-}
-
-#footer-wrap-menu li a:hover .overlay {
-    height: 100%;
+    bottom: 0;
 }
 
 @media(hover: hover) and (pointer: fine) {

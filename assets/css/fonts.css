@@ -7,6 +7,29 @@
 }
 
 @font-face {
+    font-family: 'Raleway';
+    src: url("../fonts/Raleway-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'RalewayLight';
+    src: url("../fonts/Raleway-Light.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'RalewayBold';
+    src: url("../fonts/Raleway-Bold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+
+@font-face {
     font-family: 'OswaldBold';
     src: url("../fonts/Oswald/Oswald-Bold.ttf") format("truetype");
     font-style: normal;
