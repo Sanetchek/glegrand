@@ -180,14 +180,14 @@ header#header {
     font-family: "RalewayItalic", Helvetica, sans-serif;
     font-size: 2em;
     text-align: center;
-    color: #fff;
+    color: #d8c44e;
 }
 
 .banner-slogan {
     font-size: 1em;
     position: relative;
     text-align: center;
-    color: #fff;
+    color: #d8c44e;
     margin-top: 20px;
 }
 
@@ -205,7 +205,7 @@ header#header {
     font-family: "OswaldRegular", Helvetica, sans-serif;
     height: 260px;
     background: #232222;
-    color: #fff;
+    color: #d8c44e;
 }
 
 .footer-contacts {
@@ -232,7 +232,7 @@ header#header {
 }
 
 .footer-phone a {
-    color: #fff;
+    color: #d8c44e;
 }
 
 h4#footer-hour-mode,

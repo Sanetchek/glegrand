@@ -88,12 +88,16 @@
     content: "\e900";
 }
 
-.glegrand-facebook2:before {
-    content: "\e91";
+.glegrand-call:before {
+    content: "\e901";
 }
 
-.glegrand-instagram:before {
-    content: "\e92";
+.glegrand-promotion:before {
+    content: "\e902";
+}
+
+.glegrand-voucher:before {
+    content: "\e903";
 }
 
 /* General style */
@@ -599,7 +603,7 @@ input[type="submit"] {
 
 .banner > img {
     position: absolute;
-    max-width: 100%;
+    width: 100%;
 }
 
 .banner-bg {
@@ -630,6 +634,7 @@ input[type="submit"] {
     transform: translate(0, -100%);
     opacity: 0;
     transition: all 0.6s ease 0s;
+    color: #d8c44e;
 }
 
 .banner-title.active {
@@ -639,13 +644,13 @@ input[type="submit"] {
 
 .banner-slogan {
     font-size: 1em;
-    position: relative;
     text-align: center;
     color: #fff;
     margin-top: 20px;
     transform: translate(0, 100%);
     opacity: 0;
     transition: all 0.6s ease 0s;
+    color: #d8c44e;
 }
 
 .banner-slogan.active {
@@ -719,6 +724,47 @@ input[type="submit"] {
     /*дополнительная задержка*/
 }
 
+/* Sidebar */
+ul#sidebar {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    align-items: center;
+    background: #fdfff1;
+}
+
+ul#sidebar img {
+    display: block;
+    margin: 0 auto;
+    width: 100%
+}
+
+ul#sidebar .textwidget {
+    padding: 10%;
+    text-align: center;
+}
+
+ul#sidebar .textwidget h2 {
+    margin-bottom: 25px;
+    font-family: 'LobsterRegular';
+    font-size: 1.6em;
+}
+
+ul#sidebar .textwidget h2 {
+    color: #d8c44e;
+}
+
+ul#sidebar .textwidget h2 span {
+    display: block;
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+ul#sidebar .textwidget p {
+    padding: 20px 5%;
+    font-size: 0.8em;
+}
+
+/* Banner Menu */
 .banner-container-menu {
     min-height: 236px;
     margin: 100px auto;
@@ -812,24 +858,28 @@ ul#footer-wrap-menu .four-col:nth-child(4n+4).active {
 #content-page .content-about {
     margin: 0 auto;
     background-color: rgb(255, 255, 255, 0.8);
-    max-width: 68%;
+    max-width: 50%;
     width: 100%;
     min-height: 410px;
     padding: 3% 5%;
     text-align: center;
     font-size: 1.6em;
     display: block;
+    border-radius: 2px;
 }
 
 #content-page .content-about h1 {
-    font-family: 'OswaldBold', Helvetica, sans-serif;
+    font-family: 'LobsterRegular', Helvetica, sans-serif;
     font-size: 2em;
+    color: #d8c44e;
+    margin-bottom: 25px;
 }
 
 #content-page .content-about ul {
     font-family: 'OswaldLight', Helvetica, sans-serif;
-    margin: 50px 0;
+    margin: 25px 0;
     list-style-type: none;
+    font-size: 0.8em;
 }
 
 .front-page {
@@ -1253,8 +1303,8 @@ h2.screen-reader-text {
     height: 68px;
     padding: 10px 11% 10px 10%;
     opacity: 0;
-    color: #fff;
-    font-family: 'OswaldBold', Helvetica, sans-serif;
+    color: #d8c44e;
+    font-family: 'LobsterRegular', Helvetica, sans-serif;
     font-size: 1.5em;
     text-align: center;
     -webkit-transform: translate(-50%, 0);
@@ -1284,7 +1334,7 @@ h2.screen-reader-text {
 /* Footer */
 .footer {
     background: #232222;
-    color: #fff;
+    color: #d8c44e;
 }
 
 .footer-contacts {
@@ -1311,7 +1361,7 @@ h2.screen-reader-text {
 }
 
 .footer-phone a {
-    color: #fff;
+    color: #d8c44e;
 }
 
 h4.footer-hour-mode,
@@ -1375,19 +1425,19 @@ body {
     margin: 2%;
 }
 
+hr {
+    border: none;
+    color: #232222;
+    background-color: #232222;
+    height: 1px;
+    margin: 0 auto;
+    width: 50%;
+}
+
 /* General Media width */
 @media screen and (max-width: 1200px) {
     .banner-bg {
         min-height: 500px;
-    }
-
-    .banner-title {
-        font-size: 6em;
-    }
-
-    .banner-address,
-    .banner-phone {
-        width: 65%;
     }
 
     .single-page-content {
@@ -1433,6 +1483,11 @@ body {
 
     .three-col.footer-logo .block {
         min-height: 0;
+    }
+
+    .banner > img {
+        width: 140%;
+        left: -20%;
     }
 }
 
@@ -1489,19 +1544,8 @@ body {
         background: #2c6247;
         color: #fff;
     }
-
-    #banner-contacts {
-        display: none;
-    }
-
     .banner-info {
-        top: 40%;
-        width: auto;
-    }
-
-    .banner-slogan {
-        top: -32px;
-        left: 31%;
+        bottom: 10%;
     }
 
     .banner-bg {
@@ -1523,6 +1567,16 @@ body {
     .single-page-content {
         top: 0;
         margin-bottom: 0;
+    }
+    #content-page .content-about {
+        max-width: 70%;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .banner > img {
+        width: 180%;
+        left: -40%;
     }
 }
 
@@ -1567,14 +1621,6 @@ body {
 }
 
 @media screen and (max-width: 580px) {
-    .banner-title {
-        font-size: 5em;
-    }
-
-    .banner-info {
-        top: 48%;
-    }
-
     #footer-menu {
         display: block;
         max-width: 80%;
@@ -1587,6 +1633,10 @@ body {
 
     .footer-social-icon {
         right: unset;
+    }
+    .banner > img {
+        width: 200%;
+        left: -50%;
     }
 }
 
@@ -1610,15 +1660,6 @@ body {
         min-height: 350px;
     }
 
-    .banner-title {
-        font-size: 4em;
-    }
-
-    .banner-slogan {
-        top: unset;
-        left: unset;
-    }
-
     .three-col > .block {
         min-width: fit-content !important;
     }
@@ -1637,11 +1678,28 @@ body {
     }
 
     #content-page {
-        min-height: 500px;
+        min-height: 376px;
     }
 
     #content-page .content-about {
         min-height: 350px;
+    }
+
+    #content-page .content-about {
+        max-width: 80%;
+    }
+
+    .banner > img {
+        width: 250%;
+        left: -75%;
+    }
+
+    .banner-title {
+        font-size: 1.4em;
+    }
+
+    .banner-slogan span.glegrand.glegrand-logo, .banner-slogan q {
+        font-size: 1.8em;
     }
 }
 

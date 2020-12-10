@@ -7,7 +7,7 @@
 
 .banner > img {
     position: absolute;
-    max-width: 100%;
+    width: 100%;
 }
 
 .banner-bg {
@@ -38,6 +38,7 @@
     transform: translate(0, -100%);
     opacity: 0;
     transition: all 0.6s ease 0s;
+    color: #d8c44e;
 }
 
 .banner-title.active {
@@ -47,13 +48,13 @@
 
 .banner-slogan {
     font-size: 1em;
-    position: relative;
     text-align: center;
     color: #fff;
     margin-top: 20px;
     transform: translate(0, 100%);
     opacity: 0;
     transition: all 0.6s ease 0s;
+    color: #d8c44e;
 }
 
 .banner-slogan.active {
@@ -127,6 +128,47 @@
     /*дополнительная задержка*/
 }
 
+/* Sidebar */
+ul#sidebar {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    align-items: center;
+    background: #fdfff1;
+}
+
+ul#sidebar img {
+    display: block;
+    margin: 0 auto;
+    width: 100%
+}
+
+ul#sidebar .textwidget {
+    padding: 10%;
+    text-align: center;
+}
+
+ul#sidebar .textwidget h2 {
+    margin-bottom: 25px;
+    font-family: 'LobsterRegular';
+    font-size: 1.6em;
+}
+
+ul#sidebar .textwidget h2 {
+    color: #d8c44e;
+}
+
+ul#sidebar .textwidget h2 span {
+    display: block;
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+ul#sidebar .textwidget p {
+    padding: 20px 5%;
+    font-size: 0.8em;
+}
+
+/* Banner Menu */
 .banner-container-menu {
     min-height: 236px;
     margin: 100px auto;

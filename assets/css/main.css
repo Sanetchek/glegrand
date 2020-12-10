@@ -12,19 +12,19 @@ body {
     margin: 2%;
 }
 
+hr {
+    border: none;
+    color: #232222;
+    background-color: #232222;
+    height: 1px;
+    margin: 0 auto;
+    width: 50%;
+}
+
 /* General Media width */
 @media screen and (max-width: 1200px) {
     .banner-bg {
         min-height: 500px;
-    }
-
-    .banner-title {
-        font-size: 6em;
-    }
-
-    .banner-address,
-    .banner-phone {
-        width: 65%;
     }
 
     .single-page-content {
@@ -70,6 +70,11 @@ body {
 
     .three-col.footer-logo .block {
         min-height: 0;
+    }
+
+    .banner > img {
+        width: 140%;
+        left: -20%;
     }
 }
 
@@ -126,19 +131,8 @@ body {
         background: #2c6247;
         color: #fff;
     }
-
-    #banner-contacts {
-        display: none;
-    }
-
     .banner-info {
-        top: 40%;
-        width: auto;
-    }
-
-    .banner-slogan {
-        top: -32px;
-        left: 31%;
+        bottom: 10%;
     }
 
     .banner-bg {
@@ -160,6 +154,16 @@ body {
     .single-page-content {
         top: 0;
         margin-bottom: 0;
+    }
+    #content-page .content-about {
+        max-width: 70%;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .banner > img {
+        width: 180%;
+        left: -40%;
     }
 }
 
@@ -204,14 +208,6 @@ body {
 }
 
 @media screen and (max-width: 580px) {
-    .banner-title {
-        font-size: 5em;
-    }
-
-    .banner-info {
-        top: 48%;
-    }
-
     #footer-menu {
         display: block;
         max-width: 80%;
@@ -224,6 +220,10 @@ body {
 
     .footer-social-icon {
         right: unset;
+    }
+    .banner > img {
+        width: 200%;
+        left: -50%;
     }
 }
 
@@ -247,15 +247,6 @@ body {
         min-height: 350px;
     }
 
-    .banner-title {
-        font-size: 4em;
-    }
-
-    .banner-slogan {
-        top: unset;
-        left: unset;
-    }
-
     .three-col > .block {
         min-width: fit-content !important;
     }
@@ -274,10 +265,27 @@ body {
     }
 
     #content-page {
-        min-height: 500px;
+        min-height: 376px;
     }
 
     #content-page .content-about {
         min-height: 350px;
+    }
+
+    #content-page .content-about {
+        max-width: 80%;
+    }
+
+    .banner > img {
+        width: 250%;
+        left: -75%;
+    }
+
+    .banner-title {
+        font-size: 1.4em;
+    }
+
+    .banner-slogan span.glegrand.glegrand-logo, .banner-slogan q {
+        font-size: 1.8em;
     }
 }

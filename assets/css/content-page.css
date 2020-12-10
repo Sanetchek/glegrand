@@ -17,24 +17,28 @@
 #content-page .content-about {
     margin: 0 auto;
     background-color: rgb(255, 255, 255, 0.8);
-    max-width: 68%;
+    max-width: 50%;
     width: 100%;
     min-height: 410px;
     padding: 3% 5%;
     text-align: center;
     font-size: 1.6em;
     display: block;
+    border-radius: 2px;
 }
 
 #content-page .content-about h1 {
-    font-family: 'OswaldBold', Helvetica, sans-serif;
+    font-family: 'LobsterRegular', Helvetica, sans-serif;
     font-size: 2em;
+    color: #d8c44e;
+    margin-bottom: 25px;
 }
 
 #content-page .content-about ul {
     font-family: 'OswaldLight', Helvetica, sans-serif;
-    margin: 50px 0;
+    margin: 25px 0;
     list-style-type: none;
+    font-size: 0.8em;
 }
 
 .front-page {

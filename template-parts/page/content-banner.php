@@ -1,14 +1,16 @@
 <?php
 $bannerImage = esc_attr( get_option( 'banner_image' ) );
+$attachment_id = attachment_url_to_postid( $bannerImage );
 $bannerTitle = esc_attr( get_option( 'banner_title' ) );
 $bannerTagline =  get_option( 'banner_tagline' ) ;
 ?>
 
 <div class="banner">
     <?php if( ! ($bannerImage) ) : ?>
-        <img loading="lazy" src="<?php echo get_template_directory_uri(). '/assets/images/1-3.jpg' ?>" alt="Salon Glegrand">
+        <img loading="lazy" src="<?php echo get_template_directory_uri(). '/assets/images/1-3.jpg' ?>" alt="<?php _e( 'Salon Glegrand', 'theme_language' ); ?>">
     <?php else : ?>
-        <img src="<?php print $bannerImage ?>" alt="<?php _e( 'Логотип', 'theme_language' ); ?>">
+        <img src="<?php wp_get_attachment_image_url( $attachment_id, 'full' )   ?>" srcset="<?php echo wp_get_attachment_image_srcset( $attachment_id, 'full' ) ?>"
+     sizes="<?php echo wp_get_attachment_image_sizes( $attachment_id, 'full' ) ?>" alt="<?php _e( 'Salon Glegrand', 'theme_language' ); ?>">
     <?php endif ?>
     <div class="wrapper">
         <div class="banner-bg">
@@ -21,17 +23,8 @@ $bannerTagline =  get_option( 'banner_tagline' ) ;
 </div>
 
 <div class="wrapper">
-    <?php
-    wp_nav_menu( [
-        'theme_location'  => 'third',
-        'container'       => 'div',
-        'container_class' => 'banner-container-menu',
-        'menu_class'      => 'banner-menu',
-        'before'          => '<div class="block">',
-        'after'           => '</div>',
-        'items_wrap'      => '<ul id="banner-wrap-menu" class="raw">%3$s</ul><div class="clearfix"></div>',
-        'depth'           => 0,
-    ] );
-    ?>
+   <div class="banner-container-menu">
+       <?php get_sidebar(); ?>
+    </div>
 </div>
 
