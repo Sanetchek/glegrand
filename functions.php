@@ -12,46 +12,6 @@
 require_once('customize/functions-customize.php');
 
 /*
- * Walker Comments                                    -   ON
- */
-require_once ('inc/functions-walker.php');
-
-/*
- * Login redirect if not administrator                  -   ON
- * Remove Sub-menu page                                 -   Off
- * Hide other users' posts in admin panel               -   ON
- * Limit/Restrict media library for users               -   ON
- * Password strength                                    -   ON
- * Delete original size of image                        -   ON
- * Delete image sizes                                   -   ON
- * Delete all image sizes from user profile page        -   ON
- * Delete all image sizes from: post, type_post, page   -   ON
- * Modify user table                                    -   ON
- *
- **/
-require_once ('inc/functions-limits.php');
-
-/*
- * Remove Admin bar                                     -   Off
- * Remove WordPress Meta Generator                      -   ON
- * REMOVE WP EMOJI                                      -   ON
- * Removing WordPress Version from pages,
-   RSS, scripts and styles                              -   ON
- * Change logotype link to site (not to wordpress.org)  -   ON
- * Remove title in logotype "сайт работает на wordpress"-   ON
- * Custom WordPress Footer                              -   ON
- * Remove WordPress Version From The Admin Footer       -   ON
- *
- **/
-require_once('inc/functions-remove.php');
-
-/*
- * Disable Updates
- *
-
-require_once('inc/functions-updates.php');
-*/
-/*
  * Breadcrumbs                                          -   ON
  * Cyr to lat                                           -   ON
  */

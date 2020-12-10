@@ -94,6 +94,8 @@ article#page-contacts .single-page-cont h1 {
     margin-bottom: -300px;
     float: right;
     box-sizing: border-box;
+    display: grid;
+    align-items: center;
 }
 
 .single-page-content-wrapper h2 {
