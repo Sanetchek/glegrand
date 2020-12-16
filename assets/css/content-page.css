@@ -42,12 +42,15 @@
 }
 
 .front-page {
+    -webkit-transform: translate(0, 80%);
     transform: translate(0, 80%);
     opacity: 0;
+    -webkit-transition: all 0.4s ease 0s;
     transition: all 0.4s ease 0s;
 }
 
 .front-page.active {
+    -webkit-transform: translate(0px, 0px);
     transform: translate(0px, 0px);
     opacity: 1;
 }
@@ -88,13 +91,17 @@ article#page-contacts .single-page-cont h1 {
     width: 100%;
     min-height: 365px;
     background-color: rgb(255, 255, 255, 0.75);
+    -webkit-box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
     box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
     padding: 50px 6%;
     top: -300px;
     margin-bottom: -300px;
     float: right;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     display: grid;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -141,8 +148,10 @@ article#page-contacts .single-page-cont h1 {
     max-width: 780px;
     width: 100%;
     min-height: 365px;
+    -webkit-box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
     box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
     padding: 50px 6%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     margin-bottom: 25%;
 }
@@ -201,8 +210,10 @@ article#page-gallery .single-page-gallery h1 {
 main.single-page-gallery.content {
     width: 100%;
     min-height: 365px;
+    -webkit-box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
     box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
     padding: 50px 6%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -212,6 +223,7 @@ main.single-page-gallery.content {
 
 #page-gallery .block {
     padding: 0 4px;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -219,11 +231,14 @@ main.single-page-gallery.content {
     margin-top: 8px !important;
     height: auto;
     cursor: pointer;
+    -webkit-filter: grayscale(1);
     filter: grayscale(1);
+    -webkit-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
 }
 
 #page-gallery .block img:hover {
+    -webkit-filter: grayscale(0);
     filter: grayscale(0);
 }
 
@@ -252,16 +267,32 @@ main.single-page-gallery.content {
 
 /* Add Animation - Zoom in the Modal */
 .modal-content {
+    -webkit-animation-name: zoom;
     animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
     animation-duration: 0.6s;
 }
 
-@keyframes zoom {
+@-webkit-keyframes zoom {
     from {
+        -webkit-transform: scale(0);
         transform: scale(0)
     }
 
     to {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+
+@keyframes zoom {
+    from {
+        -webkit-transform: scale(0);
+        transform: scale(0)
+    }
+
+    to {
+        -webkit-transform: scale(1);
         transform: scale(1)
     }
 }
@@ -274,6 +305,7 @@ main.single-page-gallery.content {
     color: #f1f1f1;
     font-size: 40px;
     font-weight: bold;
+    -webkit-transition: 0.3s;
     transition: 0.3s;
 }
 

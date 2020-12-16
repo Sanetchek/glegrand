@@ -36,6 +36,7 @@
     position: absolute;
     bottom: -3px;
     left: 0;
+    -webkit-transition: all 0.2s linear;
     transition: all 0.2s linear;
 }
 
@@ -62,6 +63,7 @@
     height: 5px;
     background-color: #333;
     margin: 6px 0;
+    -webkit-transition: 0.4s;
     transition: 0.4s;
 }
 

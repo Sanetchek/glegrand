@@ -27,6 +27,7 @@
     bottom: 18%;
     left: 50%;
     width: 60%;
+    -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
 }
 
@@ -35,13 +36,16 @@
     font-size: 2em;
     text-align: center;
     color: #fff;
+    -webkit-transform: translate(0, -100%);
     transform: translate(0, -100%);
     opacity: 0;
+    -webkit-transition: all 0.6s ease 0s;
     transition: all 0.6s ease 0s;
     color: #d8c44e;
 }
 
 .banner-title.active {
+    -webkit-transform: translate(0px, 0px);
     transform: translate(0px, 0px);
     opacity: 1;
 }
@@ -51,15 +55,19 @@
     text-align: center;
     color: #fff;
     margin-top: 20px;
+    -webkit-transform: translate(0, 100%);
     transform: translate(0, 100%);
     opacity: 0;
+    -webkit-transition: all 0.6s ease 0s;
     transition: all 0.6s ease 0s;
     color: #d8c44e;
 }
 
 .banner-slogan.active {
+    -webkit-transform: translate(0px, 0px);
     transform: translate(0px, 0px);
     opacity: 1;
+    -webkit-transition: all 0.6s ease 0.4s;
     transition: all 0.6s ease 0.4s;
     /*дополнительная задержка*/
 }
@@ -83,21 +91,28 @@
     font-size: 1em;
     margin-right: 30%;
 
+    -webkit-transform: translate(-120%, 0px);
+
     transform: translate(-120%, 0px);
     opacity: 0;
+    -webkit-transition: all 0.6s ease 0s;
     transition: all 0.6s ease 0s;
 }
 
 .banner-address.active {
+    -webkit-transform: translate(0px, 0px);
     transform: translate(0px, 0px);
     opacity: 1;
+    -webkit-transition: all 0.6s ease 0.4s;
     transition: all 0.6s ease 0.4s;
     /*дополнительная задержка*/
 }
 
 .banner-phone.active {
+    -webkit-transform: translate(0px, 0px);
     transform: translate(0px, 0px);
     opacity: 1;
+    -webkit-transition: all 0.6s ease 0.6s;
     transition: all 0.6s ease 0.6s;
     /*дополнительная задержка*/
 }
@@ -116,14 +131,19 @@
     font-size: 1.5em;
     text-align: right;
 
+    -webkit-transform: translate(0, 120%);
+
     transform: translate(0, 120%);
     opacity: 0;
+    -webkit-transition: all 0.6s ease 0s;
     transition: all 0.6s ease 0s;
 }
 
 .banner-mode.active {
+    -webkit-transform: translate(0px, 0px);
     transform: translate(0px, 0px);
     opacity: 1;
+    -webkit-transition: all 0.6s ease 0.4s;
     transition: all 0.6s ease 0.4s;
     /*дополнительная задержка*/
 }
@@ -132,6 +152,8 @@
 ul#sidebar {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     background: #fdfff1;
 }
@@ -188,6 +210,7 @@ ul#sidebar .textwidget p {
 
 #banner-wrap-menu a img {
     width: 100%;
+    -webkit-filter: none;
     filter: none;
     padding: 0;
 }
@@ -201,44 +224,54 @@ ul#sidebar .textwidget p {
 
 #banner-wrap-menu a:hover {
     -webkit-box-shadow: 0px 49px 43px -32px rgba(0, 0, 0, 0.4);
-    -moz-box-shadow: 0px 49px 43px -32px rgba(0, 0, 0, 0.4);
     box-shadow: 0px 49px 43px -32px rgba(0, 0, 0, 0.4);
 }
 
 #banner-wrap-menu a:hover img {
+    -webkit-filter: grayscale(1);
     filter: grayscale(1);
 }
 
 ul#banner-wrap-menu .three-col,
 ul#footer-wrap-menu .four-col {
+    -webkit-transform: translate(0, 120%);
     transform: translate(0, 120%);
     opacity: 0;
+    -webkit-transition: all 0.4s ease 0s;
     transition: all 0.4s ease 0s;
 }
 
 ul#banner-wrap-menu .three-col:nth-child(3n+1).active,
 ul#footer-wrap-menu .four-col:nth-child(4n+1).active {
+    -webkit-transform: translate(0, 0);
     transform: translate(0, 0);
     opacity: 1;
+    -webkit-transition: all 0.4s ease 0s;
     transition: all 0.4s ease 0s;
 }
 
 ul#banner-wrap-menu .three-col:nth-child(3n+2).active,
 ul#footer-wrap-menu .four-col:nth-child(4n+2).active {
+    -webkit-transform: translate(0, 0);
     transform: translate(0, 0);
     opacity: 1;
+    -webkit-transition: all 0.4s ease 0.1s;
     transition: all 0.4s ease 0.1s;
 }
 
 ul#banner-wrap-menu .three-col:nth-child(3n+3).active,
 ul#footer-wrap-menu .four-col:nth-child(4n+3).active {
+    -webkit-transform: translate(0, 0);
     transform: translate(0, 0);
     opacity: 1;
+    -webkit-transition: all 0.4s ease 0.2s;
     transition: all 0.4s ease 0.2s;
 }
 
 ul#footer-wrap-menu .four-col:nth-child(4n+4).active {
+    -webkit-transform: translate(0, 0);
     transform: translate(0, 0);
     opacity: 1;
+    -webkit-transition: all 0.4s ease 0.3s;
     transition: all 0.4s ease 0.3s;
 }

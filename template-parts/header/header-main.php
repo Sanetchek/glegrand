@@ -7,7 +7,7 @@
             <?php if( ! ($headerLogo) ) : ?>
                 <span class="glegrand glegrand-logo"></span>
             <?php else : ?>
-                <img id="header-logo" src="<?php print $headerLogo ?>" alt="<?php _e( 'Логотип', 'theme_language' ); ?>">
+                <img id="header-logo" src="<?php echo $headerLogo ?>" alt="<?php _e( 'Логотип', 'theme_language' ); ?>">
             <?php endif ?>
             </a>
         </div>

@@ -54,6 +54,29 @@ hr {
     }
 }
 
+@media screen and (max-width: 1024px) {
+    #footer-wrap-menu li a > img {
+        opacity: 0.5;
+    }
+    #footer-wrap-menu li a:hover > img {
+        bottom: 0;
+        opacity: 0.5;
+    }
+
+    #footer-wrap-menu li span {
+        position: relative;
+        bottom: 0;
+        width: 80%;
+        height: 68px;
+        opacity: 1;
+    }
+
+    #footer-wrap-menu li a:hover span {
+        opacity: 1;
+        bottom: 0;
+    }
+}
+
 @media screen and (max-width: 1020px) {
     .three-col.footer-logo {
         width: 100% !important;
@@ -120,6 +143,7 @@ hr {
         width: 100%;
         height: 100%;
         line-height: 50px;
+        -webkit-transition: all 0.2s linear;
         transition: all 0.2s linear;
     }
 
@@ -141,10 +165,12 @@ hr {
 
     article#page-content .single-page h1 {
         left: 50%;
+        -webkit-transform: translate(-50%, 0);
         transform: translate(-50%, 0);
         top: 150px;
         width: 60%;
         background-color: rgb(255, 255, 255, 0.75);
+        -webkit-box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
         box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
         padding: 2% 5%;
     }
@@ -248,6 +274,8 @@ hr {
     }
 
     .three-col > .block {
+        min-width: -webkit-fit-content !important;
+        min-width: -moz-fit-content !important;
         min-width: fit-content !important;
     }
 
@@ -274,6 +302,10 @@ hr {
 
     #content-page .content-about {
         max-width: 80%;
+    }
+
+    .banner-container-menu {
+        width: 100%;
     }
 
     .banner > img {

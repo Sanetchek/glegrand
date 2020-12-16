@@ -10,7 +10,7 @@ $bannerTagline =  get_option( 'banner_tagline' ) ;
         <img loading="lazy" src="<?php echo get_template_directory_uri(). '/assets/images/1-3.jpg' ?>" alt="<?php _e( 'Salon Glegrand', 'theme_language' ); ?>">
     <?php else : ?>
         <img src="<?php wp_get_attachment_image_url( $attachment_id, 'full' )   ?>" srcset="<?php echo wp_get_attachment_image_srcset( $attachment_id, 'full' ) ?>"
-     sizes="<?php echo wp_get_attachment_image_sizes( $attachment_id, 'full' ) ?>" alt="<?php _e( 'Salon Glegrand', 'theme_language' ); ?>">
+        sizes="<?php echo wp_get_attachment_image_sizes( $attachment_id, 'full' ) ?>" alt="<?php _e( 'Salon Glegrand', 'theme_language' ); ?>">
     <?php endif ?>
     <div class="wrapper">
         <div class="banner-bg">

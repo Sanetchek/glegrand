@@ -24,6 +24,7 @@
     width: 100%;
     position: relative;
     bottom: 0;
+    -webkit-transition: .5s ease;
     transition: .5s ease;
 }
 
@@ -40,7 +41,6 @@
 
 #footer-wrap-menu li span {
     position: absolute;
-    left: 50%;
     bottom: -68px;
     width: 80%;
     height: 68px;
@@ -50,12 +50,12 @@
     font-family: 'LobsterRegular', Helvetica, sans-serif;
     font-size: 1.5em;
     text-align: center;
-    -webkit-transform: translate(-50%, 0);
-    -ms-transform: translate(-50%, 0);
-    transform: translate(-50%, 0);
+    -webkit-transition: .5s ease;
     transition: .5s ease;
     z-index: 2;
     display: grid;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -88,14 +88,18 @@
     font-family: "LobsterRegular", Helvetica, sans-serif;
     font-size: 2.6em;
     margin: 11% 0 8% 0;
+    -webkit-transform: translate(0, 120%);
     transform: translate(0, 120%);
     opacity: 0;
+    -webkit-transition: all 0.4s ease 0s;
     transition: all 0.4s ease 0s;
 }
 
 .footer-title.active {
+    -webkit-transform: translate(0, 0);
     transform: translate(0, 0);
     opacity: 1;
+    -webkit-transition: all 0.4s ease 0.4s;
     transition: all 0.4s ease 0.4s;
 }
 
@@ -134,10 +138,12 @@ h4.footer-hour-mode,
 .footer-social-icon a {
     display: inline-block;
     margin: 14px 10px 0 10px;
+    -webkit-filter: grayscale(0.4);
     filter: grayscale(0.4);
 }
 
 .footer-social-icon a:hover {
+    -webkit-filter: grayscale(0);
     filter: grayscale(0);
 }
 
