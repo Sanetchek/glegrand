@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Glegrand\n"
-"POT-Creation-Date: 2020-12-05 00:45+0200\n"
+"POT-Creation-Date: 2021-01-03 15:07+0200\n"
 "PO-Revision-Date: 2020-12-05 00:45+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -16,8 +16,8 @@ msgstr ""
 "X-Poedit-WPHeader: style.css\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
-"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
@@ -131,19 +131,16 @@ msgstr ""
 msgid "Favicon"
 msgstr ""
 
-#: customize/inc/functions/admin/admin-settings.php:35
-#: customize/inc/functions/admin/admin-settings.php:97
-#: template-parts/header/header-main.php:7
+#: customize/inc/functions/admin/admin-settings.php:38
+#: customize/inc/functions/admin/admin-settings.php:51
+#: customize/inc/functions/admin/admin-settings.php:94
+#: template-parts/footer/content-footer.php:48
+#: template-parts/header/header-main.php:10
 msgid "Логотип"
 msgstr ""
 
-#: customize/inc/functions/admin/admin-settings.php:54
-#: template-parts/page/content-banner.php:21
-msgid "Banner Image"
-msgstr ""
-
-#: customize/inc/functions/admin/admin-settings.php:88
-#: template-parts/footer/content-footer.php:35
+#: customize/inc/functions/admin/admin-settings.php:82
+#: template-parts/footer/content-footer.php:36
 msgid "Социальные сети:"
 msgstr ""
 
@@ -195,12 +192,8 @@ msgstr ""
 msgid "В корзине изображений не найдено"
 msgstr ""
 
-#: customize/inc/functions/function-gallery.php:40
+#: customize/inc/functions/function-gallery.php:46
 msgid "Изображения"
-msgstr ""
-
-#: customize/inc/functions/function-gallery.php:41
-msgid "Дата"
 msgstr ""
 
 #: customize/inc/functions/function-general-settings.php:25
@@ -291,12 +284,45 @@ msgstr ""
 msgid "Заголовок"
 msgstr ""
 
-#: functions.php:196
+#: functions.php:172
 msgid "Main Sidebar"
 msgstr ""
 
-#: functions.php:198
+#: functions.php:174
 msgid "Widgets in this area will be shown on all posts and pages."
+msgstr ""
+
+#: inc/functions-plugins.php:15
+msgid "Главная"
+msgstr ""
+
+#: inc/functions-plugins.php:17
+#, php-format
+msgid "Результаты поиска по запросу \"%s\""
+msgstr ""
+
+#: inc/functions-plugins.php:18
+#, php-format
+msgid "Записи с тегом \"%s\""
+msgstr ""
+
+#: inc/functions-plugins.php:19
+#, php-format
+msgid "Статьи автора %s"
+msgstr ""
+
+#: inc/functions-plugins.php:20
+msgid "Ошибка 404"
+msgstr ""
+
+#: inc/functions-plugins.php:21
+#, php-format
+msgid "Страница %s"
+msgstr ""
+
+#: inc/functions-plugins.php:22
+#, php-format
+msgid "Страница комментариев %s"
 msgstr ""
 
 #: index.php:23
@@ -309,6 +335,11 @@ msgstr ""
 
 #: searchform.php:6
 msgid "Найти"
+msgstr ""
+
+#: template-parts/page/content-banner.php:10
+#: template-parts/page/content-banner.php:13
+msgid "Salon Glegrand"
 msgstr ""
 
 #: template-parts/post/content-post.php:23

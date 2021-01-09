@@ -7,6 +7,20 @@
 */
 
 /*
+ * Remove Admin bar                                     -   Off
+ * Remove WordPress Meta Generator                      -   ON
+ * REMOVE WP EMOJI                                      -   ON
+ * Removing WordPress Version from pages,
+   RSS, scripts and styles                              -   ON
+ * Change logotype link to site (not to wordpress.org)  -   ON
+ * Remove title in logotype "сайт работает на wordpress"-   ON
+ * Custom WordPress Footer                              -   ON
+ * Remove WordPress Version From The Admin Footer       -   ON
+ *
+ * */
+require_once('inc/functions-remove.php');
+
+/*
  * Theme Customizer                                    -   ON
  */
 require_once('customize/functions-customize.php');
@@ -95,7 +109,7 @@ add_theme_support('post-formats', array(
 function glegrand_scripts()
 {
     // Styles
-    wp_enqueue_style('style', get_template_directory_uri() . '/assets/css/theme-style.css');
+    wp_enqueue_style('style', get_template_directory_uri() . '/assets/css/theme-style.min.css');
 
     // Scripts
     wp_enqueue_script('jquery');

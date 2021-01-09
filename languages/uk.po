@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "Project-Id-Version: Glegrand\n"
-"POT-Creation-Date: 2020-12-05 00:45+0200\n"
-"PO-Revision-Date: 2020-12-05 00:53+0200\n"
+"POT-Creation-Date: 2021-01-03 15:07+0200\n"
+"PO-Revision-Date: 2021-01-03 15:34+0200\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -129,19 +129,16 @@ msgstr "Налаштування теми"
 msgid "Favicon"
 msgstr "Favicon"
 
-#: customize/inc/functions/admin/admin-settings.php:35
-#: customize/inc/functions/admin/admin-settings.php:97
-#: template-parts/header/header-main.php:7
+#: customize/inc/functions/admin/admin-settings.php:38
+#: customize/inc/functions/admin/admin-settings.php:51
+#: customize/inc/functions/admin/admin-settings.php:94
+#: template-parts/footer/content-footer.php:48
+#: template-parts/header/header-main.php:10
 msgid "Логотип"
 msgstr "Логотип"
 
-#: customize/inc/functions/admin/admin-settings.php:54
-#: template-parts/page/content-banner.php:21
-msgid "Banner Image"
-msgstr "Banner Image"
-
-#: customize/inc/functions/admin/admin-settings.php:88
-#: template-parts/footer/content-footer.php:35
+#: customize/inc/functions/admin/admin-settings.php:82
+#: template-parts/footer/content-footer.php:36
 msgid "Социальные сети:"
 msgstr "Соціальні мережі:"
 
@@ -193,13 +190,9 @@ msgstr "Зображення не знайдено"
 msgid "В корзине изображений не найдено"
 msgstr "В кошику зображень, не знайдено"
 
-#: customize/inc/functions/function-gallery.php:40
+#: customize/inc/functions/function-gallery.php:46
 msgid "Изображения"
 msgstr "Зображення"
-
-#: customize/inc/functions/function-gallery.php:41
-msgid "Дата"
-msgstr "Дата"
 
 #: customize/inc/functions/function-general-settings.php:25
 msgid "Внешний вид"
@@ -258,7 +251,7 @@ msgstr "Instagram"
 
 #: customize/inc/functions/function-general-settings.php:51
 msgid "Страница редактирования информации в Банере"
-msgstr "Сторінка редагування інформації в банер"
+msgstr "Сторінка редагування інформації у банері"
 
 #: customize/inc/functions/function-general-settings.php:58
 msgid "Загрузить favicon"
@@ -289,13 +282,46 @@ msgstr "Номер телефону"
 msgid "Заголовок"
 msgstr "Заголовок"
 
-#: functions.php:196
+#: functions.php:172
 msgid "Main Sidebar"
 msgstr "Main Sidebar"
 
-#: functions.php:198
+#: functions.php:174
 msgid "Widgets in this area will be shown on all posts and pages."
 msgstr "Widgets in this area will be shown on all posts and pages."
+
+#: inc/functions-plugins.php:15
+msgid "Главная"
+msgstr "Головна"
+
+#: inc/functions-plugins.php:17
+#, php-format
+msgid "Результаты поиска по запросу \"%s\""
+msgstr "Результати пошуку на запит \"%s\""
+
+#: inc/functions-plugins.php:18
+#, php-format
+msgid "Записи с тегом \"%s\""
+msgstr "Публікації з тегом \"%s\""
+
+#: inc/functions-plugins.php:19
+#, php-format
+msgid "Статьи автора %s"
+msgstr "Публікації автора \"%s\""
+
+#: inc/functions-plugins.php:20
+msgid "Ошибка 404"
+msgstr "Помилка 404"
+
+#: inc/functions-plugins.php:21
+#, php-format
+msgid "Страница %s"
+msgstr "Сторінка: \"%s\""
+
+#: inc/functions-plugins.php:22
+#, php-format
+msgid "Страница комментариев %s"
+msgstr "Сторінка коментарів %s"
 
 #: index.php:23
 msgid "Фильтр"
@@ -308,6 +334,11 @@ msgstr "Що знайти &hellip; ?"
 #: searchform.php:6
 msgid "Найти"
 msgstr "Знайти"
+
+#: template-parts/page/content-banner.php:10
+#: template-parts/page/content-banner.php:13
+msgid "Salon Glegrand"
+msgstr "Salon Glegrand"
 
 #: template-parts/post/content-post.php:23
 msgid "Предыдущая страница: "
