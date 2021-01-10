@@ -119,6 +119,9 @@ function glegrand_scripts()
     );
 
     wp_enqueue_script('script', get_template_directory_uri() . '/assets/js/script.min.js', false, null, true);
+
+
+    wp_deregister_style( 'dashicons' );
 }
 add_action('wp_enqueue_scripts', 'glegrand_scripts');
 
